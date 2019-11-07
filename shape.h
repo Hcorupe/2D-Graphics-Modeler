@@ -13,8 +13,6 @@
 using namespace Qt;
 using namespace std;
 
-namespace myShape{
-
 class Shape
 {
     public:
@@ -1019,8 +1017,5 @@ class polygon: public Shape
         vector <QPoint> qPt;
         int pointCount;
 };
-
-
-}
 
 #endif // SHAPES_H
