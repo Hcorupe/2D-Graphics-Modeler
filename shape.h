@@ -13,6 +13,8 @@
 using namespace Qt;
 using namespace std;
 
+namespace myShape{
+
 class Shape
 {
     public:
@@ -35,10 +37,10 @@ class Shape
         }
 
         void setShapeId(int num) {
-            shapeID = num;
+            shape_ID = num;
         }
         int getShapeId() {
-            return shapeID;
+            return shape_ID;
         }
         void setPenWidth(int w)
         {
@@ -361,7 +363,7 @@ class Shape
         QBrush brush;
 
     private:
-            int shapeID;
+            int shape_ID;
 
 };
 
@@ -1018,5 +1020,7 @@ class polygon: public Shape
         int pointCount;
 };
 
+
+}
 
 #endif // SHAPES_H
