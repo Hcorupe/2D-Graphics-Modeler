@@ -21,10 +21,11 @@ class vector
           space = the available storage capacity of the vector where size_v <= space
           if size_v < space there is space for (space - size_v) Ts after elem[size_v-1]
     */
-
+   
     int size_v;     // the size
     T *elem; 		// pointer to the elements (or 0)
     int space;      // number of elements plus number of free slots
+    int shape_ID;    // from input file 
 
 public:
     vector() : size_v{0}, elem{nullptr}, space{0} {} // default constructor
