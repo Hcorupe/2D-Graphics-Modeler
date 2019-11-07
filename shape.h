@@ -10,8 +10,8 @@
 #include <QString>
 #include <QPaintDevice>
 
-using namespace Qt;
-using namespace std;
+using namespace Qt;   // namespace for qt stuff
+using namespace std; // namespace for vector 
 
 class Shape
 {
