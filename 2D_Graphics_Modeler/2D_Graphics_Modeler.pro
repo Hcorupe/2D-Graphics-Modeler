@@ -18,11 +18,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     login.cpp \
     main.cpp \
-    MainWindow.cpp
+    MainWindow.cpp \
+    CS1C_Vector_Templated_v3.cpp
 
 HEADERS += \
     MainWindow.h \
-    login.h
+    login.h \
+    vector.h
 
 FORMS += \
     MainWindow.ui \
