@@ -9,7 +9,8 @@ class Line : public Shape
 
         Line()
         {
-
+            endPoint.setX(0);
+            endPoint.setY(0);
         }
 
         ~Line() {}
