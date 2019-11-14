@@ -23,8 +23,15 @@ SOURCES += \
 
 HEADERS += \
     MainWindow.h \
+    circle.h \
+    line.h \
     login.h \
-    vector.h
+    text.h \
+    vector.h \
+    shape.h \
+    rectangle.h \
+    square.h \
+    ellipse.h
 
 FORMS += \
     MainWindow.ui \
