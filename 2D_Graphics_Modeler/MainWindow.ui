@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1232</width>
+    <height>832</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,24 +18,29 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>801</width>
-     <height>601</height>
+     <width>1231</width>
+     <height>831</height>
     </rect>
    </property>
    <property name="currentIndex">
     <number>0</number>
    </property>
-   <widget class="QWidget" name="tab">
+   <widget class="QWidget" name="MainTab">
     <attribute name="title">
      <string>2D Graphics Render</string>
     </attribute>
    </widget>
-   <widget class="QWidget" name="tab_2">
+   <widget class="QWidget" name="ReportsTab">
+    <attribute name="title">
+     <string>Reports</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="ReviewTab">
     <attribute name="title">
      <string>Reviews</string>
     </attribute>
    </widget>
-   <widget class="QWidget" name="tab_3">
+   <widget class="QWidget" name="ContactTab">
     <attribute name="title">
      <string>Contact Us</string>
     </attribute>

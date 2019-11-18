@@ -50,11 +50,6 @@ class Shape
             shapeID = num;
         }
 
-        int getShapeId()
-        {
-            return shapeID;
-        }
-
         void setPenWidth(int w)
         {
             pen.setWidth(w);
@@ -239,17 +234,20 @@ class Shape
             startPoint.setY(y);
         }
 
+        int getShapeId()
+        {
+            return shapeID;
+        }
+
         QPen getPen()
         {
             return pen;
         }
 
-        virtual double GetArea() = 0;
-
-        virtual double GetPerimeter() = 0;
-
-
-        virtual void draw(QPaintDevice* device) = 0;
+        QBrush getBrush()
+        {
+            return brush;
+        }
 
         virtual void move(int x1Value, int y1Value)
         {
@@ -261,6 +259,12 @@ class Shape
         {
             return startPoint;
         }
+
+        virtual double GetArea() = 0;
+
+        virtual double GetPerimeter() = 0;
+
+        virtual void draw(QPaintDevice* device) = 0;
 
     private:
             int shapeID;

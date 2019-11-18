@@ -26,6 +26,8 @@ HEADERS += \
     circle.h \
     line.h \
     login.h \
+    polygon.h \
+    polyline.h \
     text.h \
     vector.h \
     shape.h \
