@@ -38,7 +38,7 @@ class Shape
 
         bool operator > (const Shape& RHS)
         {
-            return shapeID < RHS.shapeID;
+            return shapeID > RHS.shapeID;
         }
 
         bool operator == (const Shape& RHS)
