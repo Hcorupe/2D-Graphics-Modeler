@@ -1,7 +1,8 @@
 #include "login.h"
+#include "MainWindow.h"
 #include "ui_login.h"
 
-bool isAdmin; // True if current user is admin
+
 
 Login::Login(QWidget *parent) :
     QDialog(parent),
@@ -23,17 +24,13 @@ void Login::on_loginButton_clicked()
     if (ui->userEdit->text() == QString::fromStdString(login::USERNAME) &&
         ui->passwordEdit->text() == QString::fromStdString(login::PASSWORD))
     {
-        isAdmin = false;
-
-        this->accept();
+        this->done(0);
     }
 
     else if (ui->userEdit->text() == QString::fromStdString(login::ADMIN_USERNAME) &&
              ui->passwordEdit->text() == QString::fromStdString(login::ADMIN_PASSWORD))
     {
-        isAdmin = true;
-
-        this->accept();
+        this->done(1);
     }
 
     else

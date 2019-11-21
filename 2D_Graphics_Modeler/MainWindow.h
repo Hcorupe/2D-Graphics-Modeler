@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QWidget>
+#include "login.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,5 +19,10 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    Login* login;
+
+private slots:
+    void disableEdit();
+
 };
 #endif // MAINWINDOW_H
