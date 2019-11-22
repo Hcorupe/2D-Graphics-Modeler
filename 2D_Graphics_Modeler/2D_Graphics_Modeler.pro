@@ -19,7 +19,8 @@ SOURCES += \
     login.cpp \
     main.cpp \
     MainWindow.cpp \
-    CS1C_Vector_Templated_v3.cpp
+    CS1C_Vector_Templated_v3.cpp \
+    renderarea.cpp
 
 HEADERS += \
     MainWindow.h \
@@ -28,6 +29,7 @@ HEADERS += \
     login.h \
     polygon.h \
     polyline.h \
+    renderarea.h \
     text.h \
     vector.h \
     shape.h \

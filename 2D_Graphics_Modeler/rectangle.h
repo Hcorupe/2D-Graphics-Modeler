@@ -12,6 +12,15 @@ class Rectangle : public Shape
             width  = 0;
         }
 
+        Rectangle(int x, int y, Qt::GlobalColor penColor, int penWidth, Qt::PenStyle penStyle,
+                  Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle, Qt::GlobalColor brushColor,
+                  Qt::BrushStyle brushStyle, int l, int w)
+                    :Shape(x, y, penColor, penWidth, penStyle, capStyle, joinStyle, brushColor, brushStyle)
+        {
+            length = l;
+            width  = w;
+        }
+
         ~Rectangle(){}
 
         virtual void draw(QPaintDevice* device)

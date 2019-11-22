@@ -20,6 +20,7 @@
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QWidget>
+#include "renderarea.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -37,6 +38,7 @@ public:
     QLabel *label;
     QPushButton *newShapeButton;
     QPushButton *deleteShapeButton;
+    RenderArea *renderArea;
     QWidget *ReportsTab;
     QWidget *ReviewTab;
     QWidget *ContactTab;
@@ -45,39 +47,43 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(1232, 832);
+        MainWindow->resize(1037, 619);
         tabWidget = new QTabWidget(MainWindow);
         tabWidget->setObjectName(QStringLiteral("tabWidget"));
-        tabWidget->setGeometry(QRect(0, 0, 1231, 831));
+        tabWidget->setGeometry(QRect(0, 0, 1041, 621));
         MainTab = new QWidget();
         MainTab->setObjectName(QStringLiteral("MainTab"));
         idComboBox = new QComboBox(MainTab);
         idComboBox->setObjectName(QStringLiteral("idComboBox"));
-        idComboBox->setGeometry(QRect(20, 760, 141, 22));
+        idComboBox->setGeometry(QRect(20, 540, 141, 22));
         idLabel = new QLabel(MainTab);
         idLabel->setObjectName(QStringLiteral("idLabel"));
-        idLabel->setGeometry(QRect(60, 740, 55, 16));
+        idLabel->setGeometry(QRect(60, 520, 55, 16));
         moveLabel = new QLabel(MainTab);
         moveLabel->setObjectName(QStringLiteral("moveLabel"));
-        moveLabel->setGeometry(QRect(210, 740, 81, 16));
+        moveLabel->setGeometry(QRect(210, 520, 81, 16));
         xSpinBox = new QSpinBox(MainTab);
         xSpinBox->setObjectName(QStringLiteral("xSpinBox"));
-        xSpinBox->setGeometry(QRect(200, 760, 42, 22));
+        xSpinBox->setGeometry(QRect(200, 540, 42, 22));
         ySpinBox = new QSpinBox(MainTab);
         ySpinBox->setObjectName(QStringLiteral("ySpinBox"));
-        ySpinBox->setGeometry(QRect(270, 760, 42, 22));
+        ySpinBox->setGeometry(QRect(270, 540, 42, 22));
         xLabel = new QLabel(MainTab);
         xLabel->setObjectName(QStringLiteral("xLabel"));
-        xLabel->setGeometry(QRect(180, 760, 21, 16));
+        xLabel->setGeometry(QRect(180, 540, 21, 16));
         label = new QLabel(MainTab);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(250, 760, 21, 16));
+        label->setGeometry(QRect(250, 540, 21, 16));
         newShapeButton = new QPushButton(MainTab);
         newShapeButton->setObjectName(QStringLiteral("newShapeButton"));
-        newShapeButton->setGeometry(QRect(330, 760, 93, 28));
+        newShapeButton->setGeometry(QRect(330, 540, 93, 28));
         deleteShapeButton = new QPushButton(MainTab);
         deleteShapeButton->setObjectName(QStringLiteral("deleteShapeButton"));
-        deleteShapeButton->setGeometry(QRect(430, 760, 93, 28));
+        deleteShapeButton->setGeometry(QRect(430, 540, 93, 28));
+        renderArea = new RenderArea(MainTab);
+        renderArea->setObjectName(QStringLiteral("renderArea"));
+        renderArea->setGeometry(QRect(20, 10, 1000, 500));
+        renderArea->setMinimumSize(QSize(1000, 500));
         tabWidget->addTab(MainTab, QString());
         ReportsTab = new QWidget();
         ReportsTab->setObjectName(QStringLiteral("ReportsTab"));

@@ -210,6 +210,7 @@ Makefile: 2D_Graphics_Modeler.pro D:/Qt/5.9.8/mingw53_32/mkspecs/win32-g++/qmake
 		D:/Qt/5.9.8/mingw53_32/mkspecs/features/qt_config.prf \
 		D:/Qt/5.9.8/mingw53_32/mkspecs/win32-g++/qmake.conf \
 		D:/Qt/5.9.8/mingw53_32/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		D:/Qt/5.9.8/mingw53_32/mkspecs/features/exclusive_builds.prf \
 		D:/Qt/5.9.8/mingw53_32/mkspecs/features/toolchain.prf \
 		D:/Qt/5.9.8/mingw53_32/mkspecs/features/default_pre.prf \
@@ -387,6 +388,7 @@ D:/Qt/5.9.8/mingw53_32/mkspecs/features/qt_functions.prf:
 D:/Qt/5.9.8/mingw53_32/mkspecs/features/qt_config.prf:
 D:/Qt/5.9.8/mingw53_32/mkspecs/win32-g++/qmake.conf:
 D:/Qt/5.9.8/mingw53_32/mkspecs/features/spec_post.prf:
+.qmake.stash:
 D:/Qt/5.9.8/mingw53_32/mkspecs/features/exclusive_builds.prf:
 D:/Qt/5.9.8/mingw53_32/mkspecs/features/toolchain.prf:
 D:/Qt/5.9.8/mingw53_32/mkspecs/features/default_pre.prf:

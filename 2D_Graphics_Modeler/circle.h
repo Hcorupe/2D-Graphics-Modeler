@@ -7,6 +7,17 @@ class Circle : public Ellipse
 {
     public:
 
+        Circle()
+        {
+            setMajorAxisA(0);
+            setMinorAxisB(0);
+        }
+
+        Circle(int x, int y, Qt::GlobalColor penColor, int penWidth, Qt::PenStyle penStyle,
+               Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle, Qt::GlobalColor brushColor,
+               Qt::BrushStyle brushStyle, int axis)
+                :Ellipse(x, y, penColor, penWidth, penStyle, capStyle, joinStyle, brushColor, brushStyle, axis, axis){}
+
         ~Circle() {}
 
         virtual void setMajorAxisA(int a_Value)

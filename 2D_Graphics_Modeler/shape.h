@@ -29,6 +29,20 @@ class Shape
             brush.setStyle(Qt::SolidPattern);
         }
 
+        Shape(int x, int y, Qt::GlobalColor penColor, int penWidth, Qt::PenStyle penStyle,
+              Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle, Qt::GlobalColor brushColor,
+              Qt::BrushStyle brushStyle)
+        {
+            setStartPoint(x,y);
+            pen.setColor(penColor);
+            pen.setWidth(penWidth);
+            pen.setStyle(penStyle);
+            pen.setCapStyle(capStyle);
+            pen.setJoinStyle(joinStyle);
+            brush.setColor(brushColor);
+            brush.setStyle(brushStyle);
+        }
+
         virtual ~Shape(){}
 
         bool operator < (const Shape& RHS)

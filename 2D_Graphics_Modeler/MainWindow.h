@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include "login.h"
+#include "renderarea.h"
 
 
 QT_BEGIN_NAMESPACE

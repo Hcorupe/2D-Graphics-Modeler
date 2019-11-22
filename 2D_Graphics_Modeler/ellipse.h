@@ -11,6 +11,16 @@ class Ellipse : public Shape
             a = 0;
             b = 0;
         }
+
+        Ellipse(int x, int y, Qt::GlobalColor penColor, int penWidth, Qt::PenStyle penStyle,
+                Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle, Qt::GlobalColor brushColor,
+                Qt::BrushStyle brushStyle, int major, int minor)
+                    :Shape(x, y, penColor, penWidth, penStyle, capStyle, joinStyle, brushColor, brushStyle)
+        {
+            a = major;
+            b = minor;
+        }
+
         ~Ellipse() {}
 
         virtual void draw(QPaintDevice* device)

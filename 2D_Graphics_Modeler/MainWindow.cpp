@@ -12,6 +12,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->setupUi(this);
 
+
+
     connect(login, SIGNAL(finished(int)), this, SLOT(show()));
     connect(login, SIGNAL(finished(int)), this, SLOT(disableEdit()));
 
@@ -20,6 +22,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 void MainWindow::disableEdit()
 {
+       // Disable editing forms if user is not admin
        if(login->result() == 0)
        {
            ui->MainTab->findChild<QWidget*>("xSpinBox")->setDisabled(true);
