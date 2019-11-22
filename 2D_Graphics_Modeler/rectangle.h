@@ -12,9 +12,9 @@ class Rectangle : public Shape
             width  = 0;
         }
 
-        Rectangle(int x, int y, Qt::GlobalColor penColor, int penWidth, Qt::PenStyle penStyle,
+        Rectangle(int x, int y,  int l, int w, Qt::GlobalColor penColor, int penWidth, Qt::PenStyle penStyle,
                   Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle, Qt::GlobalColor brushColor,
-                  Qt::BrushStyle brushStyle, int l, int w)
+                  Qt::BrushStyle brushStyle)
                     :Shape(x, y, penColor, penWidth, penStyle, capStyle, joinStyle, brushColor, brushStyle)
         {
             length = l;
