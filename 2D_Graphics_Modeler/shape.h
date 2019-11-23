@@ -19,7 +19,8 @@ class Shape
 
         Shape()
         {
-            setStartPoint(0,0);
+            startPoint.setX(0);
+            startPoint.setY(0);
             pen.setColor(Qt::black);
             pen.setWidth(1);
             pen.setStyle(Qt::SolidLine);
@@ -29,11 +30,12 @@ class Shape
             brush.setStyle(Qt::SolidPattern);
         }
 
-        Shape(int x, int y, Qt::GlobalColor penColor, int penWidth, Qt::PenStyle penStyle,
+        Shape(int ID, QPoint sPoint, Qt::GlobalColor penColor, int penWidth, Qt::PenStyle penStyle,
               Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle, Qt::GlobalColor brushColor,
               Qt::BrushStyle brushStyle)
         {
-            setStartPoint(x,y);
+            shapeID = ID;
+            startPoint = sPoint;
             pen.setColor(penColor);
             pen.setWidth(penWidth);
             pen.setStyle(penStyle);
@@ -60,50 +62,49 @@ class Shape
             return shapeID == RHS.shapeID;
         }
 
-        void setShapeId(int num) {
+        void setShapeId(const int num) {
             shapeID = num;
         }
 
-        void setPenWidth(int w)
+        void setPenWidth(const int w)
         {
             pen.setWidth(w);
         }
 
-        void setPenColor(Qt::GlobalColor color)
+        void setPenColor(const Qt::GlobalColor color)
         {
             pen.setColor(color);
         }
 
-        void setPenStyle(Qt::PenStyle pStyle)
+        void setPenStyle(const Qt::PenStyle pStyle)
         {
             pen.setStyle(pStyle);
         }
 
-        void setPenCapStyle(Qt::PenCapStyle cap)
+        void setPenCapStyle(const Qt::PenCapStyle cap)
         {
             pen.setCapStyle(cap);
 
         }
 
-        void setPenJoinStyle(Qt::PenJoinStyle join)
+        void setPenJoinStyle(const Qt::PenJoinStyle join)
         {
             pen.setJoinStyle(join);
         }
 
-        void setBrushColor(Qt::GlobalColor color)
+        void setBrushColor(const Qt::GlobalColor color)
         {
            brush.setColor(color);
         }
 
-        void setBrushStyle(Qt::BrushStyle bStyle)
+        void setBrushStyle(const Qt::BrushStyle bStyle)
         {
             brush.setStyle(bStyle);
         }
 
-        void setStartPoint(int x, int y)
+        void setStartPoint(const QPoint sPoint)
         {
-            startPoint.setX(x);
-            startPoint.setY(y);
+            startPoint = sPoint;
         }
 
         int getShapeId()
@@ -121,7 +122,7 @@ class Shape
             return brush;
         }
 
-        virtual void move(int x1Value, int y1Value)
+        virtual void move(const int x1Value, int y1Value)
         {
             startPoint.setX(x1Value);
             startPoint.setY(y1Value);

@@ -12,10 +12,10 @@ class Rectangle : public Shape
             width  = 0;
         }
 
-        Rectangle(int x, int y,  int l, int w, Qt::GlobalColor penColor, int penWidth, Qt::PenStyle penStyle,
+        Rectangle(int ID, QPoint sPoint,  int l, int w, Qt::GlobalColor penColor, int penWidth, Qt::PenStyle penStyle,
                   Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle, Qt::GlobalColor brushColor,
                   Qt::BrushStyle brushStyle)
-                    :Shape(x, y, penColor, penWidth, penStyle, capStyle, joinStyle, brushColor, brushStyle)
+                    :Shape(ID, sPoint, penColor, penWidth, penStyle, capStyle, joinStyle, brushColor, brushStyle)
         {
             length = l;
             width  = w;
@@ -33,12 +33,12 @@ class Rectangle : public Shape
             painter.end();
         }
 
-        virtual void setLength(int lValue)
+        virtual void setLength(const int lValue)
         {
             length = lValue;
         }
 
-        virtual void setWidth(int wValue)
+        virtual void setWidth(const int wValue)
         {
             width = wValue;
         }

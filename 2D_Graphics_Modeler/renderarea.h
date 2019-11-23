@@ -4,6 +4,13 @@
 #include <QWidget>
 #include "shape.h"
 #include "rectangle.h"
+#include "square.h"
+#include "ellipse.h"
+#include "circle.h"
+#include "line.h"
+#include "polyline.h"
+#include "polygon.h"
+#include "text.h"
 
 
 class RenderArea : public QWidget

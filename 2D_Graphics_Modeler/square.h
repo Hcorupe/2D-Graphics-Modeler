@@ -14,21 +14,21 @@ class Square : public Rectangle
             setWidth(0);
         }
 
-        Square(int x, int y, int side, Qt::GlobalColor penColor, int penWidth, Qt::PenStyle penStyle,
+        Square(int ID, QPoint sPoint, int side, Qt::GlobalColor penColor, int penWidth, Qt::PenStyle penStyle,
                Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle, Qt::GlobalColor brushColor,
                Qt::BrushStyle brushStyle)
-                :Rectangle(x, y, side, side, penColor, penWidth, penStyle, capStyle, joinStyle, brushColor,
+                :Rectangle(ID, sPoint, side, side, penColor, penWidth, penStyle, capStyle, joinStyle, brushColor,
                            brushStyle) {}
 
         ~Square() {}
 
-        virtual void setWidth(int width)
+        virtual void setWidth(const int width)
         {
             Rectangle::setLength(width);
             Rectangle::setWidth(width);
         }
 
-        virtual void setLength(int length)
+        virtual void setLength(const int length)
         {
             Rectangle::setLength(length);
             Rectangle::setWidth(length);

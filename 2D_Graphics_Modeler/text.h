@@ -10,14 +10,30 @@ class Text: public Shape
         Text()
         {
             message = "Text";
-            width   = 15;
-            height  = 10;
+            width   = 500;
+            length  = 500;
             font.setFamily("Times");
             font.setStyle(QFont::StyleNormal);
             font.setWeight(QFont::Normal);
             font.setPointSize(10);
             alignment = Qt::AlignCenter;
 
+
+        }
+
+        Text(int ID, QPoint sPoint, int l, int w, QString text, Qt::GlobalColor color, Qt::Alignment align,
+             int pointSize, QString family, QFont::Style style, QFont::Weight weight)
+                :Shape(ID, sPoint, color, 0, Qt::SolidLine, Qt::SquareCap, Qt::BevelJoin, Qt::white,
+                       Qt::SolidPattern)
+        {
+            length = l;
+            width  = w;
+            message = text;
+            alignment = align;
+            font.setPointSize(pointSize);
+            font.setFamily(family);
+            font.setStyle(style);
+            font.setWeight(weight);
         }
 
         ~Text() {}
@@ -28,40 +44,50 @@ class Text: public Shape
             painter.setPen(getPen());
             painter.setFont(font);
 
-            painter.drawText(getStartPoint().rx(), getStartPoint().ry(),width,height, alignment, message);
+            painter.drawText(getStartPoint().rx(), getStartPoint().ry(), width, length, alignment, message);
             painter.end();
         }
 
-        void setFontFamily(QString family)
+        void setFontFamily(const QString family)
         {
             font.setFamily(family);
         }
 
-        void setStyle(QFont::Style style)
+        void setStyle(const QFont::Style style)
         {
             font.setStyle(style);
         }
 
-        void setWeight(QFont::Weight weight)
+        void setWeight(const QFont::Weight weight)
         {
             font.setWeight(weight);
         }
 
-        void setPointSize(int size)
+        void setPointSize(const int size)
         {
             font.setPointSize(size);
         }
 
-        void setAlignment(Qt::Alignment align)
+        void setAlignment(const Qt::Alignment align)
         {
             alignment = align;
+        }
+
+        double GetArea()
+        {
+            return 0;
+        }
+
+        double GetPerimeter()
+        {
+            return 0;
         }
 
     private:
         QFont font;
         Qt::Alignment alignment;
+        int length;
         int width;
-        int height;
         QString message;
 
 };

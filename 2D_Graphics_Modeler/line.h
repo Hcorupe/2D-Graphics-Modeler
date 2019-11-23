@@ -13,13 +13,19 @@ class Line : public Shape
             endPoint.setY(0);
         }
 
+        Line(int ID, QPoint sPoint, QPoint ePoint, Qt::GlobalColor penColor, int penWidth, Qt::PenStyle penStyle,
+             Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle)
+                :Shape(ID, sPoint, penColor, penWidth, penStyle, capStyle, joinStyle, Qt::black, Qt::SolidPattern)
+        {
+            endPoint = ePoint;
+        }
+
         ~Line() {}
 
         virtual void draw(QPaintDevice* device)
         {
             painter.begin(device);
             painter.setPen(getPen());
-            painter.setBrush(brush);
 
             painter.drawLine(getStartPoint(), endPoint);
             painter.end();
@@ -35,6 +41,18 @@ class Line : public Shape
             endPoint.setX(x);
             endPoint.setY(y);
         }
+
+        double GetArea()
+        {
+            return 0;
+        }
+
+        double GetPerimeter()
+        {
+            return 0;
+        }
+
+
 
     private:
         QPoint endPoint; // Point where line ends

@@ -12,10 +12,10 @@ class Ellipse : public Shape
             b = 0;
         }
 
-        Ellipse(int x, int y, Qt::GlobalColor penColor, int penWidth, Qt::PenStyle penStyle,
+        Ellipse(int ID, QPoint sPoint, Qt::GlobalColor penColor, int penWidth, Qt::PenStyle penStyle,
                 Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle, Qt::GlobalColor brushColor,
                 Qt::BrushStyle brushStyle, int major, int minor)
-                    :Shape(x, y, penColor, penWidth, penStyle, capStyle, joinStyle, brushColor, brushStyle)
+                    :Shape(ID, sPoint, penColor, penWidth, penStyle, capStyle, joinStyle, brushColor, brushStyle)
         {
             a = major;
             b = minor;
@@ -33,12 +33,12 @@ class Ellipse : public Shape
             painter.end();
         }
 
-        virtual void setMajorAxisA(int a_Value)
+        virtual void setMajorAxisA(const int a_Value)
         {
             a = a_Value;
         }
 
-        virtual void setMinorAxisB(int b_Value)
+        virtual void setMinorAxisB(const int b_Value)
         {
             b = b_Value;
         }

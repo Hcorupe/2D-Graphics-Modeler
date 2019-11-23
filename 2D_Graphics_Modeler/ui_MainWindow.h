@@ -84,6 +84,7 @@ public:
         renderArea->setObjectName(QStringLiteral("renderArea"));
         renderArea->setGeometry(QRect(20, 10, 1000, 500));
         renderArea->setMinimumSize(QSize(1000, 500));
+        renderArea->setAutoFillBackground(false);
         tabWidget->addTab(MainTab, QString());
         ReportsTab = new QWidget();
         ReportsTab->setObjectName(QStringLiteral("ReportsTab"));
