@@ -20,6 +20,7 @@ SOURCES += \
     main.cpp \
     MainWindow.cpp \
     CS1C_Vector_Templated_v3.cpp \
+    parser.cpp \
     renderarea.cpp
 
 HEADERS += \
@@ -27,6 +28,7 @@ HEADERS += \
     circle.h \
     line.h \
     login.h \
+    parser.h \
     polygon.h \
     polyline.h \
     renderarea.h \
@@ -45,3 +47,10 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    shape_input_file_specs.txt \
+    shapes.txt
+
+RESOURCES += \
+    myResource.qrc

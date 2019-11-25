@@ -1,4 +1,6 @@
 #include "renderarea.h"
+#include"parser.h"
+#include<QDebug>
 
 RenderArea::RenderArea(QWidget *parent) : QWidget(parent)
 {
@@ -8,12 +10,41 @@ RenderArea::RenderArea(QWidget *parent) : QWidget(parent)
 void RenderArea::paintEvent(QPaintEvent * /* event */)
 {
 
+//    Parser parser;
+//    vector<QPoint> point;
+//    int id;
+//    Qt::GlobalColor penColor;
+//    int penWidth;
+//    Qt::PenStyle penStyle;
+//    Qt::PenCapStyle penCapStyle;
+//    Qt::PenJoinStyle penJoinStyle;
+
+//    parser.skipLine();
+//    parser.readShapeId();
+//    parser.readShapeType();
+//    parser.readLineDimensions(point);
+//    penColor = parser.readPenColor();
+//    penWidth = parser.readPenWidth();
+//    penStyle = parser.readPenStyle();
+//    penCapStyle = parser.readPenCapStyle();
+//    penJoinStyle = parser.readPenJoinStyle();
+
+//    Line line1(id, point[0], point[1], penColor, penWidth, penStyle, penCapStyle, penJoinStyle);
+//    line1.draw(this);
+
+
+
+
+
+
+
     // Test drawing on canvas
     Rectangle rect;
     rect.setLength(100);
     rect.setWidth(50);
     rect.move(100,50);
     rect.setBrushColor(Qt::green);
+    rect.draw(this);
 
     Square square;
     square.setLength(150);
@@ -21,7 +52,7 @@ void RenderArea::paintEvent(QPaintEvent * /* event */)
     square.setBrushColor(Qt::red);
     square.draw(this);
 
-    rect.draw(this);
+
 
     Circle circle;
     circle.setMajorAxisA(100);

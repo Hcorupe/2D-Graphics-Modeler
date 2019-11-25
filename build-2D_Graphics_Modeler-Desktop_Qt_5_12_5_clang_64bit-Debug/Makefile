@@ -56,18 +56,24 @@ SOURCES       = ../2D_Graphics_Modeler/login.cpp \
 		../2D_Graphics_Modeler/main.cpp \
 		../2D_Graphics_Modeler/MainWindow.cpp \
 		../2D_Graphics_Modeler/CS1C_Vector_Templated_v3.cpp \
-		../2D_Graphics_Modeler/renderarea.cpp moc_MainWindow.cpp \
+		../2D_Graphics_Modeler/parser.cpp \
+		../2D_Graphics_Modeler/renderarea.cpp qrc_myResource.cpp \
+		moc_MainWindow.cpp \
 		moc_login.cpp \
 		moc_renderarea.cpp
 OBJECTS       = login.o \
 		main.o \
 		MainWindow.o \
 		CS1C_Vector_Templated_v3.o \
+		parser.o \
 		renderarea.o \
+		qrc_myResource.o \
 		moc_MainWindow.o \
 		moc_login.o \
 		moc_renderarea.o
-DIST          = ../../../Qt/5.12.5/clang_64/mkspecs/features/spec_pre.prf \
+DIST          = ../2D_Graphics_Modeler/shape_input_file_specs.txt \
+		../2D_Graphics_Modeler/shapes.txt \
+		../../../Qt/5.12.5/clang_64/mkspecs/features/spec_pre.prf \
 		../../../Qt/5.12.5/clang_64/mkspecs/qdevice.pri \
 		../../../Qt/5.12.5/clang_64/mkspecs/features/device_config.prf \
 		../../../Qt/5.12.5/clang_64/mkspecs/common/unix.conf \
@@ -211,6 +217,7 @@ DIST          = ../../../Qt/5.12.5/clang_64/mkspecs/features/spec_pre.prf \
 		../../../Qt/5.12.5/clang_64/mkspecs/features/qt_config.prf \
 		../../../Qt/5.12.5/clang_64/mkspecs/macx-clang/qmake.conf \
 		../../../Qt/5.12.5/clang_64/mkspecs/features/spec_post.prf \
+		../2D_Graphics_Modeler/.qmake.stash \
 		../../../Qt/5.12.5/clang_64/mkspecs/features/exclusive_builds.prf \
 		../../../Qt/5.12.5/clang_64/mkspecs/features/mac/sdk.prf \
 		../../../Qt/5.12.5/clang_64/mkspecs/features/toolchain.prf \
@@ -242,6 +249,7 @@ DIST          = ../../../Qt/5.12.5/clang_64/mkspecs/features/spec_pre.prf \
 		../2D_Graphics_Modeler/circle.h \
 		../2D_Graphics_Modeler/line.h \
 		../2D_Graphics_Modeler/login.h \
+		../2D_Graphics_Modeler/parser.h \
 		../2D_Graphics_Modeler/polygon.h \
 		../2D_Graphics_Modeler/polyline.h \
 		../2D_Graphics_Modeler/renderarea.h \
@@ -254,6 +262,7 @@ DIST          = ../../../Qt/5.12.5/clang_64/mkspecs/features/spec_pre.prf \
 		../2D_Graphics_Modeler/main.cpp \
 		../2D_Graphics_Modeler/MainWindow.cpp \
 		../2D_Graphics_Modeler/CS1C_Vector_Templated_v3.cpp \
+		../2D_Graphics_Modeler/parser.cpp \
 		../2D_Graphics_Modeler/renderarea.cpp
 QMAKE_TARGET  = 2D_Graphics_Modeler
 DESTDIR       = 
@@ -421,6 +430,7 @@ Makefile: ../2D_Graphics_Modeler/2D_Graphics_Modeler.pro ../../../Qt/5.12.5/clan
 		../../../Qt/5.12.5/clang_64/mkspecs/features/qt_config.prf \
 		../../../Qt/5.12.5/clang_64/mkspecs/macx-clang/qmake.conf \
 		../../../Qt/5.12.5/clang_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../../Qt/5.12.5/clang_64/mkspecs/features/exclusive_builds.prf \
 		../../../Qt/5.12.5/clang_64/mkspecs/features/mac/sdk.prf \
 		../../../Qt/5.12.5/clang_64/mkspecs/features/toolchain.prf \
@@ -449,6 +459,7 @@ Makefile: ../2D_Graphics_Modeler/2D_Graphics_Modeler.pro ../../../Qt/5.12.5/clan
 		../../../Qt/5.12.5/clang_64/mkspecs/features/yacc.prf \
 		../../../Qt/5.12.5/clang_64/mkspecs/features/lex.prf \
 		../2D_Graphics_Modeler/2D_Graphics_Modeler.pro \
+		../2D_Graphics_Modeler/myResource.qrc \
 		../../../Qt/5.12.5/clang_64/lib/QtWidgets.framework/QtWidgets.prl \
 		../../../Qt/5.12.5/clang_64/lib/QtGui.framework/QtGui.prl \
 		../../../Qt/5.12.5/clang_64/lib/QtCore.framework/QtCore.prl
@@ -597,6 +608,7 @@ Makefile: ../2D_Graphics_Modeler/2D_Graphics_Modeler.pro ../../../Qt/5.12.5/clan
 ../../../Qt/5.12.5/clang_64/mkspecs/features/qt_config.prf:
 ../../../Qt/5.12.5/clang_64/mkspecs/macx-clang/qmake.conf:
 ../../../Qt/5.12.5/clang_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../../Qt/5.12.5/clang_64/mkspecs/features/exclusive_builds.prf:
 ../../../Qt/5.12.5/clang_64/mkspecs/features/mac/sdk.prf:
 ../../../Qt/5.12.5/clang_64/mkspecs/features/toolchain.prf:
@@ -625,6 +637,7 @@ Makefile: ../2D_Graphics_Modeler/2D_Graphics_Modeler.pro ../../../Qt/5.12.5/clan
 ../../../Qt/5.12.5/clang_64/mkspecs/features/yacc.prf:
 ../../../Qt/5.12.5/clang_64/mkspecs/features/lex.prf:
 ../2D_Graphics_Modeler/2D_Graphics_Modeler.pro:
+../2D_Graphics_Modeler/myResource.qrc:
 ../../../Qt/5.12.5/clang_64/lib/QtWidgets.framework/QtWidgets.prl:
 ../../../Qt/5.12.5/clang_64/lib/QtGui.framework/QtGui.prl:
 ../../../Qt/5.12.5/clang_64/lib/QtCore.framework/QtCore.prl:
@@ -657,9 +670,10 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
+	$(COPY_FILE) --parents ../2D_Graphics_Modeler/myResource.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents ../../../Qt/5.12.5/clang_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../2D_Graphics_Modeler/MainWindow.h ../2D_Graphics_Modeler/circle.h ../2D_Graphics_Modeler/line.h ../2D_Graphics_Modeler/login.h ../2D_Graphics_Modeler/polygon.h ../2D_Graphics_Modeler/polyline.h ../2D_Graphics_Modeler/renderarea.h ../2D_Graphics_Modeler/text.h ../2D_Graphics_Modeler/vector.h ../2D_Graphics_Modeler/shape.h ../2D_Graphics_Modeler/rectangle.h ../2D_Graphics_Modeler/square.h ../2D_Graphics_Modeler/ellipse.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../2D_Graphics_Modeler/login.cpp ../2D_Graphics_Modeler/main.cpp ../2D_Graphics_Modeler/MainWindow.cpp ../2D_Graphics_Modeler/CS1C_Vector_Templated_v3.cpp ../2D_Graphics_Modeler/renderarea.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../2D_Graphics_Modeler/MainWindow.h ../2D_Graphics_Modeler/circle.h ../2D_Graphics_Modeler/line.h ../2D_Graphics_Modeler/login.h ../2D_Graphics_Modeler/parser.h ../2D_Graphics_Modeler/polygon.h ../2D_Graphics_Modeler/polyline.h ../2D_Graphics_Modeler/renderarea.h ../2D_Graphics_Modeler/text.h ../2D_Graphics_Modeler/vector.h ../2D_Graphics_Modeler/shape.h ../2D_Graphics_Modeler/rectangle.h ../2D_Graphics_Modeler/square.h ../2D_Graphics_Modeler/ellipse.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../2D_Graphics_Modeler/login.cpp ../2D_Graphics_Modeler/main.cpp ../2D_Graphics_Modeler/MainWindow.cpp ../2D_Graphics_Modeler/CS1C_Vector_Templated_v3.cpp ../2D_Graphics_Modeler/parser.cpp ../2D_Graphics_Modeler/renderarea.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../2D_Graphics_Modeler/MainWindow.ui ../2D_Graphics_Modeler/login.ui $(DISTDIR)/
 
 
@@ -670,6 +684,7 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) -r 2D_Graphics_Modeler.app
+	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
@@ -686,8 +701,14 @@ check: first
 
 benchmark: first
 
-compiler_rcc_make_all:
+compiler_rcc_make_all: qrc_myResource.cpp
 compiler_rcc_clean:
+	-$(DEL_FILE) qrc_myResource.cpp
+qrc_myResource.cpp: ../2D_Graphics_Modeler/myResource.qrc \
+		../../../Qt/5.12.5/clang_64/bin/rcc \
+		../2D_Graphics_Modeler/shapes.txt
+	/Users/homebitch/Qt/5.12.5/clang_64/bin/rcc -name myResource ../2D_Graphics_Modeler/myResource.qrc -o qrc_myResource.cpp
+
 compiler_moc_predefs_make_all: moc_predefs.h
 compiler_moc_predefs_clean:
 	-$(DEL_FILE) moc_predefs.h
@@ -718,6 +739,14 @@ moc_MainWindow.cpp: ../2D_Graphics_Modeler/MainWindow.h \
 		../../../Qt/5.12.5/clang_64/lib/QtGui.framework/Headers/QPaintDevice \
 		../../../Qt/5.12.5/clang_64/lib/QtGui.framework/Headers/qpaintdevice.h \
 		../2D_Graphics_Modeler/rectangle.h \
+		../2D_Graphics_Modeler/square.h \
+		../2D_Graphics_Modeler/ellipse.h \
+		../2D_Graphics_Modeler/circle.h \
+		../2D_Graphics_Modeler/line.h \
+		../2D_Graphics_Modeler/polyline.h \
+		../2D_Graphics_Modeler/vector.h \
+		../2D_Graphics_Modeler/polygon.h \
+		../2D_Graphics_Modeler/text.h \
 		moc_predefs.h \
 		../../../Qt/5.12.5/clang_64/bin/moc
 	/Users/homebitch/Qt/5.12.5/clang_64/bin/moc $(DEFINES) --include /Users/homebitch/Documents/GitHub/build-2D_Graphics_Modeler-Desktop_Qt_5_12_5_clang_64bit-Debug/moc_predefs.h -I/Users/homebitch/Qt/5.12.5/clang_64/mkspecs/macx-clang -I/Users/homebitch/Documents/GitHub/2D_Graphics_Modeler -I/Users/homebitch/Qt/5.12.5/clang_64/lib/QtWidgets.framework/Headers -I/Users/homebitch/Qt/5.12.5/clang_64/lib/QtGui.framework/Headers -I/Users/homebitch/Qt/5.12.5/clang_64/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include -I/Library/Developer/CommandLineTools/usr/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include -F/Users/homebitch/Qt/5.12.5/clang_64/lib ../2D_Graphics_Modeler/MainWindow.h -o moc_MainWindow.cpp
@@ -746,6 +775,14 @@ moc_renderarea.cpp: ../2D_Graphics_Modeler/renderarea.h \
 		../../../Qt/5.12.5/clang_64/lib/QtGui.framework/Headers/QPaintDevice \
 		../../../Qt/5.12.5/clang_64/lib/QtGui.framework/Headers/qpaintdevice.h \
 		../2D_Graphics_Modeler/rectangle.h \
+		../2D_Graphics_Modeler/square.h \
+		../2D_Graphics_Modeler/ellipse.h \
+		../2D_Graphics_Modeler/circle.h \
+		../2D_Graphics_Modeler/line.h \
+		../2D_Graphics_Modeler/polyline.h \
+		../2D_Graphics_Modeler/vector.h \
+		../2D_Graphics_Modeler/polygon.h \
+		../2D_Graphics_Modeler/text.h \
 		moc_predefs.h \
 		../../../Qt/5.12.5/clang_64/bin/moc
 	/Users/homebitch/Qt/5.12.5/clang_64/bin/moc $(DEFINES) --include /Users/homebitch/Documents/GitHub/build-2D_Graphics_Modeler-Desktop_Qt_5_12_5_clang_64bit-Debug/moc_predefs.h -I/Users/homebitch/Qt/5.12.5/clang_64/mkspecs/macx-clang -I/Users/homebitch/Documents/GitHub/2D_Graphics_Modeler -I/Users/homebitch/Qt/5.12.5/clang_64/lib/QtWidgets.framework/Headers -I/Users/homebitch/Qt/5.12.5/clang_64/lib/QtGui.framework/Headers -I/Users/homebitch/Qt/5.12.5/clang_64/lib/QtCore.framework/Headers -I. -I/Library/Developer/CommandLineTools/usr/include/c++/v1 -I/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include -I/Library/Developer/CommandLineTools/usr/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include -F/Users/homebitch/Qt/5.12.5/clang_64/lib ../2D_Graphics_Modeler/renderarea.h -o moc_renderarea.cpp
@@ -775,7 +812,15 @@ ui_MainWindow.h: ../2D_Graphics_Modeler/MainWindow.ui \
 		../../../Qt/5.12.5/clang_64/lib/QtCore.framework/Headers/qstring.h \
 		../../../Qt/5.12.5/clang_64/lib/QtGui.framework/Headers/QPaintDevice \
 		../../../Qt/5.12.5/clang_64/lib/QtGui.framework/Headers/qpaintdevice.h \
-		../2D_Graphics_Modeler/rectangle.h
+		../2D_Graphics_Modeler/rectangle.h \
+		../2D_Graphics_Modeler/square.h \
+		../2D_Graphics_Modeler/ellipse.h \
+		../2D_Graphics_Modeler/circle.h \
+		../2D_Graphics_Modeler/line.h \
+		../2D_Graphics_Modeler/polyline.h \
+		../2D_Graphics_Modeler/vector.h \
+		../2D_Graphics_Modeler/polygon.h \
+		../2D_Graphics_Modeler/text.h
 	/Users/homebitch/Qt/5.12.5/clang_64/bin/uic ../2D_Graphics_Modeler/MainWindow.ui -o ui_MainWindow.h
 
 ui_login.h: ../2D_Graphics_Modeler/login.ui \
@@ -790,7 +835,7 @@ compiler_yacc_impl_make_all:
 compiler_yacc_impl_clean:
 compiler_lex_make_all:
 compiler_lex_clean:
-compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_uic_clean 
+compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_header_clean compiler_uic_clean 
 
 ####### Compile
 
@@ -815,6 +860,14 @@ login.o: ../2D_Graphics_Modeler/login.cpp ../2D_Graphics_Modeler/login.h \
 		../../../Qt/5.12.5/clang_64/lib/QtGui.framework/Headers/QPaintDevice \
 		../../../Qt/5.12.5/clang_64/lib/QtGui.framework/Headers/qpaintdevice.h \
 		../2D_Graphics_Modeler/rectangle.h \
+		../2D_Graphics_Modeler/square.h \
+		../2D_Graphics_Modeler/ellipse.h \
+		../2D_Graphics_Modeler/circle.h \
+		../2D_Graphics_Modeler/line.h \
+		../2D_Graphics_Modeler/polyline.h \
+		../2D_Graphics_Modeler/vector.h \
+		../2D_Graphics_Modeler/polygon.h \
+		../2D_Graphics_Modeler/text.h \
 		../2D_Graphics_Modeler/ui_login.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o login.o ../2D_Graphics_Modeler/login.cpp
 
@@ -839,6 +892,14 @@ main.o: ../2D_Graphics_Modeler/main.cpp ../2D_Graphics_Modeler/MainWindow.h \
 		../../../Qt/5.12.5/clang_64/lib/QtGui.framework/Headers/QPaintDevice \
 		../../../Qt/5.12.5/clang_64/lib/QtGui.framework/Headers/qpaintdevice.h \
 		../2D_Graphics_Modeler/rectangle.h \
+		../2D_Graphics_Modeler/square.h \
+		../2D_Graphics_Modeler/ellipse.h \
+		../2D_Graphics_Modeler/circle.h \
+		../2D_Graphics_Modeler/line.h \
+		../2D_Graphics_Modeler/polyline.h \
+		../2D_Graphics_Modeler/vector.h \
+		../2D_Graphics_Modeler/polygon.h \
+		../2D_Graphics_Modeler/text.h \
 		../../../Qt/5.12.5/clang_64/lib/QtWidgets.framework/Headers/QApplication \
 		../../../Qt/5.12.5/clang_64/lib/QtWidgets.framework/Headers/qapplication.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../2D_Graphics_Modeler/main.cpp
@@ -864,11 +925,26 @@ MainWindow.o: ../2D_Graphics_Modeler/MainWindow.cpp ../2D_Graphics_Modeler/MainW
 		../../../Qt/5.12.5/clang_64/lib/QtGui.framework/Headers/QPaintDevice \
 		../../../Qt/5.12.5/clang_64/lib/QtGui.framework/Headers/qpaintdevice.h \
 		../2D_Graphics_Modeler/rectangle.h \
+		../2D_Graphics_Modeler/square.h \
+		../2D_Graphics_Modeler/ellipse.h \
+		../2D_Graphics_Modeler/circle.h \
+		../2D_Graphics_Modeler/line.h \
+		../2D_Graphics_Modeler/polyline.h \
+		../2D_Graphics_Modeler/vector.h \
+		../2D_Graphics_Modeler/polygon.h \
+		../2D_Graphics_Modeler/text.h \
 		../2D_Graphics_Modeler/ui_MainWindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o MainWindow.o ../2D_Graphics_Modeler/MainWindow.cpp
 
 CS1C_Vector_Templated_v3.o: ../2D_Graphics_Modeler/CS1C_Vector_Templated_v3.cpp ../2D_Graphics_Modeler/vector.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o CS1C_Vector_Templated_v3.o ../2D_Graphics_Modeler/CS1C_Vector_Templated_v3.cpp
+
+parser.o: ../2D_Graphics_Modeler/parser.cpp ../2D_Graphics_Modeler/parser.h \
+		../../../Qt/5.12.5/clang_64/lib/QtCore.framework/Headers/QCoreApplication \
+		../../../Qt/5.12.5/clang_64/lib/QtCore.framework/Headers/qcoreapplication.h \
+		../../../Qt/5.12.5/clang_64/lib/QtCore.framework/Headers/QPoint \
+		../../../Qt/5.12.5/clang_64/lib/QtCore.framework/Headers/qpoint.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o parser.o ../2D_Graphics_Modeler/parser.cpp
 
 renderarea.o: ../2D_Graphics_Modeler/renderarea.cpp ../2D_Graphics_Modeler/renderarea.h \
 		../../../Qt/5.12.5/clang_64/lib/QtWidgets.framework/Headers/QWidget \
@@ -886,8 +962,24 @@ renderarea.o: ../2D_Graphics_Modeler/renderarea.cpp ../2D_Graphics_Modeler/rende
 		../../../Qt/5.12.5/clang_64/lib/QtCore.framework/Headers/qstring.h \
 		../../../Qt/5.12.5/clang_64/lib/QtGui.framework/Headers/QPaintDevice \
 		../../../Qt/5.12.5/clang_64/lib/QtGui.framework/Headers/qpaintdevice.h \
-		../2D_Graphics_Modeler/rectangle.h
+		../2D_Graphics_Modeler/rectangle.h \
+		../2D_Graphics_Modeler/square.h \
+		../2D_Graphics_Modeler/ellipse.h \
+		../2D_Graphics_Modeler/circle.h \
+		../2D_Graphics_Modeler/line.h \
+		../2D_Graphics_Modeler/polyline.h \
+		../2D_Graphics_Modeler/vector.h \
+		../2D_Graphics_Modeler/polygon.h \
+		../2D_Graphics_Modeler/text.h \
+		../2D_Graphics_Modeler/parser.h \
+		../../../Qt/5.12.5/clang_64/lib/QtCore.framework/Headers/QCoreApplication \
+		../../../Qt/5.12.5/clang_64/lib/QtCore.framework/Headers/qcoreapplication.h \
+		../../../Qt/5.12.5/clang_64/lib/QtCore.framework/Headers/QPoint \
+		../../../Qt/5.12.5/clang_64/lib/QtCore.framework/Headers/qpoint.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o renderarea.o ../2D_Graphics_Modeler/renderarea.cpp
+
+qrc_myResource.o: qrc_myResource.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_myResource.o qrc_myResource.cpp
 
 moc_MainWindow.o: moc_MainWindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_MainWindow.o moc_MainWindow.cpp
