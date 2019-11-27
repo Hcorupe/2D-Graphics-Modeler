@@ -29,6 +29,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(login, SIGNAL(finished(int)), this, SLOT(show()));
     connect(login, SIGNAL(finished(int)), this, SLOT(disableEdit()));
 
+    // Add shape ids to combobox
     for (int i = 0; i < ui->renderArea->shapes.size(); i++)
     {
         ui->idComboBox->addItem(QString::number((ui->renderArea->shapes[i]->getShapeId())));
@@ -101,6 +102,25 @@ void MainWindow::on_ySpinBox_valueChanged(int arg1)
     newPoint = selectedShapeLabel->getStartPoint();
     newPoint.setY(arg1 + 10);
     selectedShapeLabel->setStartPoint(newPoint);
+
+    ui->renderArea->update();
+}
+
+void MainWindow::on_deleteShapeButton_clicked()
+{
+    for (int i = 0; i < ui->renderArea->shapes.size(); i++)
+    {
+
+        if (ui->renderArea->shapes[i] == selectedShape)
+        {
+            // Erase shape from shape vect
+            ui->renderArea->shapes.erase(&(ui->renderArea->shapes[i]));
+            // Erase shape label
+            ui->renderArea->shapeLabels.erase(&(ui->renderArea->shapeLabels[i]));
+        }
+    }
+
+    ui->idComboBox->removeItem(ui->idComboBox->currentIndex());
 
     ui->renderArea->update();
 }

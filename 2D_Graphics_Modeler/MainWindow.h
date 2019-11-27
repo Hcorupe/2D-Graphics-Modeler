@@ -31,5 +31,6 @@ private slots:
     void on_idComboBox_currentIndexChanged(int index);
     void on_xSpinBox_valueChanged(int arg1);
     void on_ySpinBox_valueChanged(int arg1);
+    void on_deleteShapeButton_clicked();
 };
 #endif // MAINWINDOW_H
