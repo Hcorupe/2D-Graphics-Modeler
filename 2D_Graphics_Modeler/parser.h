@@ -20,6 +20,8 @@
 #include"text.h"
 
 #include"vector.h"
+#include<cassert>
+
 
 using namespace std;
 
