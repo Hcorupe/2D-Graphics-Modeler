@@ -8,6 +8,7 @@
 
 #include<iostream>
 #include<fstream>
+#include<assert.h>
 //#include"vector.h"
 
 using namespace std;
