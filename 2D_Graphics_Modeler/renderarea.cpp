@@ -10,14 +10,10 @@ RenderArea::RenderArea(QWidget *parent) : QWidget(parent)
 void RenderArea::paintEvent(QPaintEvent * /* event */)
 {
 
-//    Parser parser;
-//    vector<QPoint> point;
-//    int id;
-//    Qt::GlobalColor penColor;
-//    int penWidth;
-//    Qt::PenStyle penStyle;
-//    Qt::PenCapStyle penCapStyle;
-//    Qt::PenJoinStyle penJoinStyle;
+    Parser parser;
+
+    cerr << (parser.fileOpen()? "in":"out");
+
 
 //    parser.skipLine();
 //    parser.readShapeId();

@@ -8,7 +8,18 @@
 
 #include<iostream>
 #include<fstream>
-//#include"vector.h"
+
+#include"shape.h"
+#include"line.h"
+#include"polyline.h"
+#include"polygon.h"
+#include"rectangle.h"
+#include"square.h"
+#include"ellipse.h"
+#include"circle.h"
+#include"text.h"
+
+#include"vector.h"
 
 using namespace std;
 
@@ -31,6 +42,18 @@ const int TEXT_FAMILY = 16;
 const int TEXT_STYLE = 15;
 const int TEXT_WEIGHT = 16;
 
+enum SHAPE
+{
+    LINE,
+    POLYLINE,
+    POLYGON,
+    RECTANGLE,
+    SQUARE,
+    ELLIPSE,
+    CIRCLE,
+    TEXT
+};
+
 class Parser
 {
     ifstream fin;
@@ -44,7 +67,7 @@ public:
 
 	void skipLine();
 	int  readShapeId();
-	void readShapeType();
+    SHAPE readShapeType();
     void readLineDimensions(vector<QPoint> &points);
     void readPolyDimensions(vector<QPoint> &points);
     void readRectangleDimensions(QPoint &topLeft, int &length, int &width);
@@ -66,6 +89,7 @@ public:
     string readTextFamily();
     QFont::Style readTextStyle();
     QFont::Weight readTextWeight();
+    void readShape();
 
 
 	void outputEmptyLine() const;
@@ -92,9 +116,11 @@ public:
     void outputTextFamily() const;
     void outputTextStyle() const;
     void outputTextWeight() const;
+    bool fileOpen() const;
 
 
 private:
+    vector<Shape*> list;
     int id;
     string shapeType;
     int x1, y1;

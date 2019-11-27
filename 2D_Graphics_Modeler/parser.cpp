@@ -32,8 +32,8 @@ Parser::Parser()
     textStyle.clear();
     textWeight.clear();
 
-    fin.open(":/new/shapes.txt");
-    fout.open("output.txt");
+    fin.open("shapes.txt");
+//    fout.open("output.txt");
 }
 Parser::~Parser()
 {
@@ -55,10 +55,47 @@ int Parser::readShapeId()
     skipLine();
     return id;
 }
-void Parser::readShapeType()
+SHAPE Parser::readShapeType()
 {
     fin.ignore(SHAPE_TYPE, '\n');
     getline(fin, shapeType);
+
+    if(shapeType == "Line")
+     {
+       return SHAPE::LINE;
+     }
+     else if(shapeType == "Polyline")
+     {
+         return SHAPE::POLYLINE;
+     }
+     else if(shapeType == "Polygon")
+     {
+         return SHAPE::POLYGON;
+     }
+     else if(shapeType == "Rectangle")
+     {
+         return SHAPE::RECTANGLE;
+     }
+     else if(shapeType == "Square")
+     {
+         return SHAPE::SQUARE;
+     }
+     else if(shapeType == "Ellipse")
+     {
+         return SHAPE::ELLIPSE;
+     }
+     else if(shapeType == "Circle")
+     {
+         return SHAPE::CIRCLE;
+     }
+     else if(shapeType == "Text")
+     {
+         return SHAPE::TEXT;
+     }
+     else
+     {
+         assert(false);
+     }
 }
 void Parser::readLineDimensions(vector<QPoint> &points)
 {
@@ -539,6 +576,69 @@ QFont::Weight Parser::readTextWeight()
 
 
 
+void Parser::readShape()
+{
+//    SHAPE type;
+//    vector<QPoint> point;
+
+//    int length, width;
+//    int majorAx, minorAx;
+//    int radius;
+
+//    Qt::GlobalColor pColor;
+//    int pWidth;
+//    Qt::PenStyle pStyle;
+//    Qt::PenCapStyle pCapStyle;
+//    Qt::PenJoinStyle pJoinStyle;
+//    Qt::GlobalColor bColor;
+//    Qt::BrushStyle bStyle;
+//    Qt::GlobalColor txtColor;
+//    Qt::AlignmentFlag txtAlign;
+//    QFont::Style txtStyle;
+//    QFont::Weight txtWeight;
+
+
+
+
+
+//    skipLine();
+//    readShapeId();
+//    type = readShapeType();
+
+//    switch (type)
+//    {
+//    case(LINE): readLineDimensions(point);
+//    case(POLYLINE): readPolyDimensions(point);
+//    case(POLYGON):  readRectangleDimensions(point[0], length, width);
+//    case(RECTANGLE):
+//    case(SQUARE):
+//    case(ELLIPSE):
+//    case(CIRCLE):
+//    case(TEXT):
+//    defualt:
+//    }
+
+
+
+
+
+
+
+
+
+
+
+////    readLineDimensions();
+//    readPenColor();
+//    readPenWidth();
+//    readPenStyle();
+//    readPenCapStyle();
+//    readPenJoinStyle();
+
+}
+
+
+
 
 
 
@@ -649,6 +749,12 @@ void Parser::outputTextWeight() const
 {
     cout << "TextFontWeight: " << textWeight << endl;
 }
+
+bool Parser::fileOpen() const
+{
+    return (fin? true:false);
+}
+
 
 
 
