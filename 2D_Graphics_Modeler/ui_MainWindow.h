@@ -47,10 +47,10 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(1037, 619);
+        MainWindow->resize(1037, 721);
         tabWidget = new QTabWidget(MainWindow);
         tabWidget->setObjectName(QStringLiteral("tabWidget"));
-        tabWidget->setGeometry(QRect(0, 0, 1041, 621));
+        tabWidget->setGeometry(QRect(0, 0, 1041, 721));
         MainTab = new QWidget();
         MainTab->setObjectName(QStringLiteral("MainTab"));
         idComboBox = new QComboBox(MainTab);
@@ -65,9 +65,11 @@ public:
         xSpinBox = new QSpinBox(MainTab);
         xSpinBox->setObjectName(QStringLiteral("xSpinBox"));
         xSpinBox->setGeometry(QRect(200, 540, 42, 22));
+        xSpinBox->setMaximum(1000);
         ySpinBox = new QSpinBox(MainTab);
         ySpinBox->setObjectName(QStringLiteral("ySpinBox"));
         ySpinBox->setGeometry(QRect(270, 540, 42, 22));
+        ySpinBox->setMaximum(500);
         xLabel = new QLabel(MainTab);
         xLabel->setObjectName(QStringLiteral("xLabel"));
         xLabel->setGeometry(QRect(180, 540, 21, 16));
@@ -76,10 +78,10 @@ public:
         label->setGeometry(QRect(250, 540, 21, 16));
         newShapeButton = new QPushButton(MainTab);
         newShapeButton->setObjectName(QStringLiteral("newShapeButton"));
-        newShapeButton->setGeometry(QRect(330, 540, 93, 28));
+        newShapeButton->setGeometry(QRect(20, 600, 93, 28));
         deleteShapeButton = new QPushButton(MainTab);
         deleteShapeButton->setObjectName(QStringLiteral("deleteShapeButton"));
-        deleteShapeButton->setGeometry(QRect(430, 540, 93, 28));
+        deleteShapeButton->setGeometry(QRect(20, 570, 93, 28));
         renderArea = new RenderArea(MainTab);
         renderArea->setObjectName(QStringLiteral("renderArea"));
         renderArea->setGeometry(QRect(20, 10, 1000, 500));

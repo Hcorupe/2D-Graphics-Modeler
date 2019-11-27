@@ -1,4 +1,4 @@
-
+#include <cassert>
 #include "parser.h"
 
 
@@ -38,7 +38,7 @@ Parser::Parser()
 Parser::~Parser()
 {
 	fin.close();
-	fout.close();
+//	fout.close();
 }
 
 

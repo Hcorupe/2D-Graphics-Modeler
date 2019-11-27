@@ -164,6 +164,7 @@ public:
         --size_v;
         return p;
     }
+
 };
 }
 

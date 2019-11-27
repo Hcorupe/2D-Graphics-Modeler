@@ -18,13 +18,20 @@ class RenderArea : public QWidget
     Q_OBJECT
 public:
     explicit RenderArea(QWidget *parent = nullptr);
+    myStd::vector<Shape*> shapes;
+    myStd::vector<Text*> shapeLabels;
 
 protected:
-    void paintEvent(QPaintEvent *event) override;
+    void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
 
 signals:
 
 public slots:
+
+private:
+
+
+
 };
 
 #endif // RENDERAREA_H

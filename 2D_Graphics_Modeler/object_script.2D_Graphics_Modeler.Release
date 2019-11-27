@@ -1,0 +1,12 @@
+INPUT(
+./release\login.o
+./release\main.o
+./release\MainWindow.o
+./release\CS1C_Vector_Templated_v3.o
+./release\parser.o
+./release\renderarea.o
+./release\qrc_myResource.o
+./release\moc_MainWindow.o
+./release\moc_login.o
+./release\moc_renderarea.o
+);

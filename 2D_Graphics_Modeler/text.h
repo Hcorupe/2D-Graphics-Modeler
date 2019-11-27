@@ -11,7 +11,7 @@ class Text: public Shape
         {
             message = "Text";
             width   = 500;
-            length  = 500;
+            height  = 500;
             font.setFamily("Times");
             font.setStyle(QFont::StyleNormal);
             font.setWeight(QFont::Normal);
@@ -21,12 +21,12 @@ class Text: public Shape
 
         }
 
-        Text(int ID, QPoint sPoint, int l, int w, QString text, Qt::GlobalColor color, Qt::Alignment align,
+        Text(int ID, QPoint sPoint, int w, int h, QString text, Qt::GlobalColor color, Qt::Alignment align,
              int pointSize, QString family, QFont::Style style, QFont::Weight weight)
                 :Shape(ID, sPoint, color, 0, Qt::SolidLine, Qt::SquareCap, Qt::BevelJoin, Qt::white,
                        Qt::SolidPattern)
         {
-            length = l;
+            height = h;
             width  = w;
             message = text;
             alignment = align;
@@ -44,7 +44,7 @@ class Text: public Shape
             painter.setPen(getPen());
             painter.setFont(font);
 
-            painter.drawText(getStartPoint().rx(), getStartPoint().ry(), width, length, alignment, message);
+            painter.drawText(getStartPoint().rx(), getStartPoint().ry(), width, height, alignment, message);
             painter.end();
         }
 
@@ -86,7 +86,7 @@ class Text: public Shape
     private:
         QFont font;
         Qt::Alignment alignment;
-        int length;
+        int height;
         int width;
         QString message;
 

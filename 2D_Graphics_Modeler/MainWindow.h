@@ -14,6 +14,7 @@ class MainWindow : public QWidget
 {
     Q_OBJECT
 
+
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
@@ -21,9 +22,14 @@ public:
 private:
     Ui::MainWindow *ui;
     Login* login;
+    Shape* selectedShape;
+    Text* selectedShapeLabel;
 
 private slots:
     void disableEdit();
 
+    void on_idComboBox_currentIndexChanged(int index);
+    void on_xSpinBox_valueChanged(int arg1);
+    void on_ySpinBox_valueChanged(int arg1);
 };
 #endif // MAINWINDOW_H
