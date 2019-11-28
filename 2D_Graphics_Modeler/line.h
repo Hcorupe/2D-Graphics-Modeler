@@ -4,7 +4,7 @@
 #include "shape.h"
 
 /*!
- * \brief The Line class inherits from Shape
+ * \brief The Line class inherits from Shape.
  */
 class Line : public Shape
 {
