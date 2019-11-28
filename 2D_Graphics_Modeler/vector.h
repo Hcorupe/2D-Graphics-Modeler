@@ -8,7 +8,7 @@ using std::copy;
 namespace myStd
 {
 
-
+//! Templated Vector class
 template<typename T>
 class vector
 {
@@ -21,25 +21,32 @@ class vector
           if size_v < space there is space for (space - size_v) Ts after elem[size_v-1]
     */
    
-    int size_v;     // the size
-    T *elem; 		// pointer to the elements (or 0)
-    int space;      // number of elements plus number of free slots
+    //! Vector's size
+    int size_v;
+    //! Pointer to elements
+    T *elem;
+    //! Number of elements plus number of free slots
+    int space;
     int shape_ID;    // from input file 
 
 public:
+    //! Default constructor
     vector() : size_v{0}, elem{nullptr}, space{0} {} // default constructor
 
+    //! Alternate constructor
     explicit vector(int s) : size_v{s}, elem{new T[s]}, space{s} // alternate constructor
     {
         for (int i = 0; i < size_v; ++i)
             elem[i] = T(); // elements are initialized
     }
 
+    //! Copy constructor
     vector(const vector &src) : size_v{src.size_v}, elem{new T[src.size_v]}, space{src.space} // copy constructor
     {
         copy(src.elem, src.elem + size_v, elem); // copy elements - std::copy() algorithm
     }
 
+    //! Copy assignment
     vector &operator=(const vector &src) // copy assignment
     {
         T *p = new T[src.size_v];       // allocate new space
@@ -50,30 +57,54 @@ public:
         return *this;  // return a self-reference
     }
 
+    //! Destructor
     ~vector() {
         delete[] elem; // destructor
     }
 
+    /*!
+     * \brief operator [] returns element and index n
+     * \param n
+     * \return T element at index n
+     */
     T &operator[](int n)
     {
     	assert(n >= 0 && n < size_v);
         return elem[n]; // access: return reference
     }
 
+    /*!
+     * \brief operator [] returns constant element at index n
+     * \param n
+     * \return const T element at index n
+     */
     const T &operator[](int n) const
     {
     	assert(n >= 0 && n < size_v);
         return elem[n];
     }
 
+    /*!
+     * \brief size returns vector's size
+     * \return int vector size
+     */
     int size() const {
         return size_v;
     }
 
+    /*!
+     * \brief capacity returns vector's capacity
+     * \return int vector capacity
+     */
     int capacity() const {
         return space;
     }
 
+    /*!
+     * \brief resize grows vector to have newsize elements
+     * Initializes each element with default value
+     * \param newsize
+     */
     void resize(int newsize) // growth
     // make the vector have newsize elements
     // initialize each new element with the default value
@@ -84,6 +115,10 @@ public:
         size_v = newsize;
     }
 
+    /*!
+     * \brief push_back adds newItem to vector
+     * \param newItem
+     */
     void push_back(T newItem)
     // increase vector size by one; initialize the new element with d
     {
@@ -95,6 +130,10 @@ public:
         ++size_v;               // increase the size (size_v is the number of elements)
     }
 
+    /*!
+     * \brief reserve allocates new space in vector
+     * \param newAlloc
+     */
     void reserve(int newAlloc)
     {
         if(newAlloc > space)	// never decrease allocation
@@ -110,6 +149,10 @@ public:
     using iterator = T *;
     using const_iterator = const T *;
 
+    /*!
+     * \brief begin points to first element
+     * \return iterator to first element
+     */
     iterator begin() // points to first element
     {
         if (size_v == 0)
@@ -117,6 +160,10 @@ public:
         return &elem[0];
     }
 
+    /*!
+     * \brief begin points to first element
+     * \return constant iterator to first element
+     */
     const_iterator begin() const
     {
         if (size_v == 0)
@@ -124,6 +171,10 @@ public:
         return &elem[0];
     }
 
+    /*!
+     * \brief end points to one beyond last element
+     * \return iterator to one beyond last element
+     */
     iterator end() // points to one beyond the last element
     {
         if (size_v == 0)
@@ -131,6 +182,10 @@ public:
         return &elem[size_v];
     }
 
+    /*!
+     * \brief end points to one beyond last element
+     * \return constant iterator to one beyond last element
+     */
     const_iterator end() const
     {
         if (size_v == 0)
@@ -138,6 +193,12 @@ public:
         return &elem[size_v];
     }
 
+    /*!
+     * \brief insert a new element before p
+     * \param p
+     * \param val
+     * \return iterator to p
+     */
     iterator insert(iterator p, const T &val) // insert a new element val before p
     {
     	// first ensure that the vector is not full and second make sure it
@@ -154,6 +215,11 @@ public:
         return p;
     }
 
+    /*!
+     * \brief erase removes element pointed to by p
+     * \param p
+     * \return iterator to p
+     */
     iterator erase(iterator p) // remove element pointed to by p
     {
         if (p < begin() || p >= end())	// makes sure that the element is within bound

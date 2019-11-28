@@ -4,10 +4,14 @@
 #include "shape.h"
 #include "vector.h"
 
+/*!
+ * \brief The Polyline class inherits from Shape class.
+ */
 class Polyline: public Shape
 {
     public:
 
+        //! Default constructor
         Polyline()
         {
             QPoint p1(20,50);
@@ -18,6 +22,16 @@ class Polyline: public Shape
             points.push_back(p3);
         }
 
+        /*!
+         * \brief Alternate constructor
+         * \param ID
+         * \param newPoints
+         * \param penColor
+         * \param penWidth
+         * \param penStyle
+         * \param capStyle
+         * \param joinStyle
+         */
         Polyline(int ID, myStd::vector<QPoint> newPoints, Qt::GlobalColor penColor, int penWidth, Qt::PenStyle penStyle,
                 Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle)
                 :Shape(ID, *(newPoints.begin()), penColor, penWidth, penStyle, capStyle, joinStyle, Qt::black, Qt::SolidPattern)
@@ -25,9 +39,14 @@ class Polyline: public Shape
             points = newPoints;
         }
 
-        ~Polyline() {}
+        //! Destructor
+        ~Polyline() override {}
 
-        virtual void draw(QPaintDevice *device)
+        /*!
+         * \brief draws the polyline
+         * \param device
+         */
+        void draw(QPaintDevice *device) override
         {
             painter.begin(device);
             painter.setPen(getPen());
@@ -36,27 +55,75 @@ class Polyline: public Shape
             painter.end();
         }
 
+        /*!
+         * \brief moves polyline
+         * \param point
+         */
+        void move(QPoint point) override
+        {
+            int xOffset;
+            int yOffset;
+
+            xOffset = point.x() - points[0].x();
+            yOffset = point.y() - points[0].y();
+
+            for(int i = 0; i < points.size(); i++)
+            {
+                points[i].setX(points[i].x() + xOffset);
+                points[i].setY(points[i].y() + yOffset);
+            }
+        }
+
+
+        /*!
+         * \brief setPoints sets the point vector of QPoints
+         * \param newPoints
+         */
         void setPoints(const myStd::vector<QPoint> newPoints)
         {
             points = newPoints;
         }
 
+        /*!
+         * \brief getStartPoint returns first point
+         * \return QPoint points[0]
+         */
+        QPoint getStartPoint() override
+        {
+            return points[0];
+        }
+
+        /*!
+         * \brief getPoints returns QPoint vector
+         * \return QPoint vector of points
+         */
         myStd::vector<QPoint> getPoints()
         {
             return points;
         }
 
-        double GetArea()
+        /*!
+         * \brief GetArea returns 0 (Polyline has no area)
+         * \return 0
+         */
+        double GetArea() override
         {
             return 0;
         }
 
-        double GetPerimeter()
+        /*!
+         * \brief GetPerimeter returns 0
+         * \return 0
+         */
+        double GetPerimeter() override
         {
             return 0;
         }
 
     private:
+        /*!
+         * \brief Vector of QPoints of polyline
+         */
         myStd::vector<QPoint> points;
 
 };

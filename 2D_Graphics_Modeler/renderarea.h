@@ -18,6 +18,7 @@ class RenderArea : public QWidget
     Q_OBJECT
 public:
     explicit RenderArea(QWidget *parent = nullptr);
+    ~RenderArea() override;
     myStd::vector<Shape*> shapes;
     myStd::vector<Text*> shapeLabels;
 

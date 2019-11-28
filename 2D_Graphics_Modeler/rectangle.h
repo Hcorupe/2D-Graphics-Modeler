@@ -2,16 +2,39 @@
 #define RECTANGLE_H
 
 #include "shape.h"
+
+//! Rectangle class
+/*!
+ * \brief The Rectangle class inherits from Shape class.
+ */
 class Rectangle : public Shape
 {
       public:
 
+        /*!
+         * \brief Default constructor
+         * Sets Rectangle's length and width to default values
+         */
         Rectangle()
         {
             length = 0;
             width  = 0;
         }
 
+        /*!
+         * \brief Alternate constructor
+         * \param ID
+         * \param sPoint
+         * \param l
+         * \param w
+         * \param penColor
+         * \param penWidth
+         * \param penStyle
+         * \param capStyle
+         * \param joinStyle
+         * \param brushColor
+         * \param brushStyle
+         */
         Rectangle(int ID, QPoint sPoint,  int l, int w, Qt::GlobalColor penColor, int penWidth, Qt::PenStyle penStyle,
                   Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle, Qt::GlobalColor brushColor,
                   Qt::BrushStyle brushStyle)
@@ -21,9 +44,14 @@ class Rectangle : public Shape
             width  = w;
         }
 
-        ~Rectangle(){}
+        //! Destructor
+        ~Rectangle() override {}
 
-        virtual void draw(QPaintDevice* device)
+        /*!
+         * \brief Draws rectangle shape
+         * \param device
+         */
+        void draw(QPaintDevice* device) override
         {
             painter.begin(device);
             painter.setPen(getPen());
@@ -33,38 +61,68 @@ class Rectangle : public Shape
             painter.end();
         }
 
+        /*!
+         * \brief setLength sets rectangle's length
+         * \param lValue
+         */
         virtual void setLength(const int lValue)
         {
             length = lValue;
         }
 
+        /*!
+         * \brief setWidth sets rectangle's width
+         * \param wValue
+         */
         virtual void setWidth(const int wValue)
         {
             width = wValue;
         }
 
-        virtual double GetArea()
+        /*!
+         * \brief GetArea calculates rectangle's area
+         * \return double area
+         */
+        double GetArea() override
         {
             return length * width;
         }
 
-        virtual double GetPerimeter()
+        /*!
+         * \brief GetPerimeter calculates rectangle's perimeter
+         * \return double perimeter
+         */
+        double GetPerimeter() override
         {
             return 2 * (length+width);
         }
 
+        /*!
+         * \brief getLength gets rectangle's length
+         * \return int length
+         */
         int getLength()
         {
             return length;
         }
 
+        /*!
+         * \brief getWidth gets rectangle's width
+         * \return int width
+         */
         int getWidth()
         {
             return width;
         }
 
       private:
+        /*!
+         * \brief Rectangle's length
+         */
         int length;
+        /*!
+         * \brief Rectangle's width
+         */
         int width;
 };
 

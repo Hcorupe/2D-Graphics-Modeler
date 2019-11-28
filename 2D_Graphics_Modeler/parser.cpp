@@ -1,7 +1,7 @@
 #include <cassert>
 #include "parser.h"
 
-
+//! Default constructor
 Parser::Parser()
 {
     id = 0;

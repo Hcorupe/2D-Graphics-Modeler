@@ -32,5 +32,6 @@ private slots:
     void on_xSpinBox_valueChanged(int arg1);
     void on_ySpinBox_valueChanged(int arg1);
     void on_deleteShapeButton_clicked();
+    void on_newShapeButton_clicked();
 };
 #endif // MAINWINDOW_H

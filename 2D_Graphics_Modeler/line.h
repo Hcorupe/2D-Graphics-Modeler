@@ -3,16 +3,31 @@
 
 #include "shape.h"
 
+/*!
+ * \brief The Line class inherits from Shape
+ */
 class Line : public Shape
 {
     public:
 
+        //! Default constructor
         Line()
         {
             endPoint.setX(0);
             endPoint.setY(0);
         }
 
+        /*!
+         * \brief Alternate constructor
+         * \param ID
+         * \param sPoint
+         * \param ePoint
+         * \param penColor
+         * \param penWidth
+         * \param penStyle
+         * \param capStyle
+         * \param joinStyle
+         */
         Line(int ID, QPoint sPoint, QPoint ePoint, Qt::GlobalColor penColor, int penWidth, Qt::PenStyle penStyle,
              Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle)
                 :Shape(ID, sPoint, penColor, penWidth, penStyle, capStyle, joinStyle, Qt::black, Qt::SolidPattern)
@@ -20,9 +35,14 @@ class Line : public Shape
             endPoint = ePoint;
         }
 
-        ~Line() {}
+        //! Destructor
+        ~Line() override {}
 
-        virtual void draw(QPaintDevice* device)
+        /*!
+         * \brief draws line
+         * \param device
+         */
+        void draw(QPaintDevice* device) override
         {
             painter.begin(device);
             painter.setPen(getPen());
@@ -31,23 +51,57 @@ class Line : public Shape
             painter.end();
         }
 
+        /*!
+         * \brief moves line, start point is moved to point
+         * \param point
+         */
+        void move(QPoint point) override
+        {
+            int xOffset;
+            int yOffset;
+
+            xOffset = point.x() - getStartPoint().x();
+            yOffset = point.y() - getStartPoint().y();
+
+            endPoint.setX(endPoint.x() + xOffset);
+            endPoint.setY(endPoint.y() + yOffset);
+
+            setStartPoint(point);
+
+        }
+
+        /*!
+         * \brief getEndPoint gets end point
+         * \return QPoint endPoint
+         */
         QPoint getEndPoint()
         {
             return endPoint;
         }
 
-        void setEndPoint(int x, int y)
+        /*!
+         * \brief setEndPoint sets end point
+         * \param point
+         */
+        void setEndPoint(QPoint point)
         {
-            endPoint.setX(x);
-            endPoint.setY(y);
+            endPoint = point;
         }
 
-        double GetArea()
+        /*!
+         * \brief GetArea returns 0
+         * \return 0
+         */
+        double GetArea() override
         {
             return 0;
         }
 
-        double GetPerimeter()
+        /*!
+         * \brief GetPerimeter returns 0
+         * \return 0
+         */
+        double GetPerimeter() override
         {
             return 0;
         }
@@ -55,7 +109,10 @@ class Line : public Shape
 
 
     private:
-        QPoint endPoint; // Point where line ends
+        /*!
+         * \brief Point where line ends
+         */
+        QPoint endPoint;
 };
 
 #endif // LINE_H

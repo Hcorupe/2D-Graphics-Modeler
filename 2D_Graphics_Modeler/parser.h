@@ -63,61 +63,161 @@ class Parser
 
 
 public:
+    //! Default constructor
 	Parser();
+    //! Destructor
 	~Parser();
 
 
-	void skipLine();
+    //! skipLine skips a line in input file
+    void skipLine();
+
+    //! readShapeID reads shapeID from file
 	int  readShapeId();
+
+    //! readShapeType reads shape type from file
     SHAPE readShapeType();
+
+    //! readLineDimensions reads point vector from file
     void readLineDimensions(vector<QPoint> &points);
+
+    //! readPolyDimensions reads point vector from file
     void readPolyDimensions(vector<QPoint> &points);
+
+    //! readRectangleDimensions reads rect dimensions from file
     void readRectangleDimensions(QPoint &topLeft, int &length, int &width);
+
+    //! readSquareDimensions reads square dimensions from file
     void readSquareDimensions(QPoint &topLeft, int &length);
+
+    //! readEllipseDimensions reads ellipse dimensions from file
     void readEllipseDimensions(QPoint &topLeft, int &majorAx, int &minorAx);
+
+    //! readCircleDimensions reads circle dimensions from file
     void readCircleDimensions(QPoint &topLeft, int &radius);
+
+    //! readTextDimensions reads text dimensions from file
     void readTextDimensions(QPoint &topLeft, int &length, int &width);
+
+    //! readPenColor reads in pen color from file
     Qt::GlobalColor readPenColor();
+
+    //! readPenWidth reads pen width from file
     int readPenWidth();
+
+    //! readPenStyle reads pen style from file
     Qt::PenStyle readPenStyle();
+
+    //! readPenCapStyle reads pen cap style from file
     Qt::PenCapStyle readPenCapStyle();
+
+    //! readPenJoinStyle reads pen join style from file
     Qt::PenJoinStyle readPenJoinStyle();
+
+    //! readBrushColor reads brush color from file
     Qt::GlobalColor readBrushColor();
+
+    //! readBrushStyle reads brush style from file
     Qt::BrushStyle readBrushStyle();
+
+    //! readTextString reads text message from file
     string readTextString();
+
+    //! readTextColor reads text color from file
     Qt::GlobalColor readTextColor();
+
+    //! readTextAlignment reads text alignment from file
     Qt::AlignmentFlag readTextAlignment();
+
+    //! readTextSize reads text size from file
     int  readTextSize();
+
+    //! readTextFamily reads text family from file
     string readTextFamily();
+
+    //! readTextStyle reads text style from file
     QFont::Style readTextStyle();
+
+    //! readTextWeight reads text weight from file
     QFont::Weight readTextWeight();
+
+    //! readShape reads entire shape from file
     void readShape();
 
 
+    //! outputEmptyLine ouputs an empty line to file
 	void outputEmptyLine() const;
+
+    //! outputShapeId outputs shapeID to file
 	void outputShapeId() const;
+
+    //! outputShapeType outputs shape type to file
 	void outputShapeType() const;
+
+    //! outputLineDimensions outputs line dimensions to file
 	void outputLineDimensions() const;
+
+    //! outputPolyDimensions outputs polyline/polygon dimentions to file
 	void outputPolyDimensions() const;
+
+    //! outputRectangleDimensions outputs rect dimensions to file
 	void outputRectangleDimensions() const;
+
+    //! outputSquareDimensions outputs square dimensions to file
 	void outputSquareDimensions() const;
+
+    //! outputEllipseDimensions outputs ellipse dimensions to file
 	void outputEllipseDimensions() const;
+
+    //! outputCircleDimensions outputs circle dimensions to file
 	void outputCircleDimensions() const;
+
+    //! outputTextDimensions outputs text dimensions to file
 	void outputTextDimensions() const;
+
+    //! outputPenColor outputs pen color to file
 	void outputPenColor() const;
+
+    //! outputPenWidth outputs pen width to file
 	void outputPenWidth() const;
+
+    //! outputPenStyle outputs pen style to file
 	void outputPenStyle() const;
+
+    //! outputPenCapStyle outputs pen cap style to file
 	void outputPenCapStyle() const;
+
+    //! outputPenJoinStyle outputs pen join style to file
 	void outputPenJoinStyle() const;
+
+    //! outputBrushColor outputs brush color to file
 	void outputBrushColor() const;
+
+    //! outputBrushStyle outputs brush style to file
 	void outputBrushStyle() const;
+
+    //! outputTextString outputs text message to file
     void outputTextString() const;
+
+    //! outputTextColor outputs text color to file
     void outputTextColor() const;
+
+    //! outputTextAlignment outputs text alignment to file
     void outputTextAlignment() const;
+
+    //! outputTextSize outputs text size to file
     void outputTextSize() const;
+
+    //! outputTextFamily outputs text family to file
     void outputTextFamily() const;
+
+    //! outputTextStyle outputs text style to file
     void outputTextStyle() const;
+
+    //! outputTextWeight outputs text weight to file
     void outputTextWeight() const;
+
+    //! fileOpen returns true if input file is open
     bool fileOpen() const;
 
 

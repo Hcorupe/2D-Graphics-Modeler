@@ -6,6 +6,10 @@
 RenderArea::RenderArea(QWidget *parent) : QWidget(parent)
 {
 
+    Parser parser;
+
+    cerr << (parser.fileOpen()? "in":"out");
+
     // Test rendering default shapes (Replace with file parser when finished)
 
     QPoint sPoint(20,90);
@@ -93,27 +97,6 @@ RenderArea::RenderArea(QWidget *parent) : QWidget(parent)
 void RenderArea::paintEvent(QPaintEvent * /* event */)
 {
 
-    Parser parser;
-
-    cerr << (parser.fileOpen()? "in":"out");
-
-
-//    parser.skipLine();
-//    id = parser.readShapeId();
-//    parser.readShapeType();
-//    parser.readLineDimensions(point);
-//    penColor = parser.readPenColor();
-//    penWidth = parser.readPenWidth();
-//    penStyle = parser.readPenStyle();
-//    penCapStyle = parser.readPenCapStyle();
-//    penJoinStyle = parser.readPenJoinStyle();
-
-
-//    Line line1(id, point[0], point[1], penColor, penWidth, penStyle, penCapStyle, penJoinStyle);
-//    line1.draw(this);
-
-
-
     // Draw shapes in vector
 
     for(int i = 0; i < shapes.size(); i++)
@@ -125,4 +108,12 @@ void RenderArea::paintEvent(QPaintEvent * /* event */)
 
 }
 
+RenderArea::~RenderArea()
+{
+    // Deallocate all shapes
+    for(int i = 0; i < shapes.size(); i++)
+    {
+        delete shapes[i];
+    }
+}
 

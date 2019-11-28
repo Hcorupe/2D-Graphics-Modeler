@@ -29,6 +29,18 @@ MainWindow::MainWindow(QWidget *parent)
     connect(login, SIGNAL(finished(int)), this, SLOT(show()));
     connect(login, SIGNAL(finished(int)), this, SLOT(disableEdit()));
 
+    // Add shape types to new shape combobox
+    ui->newShapeComboBox->addItem("Rectangle");
+    ui->newShapeComboBox->addItem("Square");
+    ui->newShapeComboBox->addItem("Ellipse");
+    ui->newShapeComboBox->addItem("Circle");
+    ui->newShapeComboBox->addItem("Polygon");
+    ui->newShapeComboBox->addItem("Polyline");
+    ui->newShapeComboBox->addItem("Line");
+    ui->newShapeComboBox->addItem("Text");
+
+
+
     // Add shape ids to combobox
     for (int i = 0; i < ui->renderArea->shapes.size(); i++)
     {
@@ -79,7 +91,7 @@ void MainWindow::on_xSpinBox_valueChanged(int arg1)
     QPoint newPoint(selectedShape->getStartPoint());
     newPoint.setX(arg1);
 
-    selectedShape->setStartPoint(newPoint);
+    selectedShape->move(newPoint);
 
     // Move shape label y-value
     newPoint = selectedShapeLabel->getStartPoint();
@@ -96,7 +108,7 @@ void MainWindow::on_ySpinBox_valueChanged(int arg1)
     QPoint newPoint(selectedShape->getStartPoint());
     newPoint.setY(arg1);
 
-    selectedShape->setStartPoint(newPoint);
+    selectedShape->move(newPoint);
 
     // Move shape label x-value
     newPoint = selectedShapeLabel->getStartPoint();
@@ -123,4 +135,9 @@ void MainWindow::on_deleteShapeButton_clicked()
     ui->idComboBox->removeItem(ui->idComboBox->currentIndex());
 
     ui->renderArea->update();
+}
+
+void MainWindow::on_newShapeButton_clicked()
+{
+
 }

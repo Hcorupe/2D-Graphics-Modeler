@@ -2,11 +2,14 @@
 #define TEXT_H
 
 #include "shape.h"
-
+/*!
+ * \brief The Text class inherits from Shape class.
+ */
 class Text: public Shape
 {
     public:
 
+        //! Default constructor
         Text()
         {
             message = "Text";
@@ -17,10 +20,22 @@ class Text: public Shape
             font.setWeight(QFont::Normal);
             font.setPointSize(10);
             alignment = Qt::AlignCenter;
-
-
         }
 
+        /*!
+         * \brief Alternate constructor
+         * \param ID
+         * \param sPoint
+         * \param w
+         * \param h
+         * \param text
+         * \param color
+         * \param align
+         * \param pointSize
+         * \param family
+         * \param style
+         * \param weight
+         */
         Text(int ID, QPoint sPoint, int w, int h, QString text, Qt::GlobalColor color, Qt::Alignment align,
              int pointSize, QString family, QFont::Style style, QFont::Weight weight)
                 :Shape(ID, sPoint, color, 0, Qt::SolidLine, Qt::SquareCap, Qt::BevelJoin, Qt::white,
@@ -36,9 +51,10 @@ class Text: public Shape
             font.setWeight(weight);
         }
 
-        ~Text() {}
+        //! Destructor
+        ~Text() override {}
 
-        virtual void draw(QPaintDevice *device)
+        void draw(QPaintDevice *device) override
         {
             painter.begin(device);
             painter.setPen(getPen());
@@ -48,46 +64,79 @@ class Text: public Shape
             painter.end();
         }
 
+        /*!
+         * \brief setFontFamily sets text font family
+         * \param family
+         */
         void setFontFamily(const QString family)
         {
             font.setFamily(family);
         }
 
+        /*!
+         * \brief setStyle sets text style
+         * \param style
+         */
         void setStyle(const QFont::Style style)
         {
             font.setStyle(style);
         }
 
+        /*!
+         * \brief setWeight sets text weight
+         * \param weight
+         */
         void setWeight(const QFont::Weight weight)
         {
             font.setWeight(weight);
         }
 
+        /*!
+         * \brief setPointSize sets text point size
+         * \param size
+         */
         void setPointSize(const int size)
         {
             font.setPointSize(size);
         }
 
+        /*!
+         * \brief setAlignment sets text alignment
+         * \param align
+         */
         void setAlignment(const Qt::Alignment align)
         {
             alignment = align;
         }
 
-        double GetArea()
+        /*!
+         * \brief GetArea returns 0 (Text has no area)
+         * \return 0
+         */
+        double GetArea() override
         {
             return 0;
         }
 
-        double GetPerimeter()
+        /*!
+         * \brief GetPerimeter returns 0 (Text has no perimeter)
+         * \return 0
+         */
+        double GetPerimeter() override
         {
             return 0;
         }
 
     private:
+        //! Text font
         QFont font;
+        //! Text alignment
         Qt::Alignment alignment;
+        //! Text box height
         int height;
+        //! Text box width
         int width;
+        //! Text contents
         QString message;
 
 };
