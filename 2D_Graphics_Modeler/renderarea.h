@@ -12,6 +12,8 @@
 #include "polygon.h"
 #include "text.h"
 
+const int LABEL_OFFSET = 20;
+
 
 class RenderArea : public QWidget
 {

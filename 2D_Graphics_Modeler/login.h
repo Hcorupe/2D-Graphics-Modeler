@@ -7,7 +7,7 @@
 namespace login
 {
     const std::string ADMIN_USERNAME = "admin";     // Administrator username
-    const std::string ADMIN_PASSWORD = "adminpass"; // Administrator password
+    const std::string ADMIN_PASSWORD = "admin"; // Administrator password
 
     const std::string USERNAME = "user"; // Normal user username
     const std::string PASSWORD = "pass"; // Normal user password

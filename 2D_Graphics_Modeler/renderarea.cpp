@@ -80,8 +80,8 @@ RenderArea::RenderArea(QWidget *parent) : QWidget(parent)
     for(int i = 0; i < shapes.size(); i++)
     {
         QPoint point = shapes[i]->getStartPoint();
-        point.setX(point.x() - 10);
-        point.setY(point.y() + 10);
+        point.setX(point.x() - LABEL_OFFSET);
+        point.setY(point.y() + LABEL_OFFSET);
 
         Text* text = new Text(8,point,500,50,QString::number(shapes[i]->getShapeId()),Qt::black,Qt::AlignLeft,10,"Sans Serif",QFont::StyleNormal,QFont::Normal);
 

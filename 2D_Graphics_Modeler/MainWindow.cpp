@@ -1,17 +1,6 @@
 #include "MainWindow.h"
-#include "login.h"
 #include "ui_MainWindow.h"
-#include "shape.h"
-#include "rectangle.h"
-#include "square.h"
-#include "ellipse.h"
-#include "circle.h"
-#include "line.h"
-#include "polygon.h"
-#include "polyline.h"
-#include "text.h"
-#include "vector.h"
-#include <iostream>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QWidget(parent)
@@ -28,16 +17,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(login, SIGNAL(finished(int)), this, SLOT(show()));
     connect(login, SIGNAL(finished(int)), this, SLOT(disableEdit()));
-
-    // Add shape types to new shape combobox
-    ui->newShapeComboBox->addItem("Rectangle");
-    ui->newShapeComboBox->addItem("Square");
-    ui->newShapeComboBox->addItem("Ellipse");
-    ui->newShapeComboBox->addItem("Circle");
-    ui->newShapeComboBox->addItem("Polygon");
-    ui->newShapeComboBox->addItem("Polyline");
-    ui->newShapeComboBox->addItem("Line");
-    ui->newShapeComboBox->addItem("Text");
 
 
 
@@ -87,15 +66,15 @@ void MainWindow::on_idComboBox_currentIndexChanged(int index)
 void MainWindow::on_xSpinBox_valueChanged(int arg1)
 {
 
-    // Move shape y-value
+    // Move shape x-value
     QPoint newPoint(selectedShape->getStartPoint());
     newPoint.setX(arg1);
 
     selectedShape->move(newPoint);
 
-    // Move shape label y-value
+    // Move shape label x-value
     newPoint = selectedShapeLabel->getStartPoint();
-    newPoint.setX(arg1 - 10);
+    newPoint.setX(arg1 - LABEL_OFFSET);
     selectedShapeLabel->setStartPoint(newPoint);
 
     ui->renderArea->update();
@@ -104,15 +83,15 @@ void MainWindow::on_xSpinBox_valueChanged(int arg1)
 
 void MainWindow::on_ySpinBox_valueChanged(int arg1)
 {
-    // Move shape x-value
+    // Move shape y-value
     QPoint newPoint(selectedShape->getStartPoint());
     newPoint.setY(arg1);
 
     selectedShape->move(newPoint);
 
-    // Move shape label x-value
+    // Move shape label y-value
     newPoint = selectedShapeLabel->getStartPoint();
-    newPoint.setY(arg1 + 10);
+    newPoint.setY(arg1 + LABEL_OFFSET);
     selectedShapeLabel->setStartPoint(newPoint);
 
     ui->renderArea->update();
@@ -139,5 +118,17 @@ void MainWindow::on_deleteShapeButton_clicked()
 
 void MainWindow::on_newShapeButton_clicked()
 {
+    newShapeWindow = new NewShape;
+    connect(newShapeWindow, SIGNAL(sendShape(Shape*,Text*)), this, SLOT(receiveShape(Shape*,Text*)));
+    newShapeWindow->show();
+}
 
+void MainWindow::receiveShape(Shape* shape, Text* text)
+{
+    ui->renderArea->shapes.push_back(shape);
+    ui->renderArea->shapeLabels.push_back(text);
+
+    ui->idComboBox->addItem(QString::number(shape->getShapeId()));
+
+    ui->renderArea->update();
 }

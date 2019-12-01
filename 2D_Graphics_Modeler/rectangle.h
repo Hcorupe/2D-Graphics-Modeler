@@ -17,8 +17,8 @@ class Rectangle : public Shape
          */
         Rectangle()
         {
-            length = 0;
-            width  = 0;
+            length = 10;
+            width  = 10;
         }
 
         /*!

@@ -4,6 +4,18 @@
 #include <QWidget>
 #include "login.h"
 #include "renderarea.h"
+#include "shape.h"
+#include "rectangle.h"
+#include "square.h"
+#include "ellipse.h"
+#include "circle.h"
+#include "line.h"
+#include "polygon.h"
+#include "polyline.h"
+#include "text.h"
+#include "vector.h"
+#include <iostream>
+#include "newshape.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -22,6 +34,7 @@ public:
 private:
     Ui::MainWindow *ui;
     Login* login;
+    NewShape* newShapeWindow;
     Shape* selectedShape;
     Text* selectedShapeLabel;
 
@@ -33,5 +46,6 @@ private slots:
     void on_ySpinBox_valueChanged(int arg1);
     void on_deleteShapeButton_clicked();
     void on_newShapeButton_clicked();
+    void receiveShape(Shape* shape, Text* text);
 };
 #endif // MAINWINDOW_H

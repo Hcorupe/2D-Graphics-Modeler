@@ -20,6 +20,7 @@ SOURCES += \
     main.cpp \
     MainWindow.cpp \
     CS1C_Vector_Templated_v3.cpp \
+    newshape.cpp \
     parser.cpp \
     renderarea.cpp
 
@@ -28,6 +29,7 @@ HEADERS += \
     circle.h \
     line.h \
     login.h \
+    newshape.h \
     parser.h \
     polygon.h \
     polyline.h \
@@ -41,7 +43,8 @@ HEADERS += \
 
 FORMS += \
     MainWindow.ui \
-    login.ui
+    login.ui \
+    newshape.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
