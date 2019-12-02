@@ -32,6 +32,7 @@ NewShape::NewShape(QWidget *parent) :
     fontFamily = "Comic Sans MS";
     fontStyle  = QFont::StyleNormal;
     fontWeight = QFont::Normal;
+    alignment  = Qt::AlignLeft;
 
 
 }
@@ -55,6 +56,7 @@ void NewShape::on_shapeTypeComboBox_currentIndexChanged(int index)
 
         enableEndPoint(false);
         enableText(false);
+        enablePoly(false);
 
         break;
 
@@ -67,6 +69,7 @@ void NewShape::on_shapeTypeComboBox_currentIndexChanged(int index)
         enableWidth(false);
         enableEndPoint(false);
         enableText(false);
+        enablePoly(false);
 
         break;
 
@@ -78,6 +81,7 @@ void NewShape::on_shapeTypeComboBox_currentIndexChanged(int index)
 
         enableEndPoint(false);
         enableText(false);
+        enablePoly(false);
 
         break;
 
@@ -90,6 +94,7 @@ void NewShape::on_shapeTypeComboBox_currentIndexChanged(int index)
         enableWidth(false);
         enableEndPoint(false);
         enableText(false);
+        enablePoly(false);
 
         break;
 
@@ -101,11 +106,13 @@ void NewShape::on_shapeTypeComboBox_currentIndexChanged(int index)
         enableText(false);
         enableDimensions(false);
         enableBrush(false);
+        enablePoly(false);
 
         break;
 
     case POLYLINE:
         enablePen(true);
+        enablePoly(true);
 
         enableEndPoint(false);
         enableText(false);
@@ -116,6 +123,7 @@ void NewShape::on_shapeTypeComboBox_currentIndexChanged(int index)
     case POLYGON:
         enablePen(true);
         enableBrush(true);
+        enablePoly(true);
 
         enableEndPoint(false);
         enableText(false);
@@ -129,6 +137,7 @@ void NewShape::on_shapeTypeComboBox_currentIndexChanged(int index)
         enableEndPoint(false);
         enableBrush(false);
         enablePen(false);
+        enablePoly(false);
         break;
     }
 }
@@ -171,15 +180,24 @@ void NewShape::on_buttonBox_accepted()
         break;
 
     case LINE:
+        shape = new Line(id,sPoint,ePoint,penColor,penWidth,
+                         penStyle,capStyle,joinStyle);
         break;
 
     case POLYLINE:
+        shape = new Polyline(id,points,penColor,penWidth,
+                             penStyle,capStyle,joinStyle);
         break;
 
     case POLYGON:
+        shape = new Polygon(id,points,penColor,penWidth,
+                            penStyle,capStyle,joinStyle,
+                            brushColor,brushStyle);
         break;
 
     case TEXT:
+        shape = new Text(id,sPoint,length,width,text,textColor,alignment,
+                         pointSize,fontFamily,fontStyle,fontWeight);
         break;
     }
 
@@ -234,6 +252,7 @@ void NewShape::enableText(bool enable)
     ui->fontFamilyComboBox->setEnabled(enable);
     ui->fontWeightComboBox->setEnabled(enable);
     ui->pointSizeSpinBox->setEnabled(enable);
+    ui->alignmentComboBox->setEnabled(enable);
 }
 
 void NewShape::enablePen(bool enable)
@@ -251,6 +270,11 @@ void NewShape::enableBrush(bool enable)
     ui->brushStyleComboBox->setEnabled(enable);
 }
 
+void NewShape::enablePoly(bool enable)
+{
+    ui->addPointButton->setEnabled(enable);
+    ui->clearPointsButton->setEnabled(enable);
+}
 
 Qt::GlobalColor NewShape::readColor(int current)
 {
@@ -308,11 +332,13 @@ void NewShape::on_shapeIDSpinBox_valueChanged(int arg1)
 void NewShape::on_xSpinBox_valueChanged(int arg1)
 {
     sPoint.setX(arg1);
+    ui->pointAddedLabel->clear();
 }
 
 void NewShape::on_ySpinBox_valueChanged(int arg1)
 {
     sPoint.setY(arg1);
+    ui->pointAddedLabel->clear();
 }
 
 void NewShape::on_lSpinBox_valueChanged(int arg1)
@@ -433,4 +459,106 @@ void NewShape::on_brushStyleComboBox_currentIndexChanged(int index)
     case NO_BRUSH:
         brushStyle = Qt::NoBrush;
     }
+}
+
+void NewShape::on_textEdit_textChanged(const QString &arg1)
+{
+    text = arg1;
+}
+
+void NewShape::on_pointSizeSpinBox_valueChanged(int arg1)
+{
+    pointSize = arg1;
+}
+
+void NewShape::on_textColorComboBox_currentIndexChanged(int index)
+{
+    textColor = readColor(index);
+}
+
+
+void NewShape::on_fontFamilyComboBox_currentIndexChanged(const QString &arg1)
+{
+    fontFamily = arg1;
+}
+
+void NewShape::on_fontStyleComboBox_currentIndexChanged(int index)
+{
+    switch(index)
+    {
+    case NORMAL:
+        fontStyle = QFont::StyleNormal;
+        break;
+
+    case ITALIC:
+        fontStyle = QFont::StyleItalic;
+        break;
+
+    case OBLIQUE:
+        fontStyle = QFont::StyleOblique;
+    }
+}
+
+void NewShape::on_fontWeightComboBox_currentIndexChanged(int index)
+{
+    switch(index)
+    {
+    case NORMAL_W:
+        fontWeight = QFont::Normal;
+        break;
+
+    case LIGHT:
+        fontWeight = QFont::Light;
+        break;
+
+    case THIN:
+        fontWeight = QFont::Thin;
+        break;
+
+    case BOLD:
+        fontWeight = QFont::Bold;
+    }
+}
+
+void NewShape::on_alignmentComboBox_currentIndexChanged(int index)
+{
+    switch(index)
+    {
+    case LEFT:
+        alignment = Qt::AlignLeft;
+        break;
+
+    case RIGHT:
+        alignment = Qt::AlignRight;
+        break;
+
+    case TOP:
+        alignment = Qt::AlignTop;
+        break;
+
+    case BOTTOM:
+        alignment = Qt::AlignBottom;
+        break;
+
+    case CENTER:
+        alignment = Qt::AlignCenter;
+    }
+}
+
+void NewShape::on_addPointButton_clicked()
+{
+    QPoint point = sPoint;
+    points.push_back(point);
+    ui->pointAddedLabel->setText("Point added.");
+}
+
+void NewShape::on_clearPointsButton_clicked()
+{
+
+    for(QPoint* current = points.begin(); current != points.end(); current++)
+    {
+        points.erase(current);
+    }
+
+    ui->pointAddedLabel->setText("Points cleared.");
 }

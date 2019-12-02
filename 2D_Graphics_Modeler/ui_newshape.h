@@ -20,6 +20,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpinBox>
 
 QT_BEGIN_NAMESPACE
@@ -82,13 +83,18 @@ public:
     QFrame *line_5;
     QFrame *line_6;
     QDialogButtonBox *buttonBox;
+    QComboBox *alignmentComboBox;
+    QLabel *label_6;
+    QPushButton *addPointButton;
+    QPushButton *clearPointsButton;
+    QLabel *pointAddedLabel;
 
     void setupUi(QDialog *NewShape)
     {
         if (NewShape->objectName().isEmpty())
             NewShape->setObjectName(QStringLiteral("NewShape"));
         NewShape->setWindowModality(Qt::ApplicationModal);
-        NewShape->resize(575, 575);
+        NewShape->resize(610, 615);
         NewShape->setModal(true);
         lSpinBox = new QSpinBox(NewShape);
         lSpinBox->setObjectName(QStringLiteral("lSpinBox"));
@@ -101,34 +107,34 @@ public:
         xLabel->setGeometry(QRect(364, 110, 16, 20));
         penStyleLabel = new QLabel(NewShape);
         penStyleLabel->setObjectName(QStringLiteral("penStyleLabel"));
-        penStyleLabel->setGeometry(QRect(28, 268, 41, 16));
+        penStyleLabel->setGeometry(QRect(28, 293, 41, 16));
         capStyleComboBox = new QComboBox(NewShape);
         capStyleComboBox->setObjectName(QStringLiteral("capStyleComboBox"));
-        capStyleComboBox->setGeometry(QRect(246, 266, 80, 22));
+        capStyleComboBox->setGeometry(QRect(246, 291, 80, 22));
         brushStyleLabel = new QLabel(NewShape);
         brushStyleLabel->setObjectName(QStringLiteral("brushStyleLabel"));
-        brushStyleLabel->setGeometry(QRect(391, 268, 41, 16));
+        brushStyleLabel->setGeometry(QRect(411, 293, 41, 16));
         brushColorComboBox = new QComboBox(NewShape);
         brushColorComboBox->setObjectName(QStringLiteral("brushColorComboBox"));
-        brushColorComboBox->setGeometry(QRect(430, 226, 80, 22));
+        brushColorComboBox->setGeometry(QRect(450, 251, 80, 22));
         brushStyleComboBox = new QComboBox(NewShape);
         brushStyleComboBox->setObjectName(QStringLiteral("brushStyleComboBox"));
-        brushStyleComboBox->setGeometry(QRect(430, 266, 80, 22));
+        brushStyleComboBox->setGeometry(QRect(450, 291, 80, 22));
         sPointLabel = new QLabel(NewShape);
         sPointLabel->setObjectName(QStringLiteral("sPointLabel"));
         sPointLabel->setGeometry(QRect(288, 110, 71, 20));
         penColorComboBox = new QComboBox(NewShape);
         penColorComboBox->setObjectName(QStringLiteral("penColorComboBox"));
-        penColorComboBox->setGeometry(QRect(67, 226, 101, 22));
+        penColorComboBox->setGeometry(QRect(67, 251, 101, 22));
         brushLabel = new QLabel(NewShape);
         brushLabel->setObjectName(QStringLiteral("brushLabel"));
-        brushLabel->setGeometry(QRect(410, 188, 61, 20));
+        brushLabel->setGeometry(QRect(430, 213, 61, 20));
         brushLabel->setFrameShape(QFrame::Box);
         brushLabel->setFrameShadow(QFrame::Sunken);
         brushLabel->setAlignment(Qt::AlignCenter);
         penLabel = new QLabel(NewShape);
         penLabel->setObjectName(QStringLiteral("penLabel"));
-        penLabel->setGeometry(QRect(150, 188, 61, 20));
+        penLabel->setGeometry(QRect(150, 213, 61, 20));
         penLabel->setFrameShape(QFrame::Box);
         penLabel->setFrameShadow(QFrame::Sunken);
         penLabel->setAlignment(Qt::AlignCenter);
@@ -137,7 +143,7 @@ public:
         yLabel->setGeometry(QRect(430, 112, 16, 16));
         penStyleComboBox = new QComboBox(NewShape);
         penStyleComboBox->setObjectName(QStringLiteral("penStyleComboBox"));
-        penStyleComboBox->setGeometry(QRect(67, 266, 101, 22));
+        penStyleComboBox->setGeometry(QRect(67, 291, 101, 22));
         wSpinBox = new QSpinBox(NewShape);
         wSpinBox->setObjectName(QStringLiteral("wSpinBox"));
         wSpinBox->setGeometry(QRect(180, 128, 42, 22));
@@ -150,20 +156,20 @@ public:
         xSpinBox->setMaximum(1000);
         brushColorLabel = new QLabel(NewShape);
         brushColorLabel->setObjectName(QStringLiteral("brushColorLabel"));
-        brushColorLabel->setGeometry(QRect(390, 228, 41, 16));
+        brushColorLabel->setGeometry(QRect(410, 253, 41, 16));
         joinLabel = new QLabel(NewShape);
         joinLabel->setObjectName(QStringLiteral("joinLabel"));
-        joinLabel->setGeometry(QRect(181, 229, 61, 16));
+        joinLabel->setGeometry(QRect(181, 254, 61, 16));
         penColorLabel = new QLabel(NewShape);
         penColorLabel->setObjectName(QStringLiteral("penColorLabel"));
-        penColorLabel->setGeometry(QRect(27, 228, 71, 16));
+        penColorLabel->setGeometry(QRect(27, 253, 71, 16));
         ySpinBox = new QSpinBox(NewShape);
         ySpinBox->setObjectName(QStringLiteral("ySpinBox"));
         ySpinBox->setGeometry(QRect(440, 110, 42, 22));
         ySpinBox->setMaximum(500);
         penJoinComboBox = new QComboBox(NewShape);
         penJoinComboBox->setObjectName(QStringLiteral("penJoinComboBox"));
-        penJoinComboBox->setGeometry(QRect(246, 226, 80, 22));
+        penJoinComboBox->setGeometry(QRect(246, 251, 80, 22));
         wLabel = new QLabel(NewShape);
         wLabel->setObjectName(QStringLiteral("wLabel"));
         wLabel->setGeometry(QRect(130, 130, 41, 16));
@@ -172,7 +178,7 @@ public:
         lLabel->setGeometry(QRect(30, 130, 41, 16));
         capLabel = new QLabel(NewShape);
         capLabel->setObjectName(QStringLiteral("capLabel"));
-        capLabel->setGeometry(QRect(180, 267, 61, 16));
+        capLabel->setGeometry(QRect(180, 292, 61, 16));
         shapeIDLabel = new QLabel(NewShape);
         shapeIDLabel->setObjectName(QStringLiteral("shapeIDLabel"));
         shapeIDLabel->setGeometry(QRect(230, 20, 61, 16));
@@ -203,71 +209,71 @@ public:
         yEndSpinBox->setMaximum(500);
         textLabel = new QLabel(NewShape);
         textLabel->setObjectName(QStringLiteral("textLabel"));
-        textLabel->setGeometry(QRect(260, 362, 61, 20));
+        textLabel->setGeometry(QRect(280, 387, 61, 20));
         textLabel->setFrameShape(QFrame::Box);
         textLabel->setFrameShadow(QFrame::Sunken);
         textLabel->setAlignment(Qt::AlignCenter);
         textEdit = new QLineEdit(NewShape);
         textEdit->setObjectName(QStringLiteral("textEdit"));
         textEdit->setEnabled(false);
-        textEdit->setGeometry(QRect(111, 402, 171, 22));
+        textEdit->setGeometry(QRect(121, 427, 161, 22));
         textLabel_2 = new QLabel(NewShape);
         textLabel_2->setObjectName(QStringLiteral("textLabel_2"));
-        textLabel_2->setGeometry(QRect(71, 405, 55, 16));
+        textLabel_2->setGeometry(QRect(81, 430, 55, 16));
         penWidthSpinBox = new QSpinBox(NewShape);
         penWidthSpinBox->setObjectName(QStringLiteral("penWidthSpinBox"));
-        penWidthSpinBox->setGeometry(QRect(177, 298, 42, 22));
+        penWidthSpinBox->setGeometry(QRect(177, 323, 42, 22));
         penWidthSpinBox->setMaximum(20);
         penWidthSpinBox->setValue(1);
         label = new QLabel(NewShape);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(130, 300, 41, 16));
+        label->setGeometry(QRect(130, 325, 41, 16));
         textColorComboBox = new QComboBox(NewShape);
         textColorComboBox->setObjectName(QStringLiteral("textColorComboBox"));
         textColorComboBox->setEnabled(false);
-        textColorComboBox->setGeometry(QRect(110, 433, 121, 22));
+        textColorComboBox->setGeometry(QRect(120, 458, 121, 22));
         textColorLabel = new QLabel(NewShape);
         textColorLabel->setObjectName(QStringLiteral("textColorLabel"));
-        textColorLabel->setGeometry(QRect(65, 435, 71, 16));
+        textColorLabel->setGeometry(QRect(75, 460, 71, 16));
         pointSizeSpinBox = new QSpinBox(NewShape);
         pointSizeSpinBox->setObjectName(QStringLiteral("pointSizeSpinBox"));
         pointSizeSpinBox->setEnabled(false);
-        pointSizeSpinBox->setGeometry(QRect(370, 400, 42, 22));
+        pointSizeSpinBox->setGeometry(QRect(300, 525, 42, 22));
         pointSizeSpinBox->setMinimum(-1);
         pointSizeSpinBox->setMaximum(50);
         label_2 = new QLabel(NewShape);
         label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(300, 400, 71, 20));
+        label_2->setGeometry(QRect(230, 525, 71, 20));
         fontFamilyComboBox = new QComboBox(NewShape);
         fontFamilyComboBox->setObjectName(QStringLiteral("fontFamilyComboBox"));
         fontFamilyComboBox->setEnabled(false);
-        fontFamilyComboBox->setGeometry(QRect(110, 465, 121, 22));
+        fontFamilyComboBox->setGeometry(QRect(380, 427, 121, 22));
         label_3 = new QLabel(NewShape);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(30, 466, 71, 16));
+        label_3->setGeometry(QRect(300, 429, 71, 16));
         fontStyleComboBox = new QComboBox(NewShape);
         fontStyleComboBox->setObjectName(QStringLiteral("fontStyleComboBox"));
         fontStyleComboBox->setEnabled(false);
-        fontStyleComboBox->setGeometry(QRect(371, 430, 121, 22));
+        fontStyleComboBox->setGeometry(QRect(381, 458, 121, 22));
         label_4 = new QLabel(NewShape);
         label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setGeometry(QRect(300, 432, 71, 16));
+        label_4->setGeometry(QRect(310, 460, 71, 16));
         fontWeightComboBox = new QComboBox(NewShape);
         fontWeightComboBox->setObjectName(QStringLiteral("fontWeightComboBox"));
         fontWeightComboBox->setEnabled(false);
-        fontWeightComboBox->setGeometry(QRect(371, 460, 121, 22));
+        fontWeightComboBox->setGeometry(QRect(381, 488, 121, 22));
         label_5 = new QLabel(NewShape);
         label_5->setObjectName(QStringLiteral("label_5"));
-        label_5->setGeometry(QRect(288, 460, 81, 20));
+        label_5->setGeometry(QRect(298, 488, 81, 20));
         dimensionsLabel = new QLabel(NewShape);
         dimensionsLabel->setObjectName(QStringLiteral("dimensionsLabel"));
-        dimensionsLabel->setGeometry(QRect(250, 70, 81, 20));
+        dimensionsLabel->setGeometry(QRect(270, 70, 81, 20));
         dimensionsLabel->setFrameShape(QFrame::Box);
         dimensionsLabel->setFrameShadow(QFrame::Sunken);
         dimensionsLabel->setAlignment(Qt::AlignCenter);
         line = new QFrame(NewShape);
         line->setObjectName(QStringLiteral("line"));
-        line->setGeometry(QRect(10, 43, 554, 16));
+        line->setGeometry(QRect(10, 43, 588, 16));
         line->setFrameShape(QFrame::HLine);
         line->setFrameShadow(QFrame::Sunken);
         shapeIDSpinBox = new QSpinBox(NewShape);
@@ -276,33 +282,57 @@ public:
         shapeIDSpinBox->setMaximum(10000);
         line_2 = new QFrame(NewShape);
         line_2->setObjectName(QStringLiteral("line_2"));
-        line_2->setGeometry(QRect(8, 170, 557, 20));
+        line_2->setGeometry(QRect(8, 195, 591, 20));
         line_2->setFrameShape(QFrame::HLine);
         line_2->setFrameShadow(QFrame::Sunken);
         line_3 = new QFrame(NewShape);
         line_3->setObjectName(QStringLiteral("line_3"));
-        line_3->setGeometry(QRect(9, 340, 555, 20));
+        line_3->setGeometry(QRect(9, 365, 590, 20));
         line_3->setFrameShape(QFrame::HLine);
         line_3->setFrameShadow(QFrame::Sunken);
         line_4 = new QFrame(NewShape);
         line_4->setObjectName(QStringLiteral("line_4"));
-        line_4->setGeometry(QRect(8, 511, 556, 20));
+        line_4->setGeometry(QRect(8, 553, 591, 20));
         line_4->setFrameShape(QFrame::HLine);
         line_4->setFrameShadow(QFrame::Sunken);
         line_5 = new QFrame(NewShape);
         line_5->setObjectName(QStringLiteral("line_5"));
-        line_5->setGeometry(QRect(0, 50, 20, 471));
+        line_5->setGeometry(QRect(0, 50, 20, 512));
         line_5->setFrameShape(QFrame::VLine);
         line_5->setFrameShadow(QFrame::Sunken);
         line_6 = new QFrame(NewShape);
         line_6->setObjectName(QStringLiteral("line_6"));
-        line_6->setGeometry(QRect(555, 50, 20, 471));
+        line_6->setGeometry(QRect(590, 50, 20, 512));
         line_6->setFrameShape(QFrame::VLine);
         line_6->setFrameShadow(QFrame::Sunken);
         buttonBox = new QDialogButtonBox(NewShape);
         buttonBox->setObjectName(QStringLiteral("buttonBox"));
-        buttonBox->setGeometry(QRect(190, 534, 193, 28));
+        buttonBox->setGeometry(QRect(190, 575, 193, 28));
         buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
+        alignmentComboBox = new QComboBox(NewShape);
+        alignmentComboBox->setObjectName(QStringLiteral("alignmentComboBox"));
+        alignmentComboBox->setEnabled(false);
+        alignmentComboBox->setGeometry(QRect(120, 488, 121, 22));
+        label_6 = new QLabel(NewShape);
+        label_6->setObjectName(QStringLiteral("label_6"));
+        label_6->setGeometry(QRect(50, 492, 71, 16));
+        addPointButton = new QPushButton(NewShape);
+        addPointButton->setObjectName(QStringLiteral("addPointButton"));
+        addPointButton->setEnabled(false);
+        addPointButton->setGeometry(QRect(494, 107, 93, 28));
+        clearPointsButton = new QPushButton(NewShape);
+        clearPointsButton->setObjectName(QStringLiteral("clearPointsButton"));
+        clearPointsButton->setEnabled(false);
+        clearPointsButton->setGeometry(QRect(494, 138, 93, 28));
+        pointAddedLabel = new QLabel(NewShape);
+        pointAddedLabel->setObjectName(QStringLiteral("pointAddedLabel"));
+        pointAddedLabel->setEnabled(true);
+        pointAddedLabel->setGeometry(QRect(479, 175, 121, 20));
+        QFont font;
+        font.setBold(true);
+        font.setWeight(75);
+        pointAddedLabel->setFont(font);
+        pointAddedLabel->setAlignment(Qt::AlignCenter);
 
         retranslateUi(NewShape);
 
@@ -434,6 +464,18 @@ public:
         );
         label_5->setText(QApplication::translate("NewShape", "Font Weight:", Q_NULLPTR));
         dimensionsLabel->setText(QApplication::translate("NewShape", "Dimensions", Q_NULLPTR));
+        alignmentComboBox->clear();
+        alignmentComboBox->insertItems(0, QStringList()
+         << QApplication::translate("NewShape", "Left", Q_NULLPTR)
+         << QApplication::translate("NewShape", "Right", Q_NULLPTR)
+         << QApplication::translate("NewShape", "Top", Q_NULLPTR)
+         << QApplication::translate("NewShape", "Bottom", Q_NULLPTR)
+         << QApplication::translate("NewShape", "Center", Q_NULLPTR)
+        );
+        label_6->setText(QApplication::translate("NewShape", "Alignment:", Q_NULLPTR));
+        addPointButton->setText(QApplication::translate("NewShape", "Add Point", Q_NULLPTR));
+        clearPointsButton->setText(QApplication::translate("NewShape", "Clear Points", Q_NULLPTR));
+        pointAddedLabel->setText(QString());
     } // retranslateUi
 
 };

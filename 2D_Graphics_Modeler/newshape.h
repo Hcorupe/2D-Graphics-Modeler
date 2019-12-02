@@ -71,6 +71,30 @@ class NewShape : public QDialog
         NO_BRUSH
     };
 
+    enum FONT_STYLE
+    {
+        NORMAL,
+        ITALIC,
+        OBLIQUE
+    };
+
+    enum FONT_WEIGHT
+    {
+        NORMAL_W,
+        LIGHT,
+        THIN,
+        BOLD
+    };
+
+    enum ALIGNMENT
+    {
+        LEFT,
+        RIGHT,
+        TOP,
+        BOTTOM,
+        CENTER
+    };
+
 public:
     explicit NewShape(QWidget *parent = nullptr);
     ~NewShape();
@@ -82,6 +106,7 @@ public:
     void enableText(bool);
     void enablePen(bool);
     void enableBrush(bool);
+    void enablePoly(bool);
 
     Qt::GlobalColor readColor(int);
 
@@ -120,6 +145,24 @@ private slots:
 
     void on_brushStyleComboBox_currentIndexChanged(int index);
 
+    void on_textEdit_textChanged(const QString &arg1);
+
+    void on_pointSizeSpinBox_valueChanged(int arg1);
+
+    void on_textColorComboBox_currentIndexChanged(int index);
+
+    void on_fontFamilyComboBox_currentIndexChanged(const QString &arg1);
+
+    void on_fontStyleComboBox_currentIndexChanged(int index);
+
+    void on_fontWeightComboBox_currentIndexChanged(int index);
+
+    void on_alignmentComboBox_currentIndexChanged(int index);
+
+    void on_addPointButton_clicked();
+
+    void on_clearPointsButton_clicked();
+
 signals:
     void sendShape(Shape*, Text*);
 
@@ -128,6 +171,8 @@ private:
 
     // Shape variables
     Shape* shape;
+
+    myStd::vector<QPoint> points;
 
     SHAPE_TYPE shapeType;
     int id;
@@ -154,6 +199,7 @@ private:
     QString fontFamily;
     QFont::Style fontStyle;
     QFont::Weight fontWeight;
+    Qt::AlignmentFlag alignment;
 
 
 
