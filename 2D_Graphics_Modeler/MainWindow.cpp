@@ -25,6 +25,12 @@ MainWindow::MainWindow(QWidget *parent)
     {
         ui->idComboBox->addItem(QString::number((ui->renderArea->shapes[i]->getShapeId())));
     }
+        
+    //Add sort options to combobox
+    ui->sortComboBox->addItem(QString(("...")));
+    ui->sortComboBox->addItem(QString(("ID")));
+    ui->sortComboBox->addItem(QString(("Area")));
+    ui->sortComboBox->addItem(QString(("Perimeter")));
 
 }
 
@@ -136,3 +142,49 @@ void MainWindow::receiveShape(Shape* shape, Text* text)
 
     ui->renderArea->update();
 }
+
+void MainWindow::on_sortComboBox_currentIndexChanged(int index)
+{
+    switch(index)
+    {
+    case 1:
+        IdSort(ui->renderArea->shapes, 0, ui->renderArea->shapes.size() - 1);
+        for (int i = 0; i < ui->renderArea->shapes.size() - 1; i++)
+        {
+            ui->idComboBox->removeItem(0);
+        }
+        for (int i = 0; i < ui->renderArea->shapes.size(); i++)
+        {
+            ui->idComboBox->addItem(QString::number((ui->renderArea->shapes[i]->getShapeId())));
+        }
+        ui->idComboBox->removeItem(0);
+        break;
+    case 2:
+        AreaSort(ui->renderArea->shapes, 0, ui->renderArea->shapes.size() - 1);
+        for (int i = 0; i < ui->renderArea->shapes.size() - 1; i++)
+        {
+            ui->idComboBox->removeItem(0);
+        }
+        for (int i = 0; i < ui->renderArea->shapes.size(); i++)
+        {
+            ui->idComboBox->addItem(QString::number((ui->renderArea->shapes[i]->getShapeId())));
+        }
+        ui->idComboBox->removeItem(0);
+        break;
+    case 3:
+        PerimSort(ui->renderArea->shapes, 0, ui->renderArea->shapes.size() - 1);
+        for (int i = 0; i < ui->renderArea->shapes.size() - 1; i++)
+        {
+            ui->idComboBox->removeItem(0);
+        }
+        for (int i = 0; i < ui->renderArea->shapes.size(); i++)
+        {
+            ui->idComboBox->addItem(QString::number((ui->renderArea->shapes[i]->getShapeId())));
+        }
+        ui->idComboBox->removeItem(0);
+        break;
+    default:
+        break;
+    }
+}
+
