@@ -4,6 +4,8 @@
 //! Default constructor
 Parser::Parser()
 {
+    pointList.resize(4);	//4 is number of QPoints polyLine has in shape.txt resize() just so we can use [] right away 
+				// without pushback
     id = 0;
     shapeType.clear();
     l = 0;
@@ -634,16 +636,16 @@ myStd::vector<Shape *> Parser::readShape()
             break;}
 
         case(ELLIPSE):
-        {Ellipse* elips = new Ellipse(id, pointList[0], a, b, pColor, penWidth, pStyle, pCapStyle, pJoinStyle, bColor, bStyle);
+        {Ellipse* elips = new Ellipse(id, pointList[0], pColor, penWidth, pStyle, pCapStyle, pJoinStyle, bColor, bStyle, a, b);
             list.push_back(elips);
             break;}
         case(CIRCLE):
-        {Circle* crcl = new Circle(id, pointList[0], r, pColor, penWidth, pStyle, pCapStyle, pJoinStyle, bColor, bStyle);
+        {Circle* crcl = new Circle(id, pointList[0], pColor, penWidth, pStyle, pCapStyle, pJoinStyle, bColor, bStyle, r);
             list.push_back(crcl);
             break;}
 
     //    case(TEXT):
-    //    {Text* txt = new Text(id, pointList[0], l, w, textString, txtColor, txtAlign, textSize, textFamily, txtStyle, txtWeight);
+    //    {Text* txt = new Text(id, pointList[0], w, l, textString, txtColor, txtAlign, textSize, textFamily, txtStyle, txtWeight);
     //        list.push_back(txt);
     //        break;}
         }
