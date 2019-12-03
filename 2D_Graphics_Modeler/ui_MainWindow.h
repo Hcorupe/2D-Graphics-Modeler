@@ -97,6 +97,12 @@ public:
         ContactTab = new QWidget();
         ContactTab->setObjectName(QStringLiteral("ContactTab"));
         tabWidget->addTab(ContactTab, QString());
+        sortComboBox = new QComboBox(MainTab);
+        sortComboBox->setObjectName(QStringLiteral("sortComboBox"));
+        sortComboBox->setGeometry(QRect(690, 540, 201, 22));
+        sortLabel = new QLabel(MainTab);
+        sortLabel->setObjectName(QStringLiteral("sortLabel"));
+        sortLabel->setGeometry(QRect(730, 520, 111, 16));
 
         retranslateUi(MainWindow);
 
@@ -119,6 +125,7 @@ public:
         tabWidget->setTabText(tabWidget->indexOf(ReportsTab), QApplication::translate("MainWindow", "Reports", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(ReviewTab), QApplication::translate("MainWindow", "Reviews", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(ContactTab), QApplication::translate("MainWindow", "Contact Us", Q_NULLPTR));
+        sortLabel->setText(QApplication::translate("MainWindow", "Sort List By:", Q_NULLPTR));
     } // retranslateUi
 
 };
