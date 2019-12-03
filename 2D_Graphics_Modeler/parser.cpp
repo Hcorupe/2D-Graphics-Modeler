@@ -33,6 +33,11 @@ Parser::~Parser()
 {
 	fin.close();
 //	fout.close();
+
+    for(int i = 0; i < list.size(); i++)
+    {
+        delete list[i];
+    }
 }
 
 
@@ -553,6 +558,8 @@ myStd::vector<Shape *> Parser::readShape()
     Qt::AlignmentFlag txtAlign;
     QFont::Style txtStyle;
     QFont::Weight txtWeight;
+    QString txtString;
+    QString txtFamily;
 
 
 
@@ -606,6 +613,8 @@ myStd::vector<Shape *> Parser::readShape()
             readTextFamily();
             txtStyle = readTextStyle();
             txtWeight = readTextWeight();
+            txtString = QString::fromStdString(textString);
+            txtFamily = QString::fromStdString(textFamily);
         }
 
         switch (type)
@@ -644,10 +653,10 @@ myStd::vector<Shape *> Parser::readShape()
             list.push_back(crcl);
             break;}
 
-    //    case(TEXT):
-    //    {Text* txt = new Text(id, pointList[0], w, l, textString, txtColor, txtAlign, textSize, textFamily, txtStyle, txtWeight);
-    //        list.push_back(txt);
-    //        break;}
+        case(TEXT):
+        {Text* txt = new Text(id, pointList[0], w, l, txtString, txtColor, txtAlign, textSize, txtFamily, txtStyle, txtWeight);
+            list.push_back(txt);
+            break;}
         }
 
     }

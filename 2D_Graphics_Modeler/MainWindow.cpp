@@ -1,5 +1,6 @@
 #include "MainWindow.h"
 #include "ui_MainWindow.h"
+#include "SortingAlgs.h"        //for IdSort, AreaSort, PerimSort
 
 
 MainWindow::MainWindow(QWidget *parent)
