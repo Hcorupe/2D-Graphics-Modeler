@@ -1,7 +1,7 @@
 #include "newshape.h"
 #include "ui_newshape.h"
 
-NewShape::NewShape(QWidget *parent) :
+NewShape::NewShape(myStd::vector<int> ids, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::NewShape)
 {
@@ -33,6 +33,15 @@ NewShape::NewShape(QWidget *parent) :
     fontStyle  = QFont::StyleNormal;
     fontWeight = QFont::Normal;
     alignment  = Qt::AlignLeft;
+
+    idList = ids;
+
+    // If shapeID 0 already taken, disable ok button
+    if(ids.search(0))
+    {
+        ui->idTakenLabel->setText("Shape ID already taken.");
+        ui->buttonBox->setEnabled(false);
+    }
 
 
 }
@@ -326,7 +335,19 @@ Qt::GlobalColor NewShape::readColor(int current)
 
 void NewShape::on_shapeIDSpinBox_valueChanged(int arg1)
 {
-    id = arg1;
+    if(idList.search(arg1))
+    {
+        ui->buttonBox->setEnabled(false);
+        ui->idTakenLabel->setText("Shape ID already taken.");
+    }
+    else
+    {
+        id = arg1;
+        ui->idTakenLabel->clear();
+        ui->buttonBox->setEnabled(true);
+    }
+
+
 }
 
 void NewShape::on_xSpinBox_valueChanged(int arg1)

@@ -88,6 +88,7 @@ public:
     QPushButton *addPointButton;
     QPushButton *clearPointsButton;
     QLabel *pointAddedLabel;
+    QLabel *idTakenLabel;
 
     void setupUi(QDialog *NewShape)
     {
@@ -307,6 +308,7 @@ public:
         line_6->setFrameShadow(QFrame::Sunken);
         buttonBox = new QDialogButtonBox(NewShape);
         buttonBox->setObjectName(QStringLiteral("buttonBox"));
+        buttonBox->setEnabled(true);
         buttonBox->setGeometry(QRect(190, 575, 193, 28));
         buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
         alignmentComboBox = new QComboBox(NewShape);
@@ -330,9 +332,14 @@ public:
         pointAddedLabel->setGeometry(QRect(479, 175, 121, 20));
         QFont font;
         font.setBold(true);
+        font.setItalic(true);
         font.setWeight(75);
         pointAddedLabel->setFont(font);
         pointAddedLabel->setAlignment(Qt::AlignCenter);
+        idTakenLabel = new QLabel(NewShape);
+        idTakenLabel->setObjectName(QStringLiteral("idTakenLabel"));
+        idTakenLabel->setGeometry(QRect(390, 20, 161, 16));
+        idTakenLabel->setFont(font);
 
         retranslateUi(NewShape);
 
@@ -476,6 +483,7 @@ public:
         addPointButton->setText(QApplication::translate("NewShape", "Add Point", Q_NULLPTR));
         clearPointsButton->setText(QApplication::translate("NewShape", "Clear Points", Q_NULLPTR));
         pointAddedLabel->setText(QString());
+        idTakenLabel->setText(QString());
     } // retranslateUi
 
 };

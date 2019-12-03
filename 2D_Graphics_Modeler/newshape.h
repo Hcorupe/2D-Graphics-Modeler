@@ -96,7 +96,7 @@ class NewShape : public QDialog
     };
 
 public:
-    explicit NewShape(QWidget *parent = nullptr);
+    explicit NewShape(myStd::vector<int> ids, QWidget *parent = nullptr);
     ~NewShape();
 
     void enableDimensions(bool);
@@ -201,6 +201,9 @@ private:
     QFont::Weight fontWeight;
     Qt::AlignmentFlag alignment;
 
+    // List of current shape IDs used to
+    // prevent duplicate shapeIDs in new shapes
+    myStd::vector<int> idList;
 
 
 

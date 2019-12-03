@@ -231,6 +231,21 @@ public:
         return p;
     }
 
+    bool search(T item)
+    {
+        bool found = false;
+
+        for(iterator curr = begin(); curr != end(); ++curr)
+        {
+            if (*curr == item)
+            {
+                found = true;
+            }
+        }
+
+        return found;
+    }
+
 };
 }
 

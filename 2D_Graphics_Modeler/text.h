@@ -36,7 +36,7 @@ class Text: public Shape
          * \param style
          * \param weight
          */
-        Text(int ID, QPoint sPoint, int w, int h, QString text, Qt::GlobalColor color, Qt::Alignment align,
+        Text(int ID, QPoint sPoint, int w, int h, QString text, Qt::GlobalColor color, Qt::AlignmentFlag align,
              int pointSize, QString family, QFont::Style style, QFont::Weight weight)
                 :Shape(ID, sPoint, color, 0, Qt::SolidLine, Qt::SquareCap, Qt::BevelJoin, Qt::white,
                        Qt::SolidPattern)
@@ -104,7 +104,7 @@ class Text: public Shape
          * \brief setAlignment sets text alignment
          * \param align
          */
-        void setAlignment(const Qt::Alignment align)
+        void setAlignment(const Qt::AlignmentFlag align)
         {
             alignment = align;
         }
@@ -131,7 +131,7 @@ class Text: public Shape
         //! Text font
         QFont font;
         //! Text alignment
-        Qt::Alignment alignment;
+        Qt::AlignmentFlag alignment;
         //! Text box height
         int height;
         //! Text box width

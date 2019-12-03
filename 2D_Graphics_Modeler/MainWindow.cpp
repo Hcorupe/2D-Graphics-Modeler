@@ -26,11 +26,6 @@ MainWindow::MainWindow(QWidget *parent)
         ui->idComboBox->addItem(QString::number((ui->renderArea->shapes[i]->getShapeId())));
     }
 
-
-
-
-
-
 }
 
 void MainWindow::disableEdit()
@@ -118,7 +113,16 @@ void MainWindow::on_deleteShapeButton_clicked()
 
 void MainWindow::on_newShapeButton_clicked()
 {
-    newShapeWindow = new NewShape;
+
+    // Create list of int shapeIDs to pass to New Shape window
+    myStd::vector<int> ids;
+
+    for(int i = 0; i < ui->renderArea->shapes.size(); i++)
+    {
+        ids.push_back(ui->renderArea->shapes[i]->getShapeId());
+    }
+
+    newShapeWindow = new NewShape(ids);
     connect(newShapeWindow, SIGNAL(sendShape(Shape*,Text*)), this, SLOT(receiveShape(Shape*,Text*)));
     newShapeWindow->show();
 }

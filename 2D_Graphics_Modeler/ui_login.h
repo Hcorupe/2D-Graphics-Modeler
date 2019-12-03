@@ -37,30 +37,30 @@ public:
         if (Login->objectName().isEmpty())
             Login->setObjectName(QStringLiteral("Login"));
         Login->setWindowModality(Qt::WindowModal);
-        Login->resize(400, 300);
+        Login->resize(356, 264);
         Login->setModal(true);
         userLabel = new QLabel(Login);
         userLabel->setObjectName(QStringLiteral("userLabel"));
-        userLabel->setGeometry(QRect(50, 120, 71, 16));
+        userLabel->setGeometry(QRect(23, 95, 71, 16));
         passwordLabel = new QLabel(Login);
         passwordLabel->setObjectName(QStringLiteral("passwordLabel"));
-        passwordLabel->setGeometry(QRect(50, 160, 61, 16));
+        passwordLabel->setGeometry(QRect(23, 135, 61, 16));
         loginButton = new QPushButton(Login);
         loginButton->setObjectName(QStringLiteral("loginButton"));
-        loginButton->setGeometry(QRect(180, 190, 93, 28));
+        loginButton->setGeometry(QRect(153, 165, 93, 28));
         titleLabel = new QLabel(Login);
         titleLabel->setObjectName(QStringLiteral("titleLabel"));
-        titleLabel->setGeometry(QRect(160, 70, 131, 16));
+        titleLabel->setGeometry(QRect(133, 45, 131, 16));
         titleLabel->setScaledContents(false);
         label = new QLabel(Login);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(130, 230, 211, 20));
+        label->setGeometry(QRect(103, 205, 211, 20));
         userEdit = new QLineEdit(Login);
         userEdit->setObjectName(QStringLiteral("userEdit"));
-        userEdit->setGeometry(QRect(130, 110, 191, 31));
+        userEdit->setGeometry(QRect(103, 85, 191, 31));
         passwordEdit = new QLineEdit(Login);
         passwordEdit->setObjectName(QStringLiteral("passwordEdit"));
-        passwordEdit->setGeometry(QRect(130, 150, 191, 31));
+        passwordEdit->setGeometry(QRect(103, 125, 191, 31));
         passwordEdit->setEchoMode(QLineEdit::Password);
 
         retranslateUi(Login);
