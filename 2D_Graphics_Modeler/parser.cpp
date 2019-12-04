@@ -5,7 +5,7 @@
 Parser::Parser()
 {
     pointList.resize(4);	//4 is number of QPoints polyLine has in shape.txt resize() just so we can use [] right away 
-				// without pushback
+                            // without pushback
     id = 0;
     shapeType.clear();
     l = 0;
@@ -34,10 +34,10 @@ Parser::~Parser()
 	fin.close();
 //	fout.close();
 
-    for(int i = 0; i < list.size(); i++)
-    {
-        delete list[i];
-    }
+//    for(int i = 0; i < list.size(); i++)
+//    {
+//        delete list[i];
+//    }
 }
 
 
@@ -564,11 +564,10 @@ myStd::vector<Shape *> Parser::readShape()
 
 
 
+    skipLine();
+    readShapeId();
     while(fin)
     {
-
-        skipLine();
-        readShapeId();
         type = readShapeType();
 
         switch (type)
@@ -658,7 +657,9 @@ myStd::vector<Shape *> Parser::readShape()
             list.push_back(txt);
             break;}
         }
-
+        skipLine();     // was called before the while loop once. Needs to be at the end and not the beging of while-loop so
+        readShapeId();  // at the end of the file it makes the fin false before the while-loop checks (fin) and we will exit
+                        // the loop at the correct time.
     }
     return list;
 
