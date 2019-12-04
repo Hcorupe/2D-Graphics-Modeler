@@ -113,6 +113,11 @@ class Polygon: public Shape
             return 0;
         }
 
+        SHAPE getShapeType() override
+        {
+            return POLYGON;
+        }
+
     private:
         /*!
          * \brief QVector of polygon points

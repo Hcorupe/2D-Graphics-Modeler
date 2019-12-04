@@ -120,6 +120,11 @@ class Polyline: public Shape
             return 0;
         }
 
+        SHAPE getShapeType() override
+        {
+            return POLYLINE;
+        }
+
     private:
         /*!
          * \brief Vector of QPoints of polyline

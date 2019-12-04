@@ -127,6 +127,11 @@ class Text: public Shape
             return 0;
         }
 
+        SHAPE getShapeType() override
+        {
+            return TEXT;
+        }
+
     private:
         //! Text font
         QFont font;

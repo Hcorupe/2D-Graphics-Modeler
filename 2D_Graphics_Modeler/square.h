@@ -49,6 +49,10 @@ class Square : public Rectangle
             Rectangle::setWidth(length);
         }
 
+        SHAPE getShapeType() override
+        {
+            return SQUARE;
+        }
 
 };
 

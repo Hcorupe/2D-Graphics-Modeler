@@ -114,6 +114,11 @@ class Ellipse : public Shape
             return b;
         }
 
+        SHAPE getShapeType() override
+        {
+            return ELLIPSE;
+        }
+
 
       private:
         //! Major axis length

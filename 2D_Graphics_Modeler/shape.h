@@ -14,6 +14,19 @@
 /*!
     Abstract Base Class
 */
+
+enum SHAPE
+{
+    LINE,
+    POLYLINE,
+    POLYGON,
+    RECTANGLE,
+    SQUARE,
+    ELLIPSE,
+    CIRCLE,
+    TEXT
+};
+
 class Shape
 {
     public:
@@ -250,6 +263,8 @@ class Shape
         //! Pure virtual function
         virtual void draw(QPaintDevice* device) = 0;
 
+        virtual SHAPE getShapeType() = 0;
+
     private:
             //! Private int variable
             int shapeID;
@@ -258,6 +273,8 @@ class Shape
              * \brief Shape's top left corner
              */
             QPoint startPoint;
+
+
 
 };
 

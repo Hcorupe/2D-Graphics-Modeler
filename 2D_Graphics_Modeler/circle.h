@@ -59,6 +59,11 @@ class Circle : public Ellipse
            Ellipse::setMajorAxisA(b_Value);
            Ellipse::setMinorAxisB(b_Value);
         }
+
+        SHAPE getShapeType() override
+        {
+            return CIRCLE;
+        }
 };
 
 #endif // CIRCLE_H

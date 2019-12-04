@@ -115,6 +115,11 @@ class Rectangle : public Shape
             return width;
         }
 
+        SHAPE getShapeType() override
+        {
+            return RECTANGLE;
+        }
+
       private:
         /*!
          * \brief Rectangle's length

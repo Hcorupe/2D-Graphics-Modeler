@@ -546,6 +546,7 @@ QFont::Weight Parser::readTextWeight()
 
 myStd::vector<Shape *> Parser::readShape()
 {
+
     SHAPE type;
 
     Qt::GlobalColor pColor;

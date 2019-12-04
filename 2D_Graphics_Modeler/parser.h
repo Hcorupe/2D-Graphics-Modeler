@@ -44,17 +44,6 @@ const int TEXT_FAMILY = 16;
 const int TEXT_STYLE = 15;
 const int TEXT_WEIGHT = 16;
 
-enum SHAPE
-{
-    LINE,
-    POLYLINE,
-    POLYGON,
-    RECTANGLE,
-    SQUARE,
-    ELLIPSE,
-    CIRCLE,
-    TEXT
-};
 
 class Parser
 {

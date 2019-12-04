@@ -106,6 +106,10 @@ class Line : public Shape
             return 0;
         }
 
+        SHAPE getShapeType() override
+        {
+            return LINE;
+        }
 
 
     private:
