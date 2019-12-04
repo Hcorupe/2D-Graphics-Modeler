@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'login.ui'
 **
-** Created by: Qt User Interface Compiler version 5.12.5
+** Created by: Qt User Interface Compiler version 5.9.8
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,8 +10,11 @@
 #define UI_LOGIN_H
 
 #include <QtCore/QVariant>
+#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
@@ -32,31 +35,31 @@ public:
     void setupUi(QDialog *Login)
     {
         if (Login->objectName().isEmpty())
-            Login->setObjectName(QString::fromUtf8("Login"));
+            Login->setObjectName(QStringLiteral("Login"));
         Login->setWindowModality(Qt::WindowModal);
         Login->resize(356, 264);
         Login->setModal(true);
         userLabel = new QLabel(Login);
-        userLabel->setObjectName(QString::fromUtf8("userLabel"));
+        userLabel->setObjectName(QStringLiteral("userLabel"));
         userLabel->setGeometry(QRect(23, 95, 71, 16));
         passwordLabel = new QLabel(Login);
-        passwordLabel->setObjectName(QString::fromUtf8("passwordLabel"));
+        passwordLabel->setObjectName(QStringLiteral("passwordLabel"));
         passwordLabel->setGeometry(QRect(23, 135, 61, 16));
         loginButton = new QPushButton(Login);
-        loginButton->setObjectName(QString::fromUtf8("loginButton"));
+        loginButton->setObjectName(QStringLiteral("loginButton"));
         loginButton->setGeometry(QRect(153, 165, 93, 28));
         titleLabel = new QLabel(Login);
-        titleLabel->setObjectName(QString::fromUtf8("titleLabel"));
+        titleLabel->setObjectName(QStringLiteral("titleLabel"));
         titleLabel->setGeometry(QRect(133, 45, 131, 16));
         titleLabel->setScaledContents(false);
         label = new QLabel(Login);
-        label->setObjectName(QString::fromUtf8("label"));
+        label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(103, 205, 211, 20));
         userEdit = new QLineEdit(Login);
-        userEdit->setObjectName(QString::fromUtf8("userEdit"));
+        userEdit->setObjectName(QStringLiteral("userEdit"));
         userEdit->setGeometry(QRect(103, 85, 191, 31));
         passwordEdit = new QLineEdit(Login);
-        passwordEdit->setObjectName(QString::fromUtf8("passwordEdit"));
+        passwordEdit->setObjectName(QStringLiteral("passwordEdit"));
         passwordEdit->setGeometry(QRect(103, 125, 191, 31));
         passwordEdit->setEchoMode(QLineEdit::Password);
 
@@ -67,11 +70,11 @@ public:
 
     void retranslateUi(QDialog *Login)
     {
-        Login->setWindowTitle(QApplication::translate("Login", "2D Graphics Login", nullptr));
-        userLabel->setText(QApplication::translate("Login", "Username:", nullptr));
-        passwordLabel->setText(QApplication::translate("Login", "Password:", nullptr));
-        loginButton->setText(QApplication::translate("Login", "Login", nullptr));
-        titleLabel->setText(QApplication::translate("Login", "2D Graphics Modeler", nullptr));
+        Login->setWindowTitle(QApplication::translate("Login", "2D Graphics Login", Q_NULLPTR));
+        userLabel->setText(QApplication::translate("Login", "Username:", Q_NULLPTR));
+        passwordLabel->setText(QApplication::translate("Login", "Password:", Q_NULLPTR));
+        loginButton->setText(QApplication::translate("Login", "Login", Q_NULLPTR));
+        titleLabel->setText(QApplication::translate("Login", "2D Graphics Modeler", Q_NULLPTR));
         label->setText(QString());
     } // retranslateUi
 

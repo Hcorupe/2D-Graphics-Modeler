@@ -1,4 +1,5 @@
 INPUT(
+./debug\SortingAlgs.o
 ./debug\login.o
 ./debug\main.o
 ./debug\MainWindow.o

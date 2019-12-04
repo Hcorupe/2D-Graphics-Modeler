@@ -653,7 +653,7 @@ myStd::vector<Shape *> Parser::readShape()
             break;}
 
         case(TEXT):
-        {Text* txt = new Text(id, pointList[0], w, l, txtString, txtColor, txtAlign, textSize, txtFamily, txtStyle, txtWeight);
+        {Text* txt = new Text(id, pointList[0], l, w, txtString, txtColor, txtAlign, textSize, txtFamily, txtStyle, txtWeight);
             list.push_back(txt);
             break;}
         }
