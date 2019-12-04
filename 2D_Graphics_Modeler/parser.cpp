@@ -27,12 +27,12 @@ Parser::Parser()
     textWeight.clear();
 
     fin.open("shapes.txt");
-//    fout.open("output.txt");
+    fout.open("output.txt");
 }
 Parser::~Parser()
 {
 	fin.close();
-//	fout.close();
+    fout.close();
 
 //    for(int i = 0; i < list.size(); i++)
 //    {

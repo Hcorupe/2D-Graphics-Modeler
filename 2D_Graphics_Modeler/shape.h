@@ -263,6 +263,7 @@ class Shape
         //! Pure virtual function
         virtual void draw(QPaintDevice* device) = 0;
 
+        //! Pure virtual function
         virtual SHAPE getShapeType() = 0;
 
     private:

@@ -127,6 +127,7 @@ void NewShape::on_shapeTypeComboBox_currentIndexChanged(int index)
         enableText(false);
         enableDimensions(false);
         enableBrush(false);
+        ui->buttonBox->setEnabled(false);
         break;
 
     case POLYGON:
@@ -137,6 +138,7 @@ void NewShape::on_shapeTypeComboBox_currentIndexChanged(int index)
         enableEndPoint(false);
         enableText(false);
         enableDimensions(false);
+        ui->buttonBox->setEnabled(false);
         break;
 
     case TEXT:
@@ -353,13 +355,11 @@ void NewShape::on_shapeIDSpinBox_valueChanged(int arg1)
 void NewShape::on_xSpinBox_valueChanged(int arg1)
 {
     sPoint.setX(arg1);
-    ui->pointAddedLabel->clear();
 }
 
 void NewShape::on_ySpinBox_valueChanged(int arg1)
 {
     sPoint.setY(arg1);
-    ui->pointAddedLabel->clear();
 }
 
 void NewShape::on_lSpinBox_valueChanged(int arg1)
@@ -570,7 +570,19 @@ void NewShape::on_addPointButton_clicked()
 {
     QPoint point = sPoint;
     points.push_back(point);
-    ui->pointAddedLabel->setText("Point added.");
+
+    ui->pointCountLabel->setText(QString::number(points.size()));
+
+    if(ui->shapeTypeComboBox->currentIndex() == POLYLINE && points.size() >= 2)
+    {
+        ui->buttonBox->setEnabled(true);
+    }
+
+    else if(ui->shapeTypeComboBox->currentIndex() == POLYGON && points.size() >= 3)
+    {
+        ui->buttonBox->setEnabled(true);
+    }
+
 }
 
 void NewShape::on_clearPointsButton_clicked()
@@ -581,5 +593,6 @@ void NewShape::on_clearPointsButton_clicked()
         points.erase(current);
     }
 
-    ui->pointAddedLabel->setText("Points cleared.");
+    ui->pointCountLabel->setText("0");
+
 }

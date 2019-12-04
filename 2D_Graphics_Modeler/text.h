@@ -127,10 +127,60 @@ class Text: public Shape
             return 0;
         }
 
+        /*!
+         * \brief GetFont returns font
+         * \return Qfont
+         */
+        QFont getFont()
+        {
+            return font;
+        }
+
+        /*!
+         * \brief getAlignment returns text alignment
+         * \return AlignmentFlag
+         */
+        Qt::AlignmentFlag getAlignment()
+        {
+            return alignment;
+        }
+
+        /*!
+         * \brief getWidth returns text box width
+         * \return int
+         */
+        int getWidth()
+        {
+            return width;
+        }
+
+        /*!
+         * \brief getHeight returns text box height
+         * \return int
+         */
+        int getHeight()
+        {
+            return height;
+        }
+
+        /*!
+         * \brief getMessage returns text message
+         * \return Qstring
+         */
+        QString getMessage()
+        {
+            return message;
+        }
+
+        /*!
+         * \brief getShapeType returns shape type
+         * \return SHAPE enum
+         */
         SHAPE getShapeType() override
         {
             return TEXT;
         }
+
 
     private:
         //! Text font

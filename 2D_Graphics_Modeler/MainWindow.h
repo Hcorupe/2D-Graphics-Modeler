@@ -47,6 +47,5 @@ private slots:
     void on_deleteShapeButton_clicked();
     void on_newShapeButton_clicked();
     void receiveShape(Shape* shape, Text* text);
-    void on_sortComboBox_currentIndexChanged(int index);
 };
 #endif // MAINWINDOW_H

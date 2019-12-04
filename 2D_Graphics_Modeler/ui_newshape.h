@@ -87,8 +87,9 @@ public:
     QLabel *label_6;
     QPushButton *addPointButton;
     QPushButton *clearPointsButton;
-    QLabel *pointAddedLabel;
+    QLabel *pointsLabel;
     QLabel *idTakenLabel;
+    QLabel *pointCountLabel;
 
     void setupUi(QDialog *NewShape)
     {
@@ -240,8 +241,9 @@ public:
         pointSizeSpinBox->setObjectName(QStringLiteral("pointSizeSpinBox"));
         pointSizeSpinBox->setEnabled(false);
         pointSizeSpinBox->setGeometry(QRect(300, 525, 42, 22));
-        pointSizeSpinBox->setMinimum(-1);
+        pointSizeSpinBox->setMinimum(1);
         pointSizeSpinBox->setMaximum(50);
+        pointSizeSpinBox->setValue(1);
         label_2 = new QLabel(NewShape);
         label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setGeometry(QRect(230, 525, 71, 20));
@@ -326,20 +328,27 @@ public:
         clearPointsButton->setObjectName(QStringLiteral("clearPointsButton"));
         clearPointsButton->setEnabled(false);
         clearPointsButton->setGeometry(QRect(494, 138, 93, 28));
-        pointAddedLabel = new QLabel(NewShape);
-        pointAddedLabel->setObjectName(QStringLiteral("pointAddedLabel"));
-        pointAddedLabel->setEnabled(true);
-        pointAddedLabel->setGeometry(QRect(479, 175, 121, 20));
+        pointsLabel = new QLabel(NewShape);
+        pointsLabel->setObjectName(QStringLiteral("pointsLabel"));
+        pointsLabel->setEnabled(true);
+        pointsLabel->setGeometry(QRect(500, 175, 51, 20));
         QFont font;
-        font.setBold(true);
-        font.setItalic(true);
-        font.setWeight(75);
-        pointAddedLabel->setFont(font);
-        pointAddedLabel->setAlignment(Qt::AlignCenter);
+        font.setBold(false);
+        font.setItalic(false);
+        font.setWeight(50);
+        pointsLabel->setFont(font);
+        pointsLabel->setAlignment(Qt::AlignCenter);
         idTakenLabel = new QLabel(NewShape);
         idTakenLabel->setObjectName(QStringLiteral("idTakenLabel"));
         idTakenLabel->setGeometry(QRect(390, 20, 161, 16));
-        idTakenLabel->setFont(font);
+        QFont font1;
+        font1.setBold(true);
+        font1.setItalic(true);
+        font1.setWeight(75);
+        idTakenLabel->setFont(font1);
+        pointCountLabel = new QLabel(NewShape);
+        pointCountLabel->setObjectName(QStringLiteral("pointCountLabel"));
+        pointCountLabel->setGeometry(QRect(549, 177, 41, 16));
 
         retranslateUi(NewShape);
 
@@ -482,8 +491,9 @@ public:
         label_6->setText(QApplication::translate("NewShape", "Alignment:", Q_NULLPTR));
         addPointButton->setText(QApplication::translate("NewShape", "Add Point", Q_NULLPTR));
         clearPointsButton->setText(QApplication::translate("NewShape", "Clear Points", Q_NULLPTR));
-        pointAddedLabel->setText(QString());
+        pointsLabel->setText(QApplication::translate("NewShape", "Points:", Q_NULLPTR));
         idTakenLabel->setText(QString());
+        pointCountLabel->setText(QApplication::translate("NewShape", "0", Q_NULLPTR));
     } // retranslateUi
 
 };

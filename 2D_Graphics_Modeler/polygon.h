@@ -96,6 +96,15 @@ class Polygon: public Shape
         }
 
         /*!
+         * \brief getPoints returns vector of QPoints
+         * \return QPoint vector
+         */
+        myStd::vector<QPoint> getPoints()
+        {
+            return points;
+        }
+
+        /*!
          * \brief GetArea returns 0
          * \return 0
          */

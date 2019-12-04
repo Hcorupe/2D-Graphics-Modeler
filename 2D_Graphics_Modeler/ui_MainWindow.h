@@ -39,8 +39,6 @@ public:
     QPushButton *newShapeButton;
     QPushButton *deleteShapeButton;
     RenderArea *renderArea;
-    QComboBox *sortComboBox;
-    QLabel *sortLabel;
     QWidget *ReportsTab;
     QWidget *ReviewTab;
     QWidget *ContactTab;
@@ -89,12 +87,6 @@ public:
         renderArea->setGeometry(QRect(20, 10, 1000, 500));
         renderArea->setMinimumSize(QSize(1000, 500));
         renderArea->setAutoFillBackground(false);
-        sortComboBox = new QComboBox(MainTab);
-        sortComboBox->setObjectName(QStringLiteral("sortComboBox"));
-        sortComboBox->setGeometry(QRect(590, 540, 201, 22));
-        sortLabel = new QLabel(MainTab);
-        sortLabel->setObjectName(QStringLiteral("sortLabel"));
-        sortLabel->setGeometry(QRect(630, 520, 111, 16));
         tabWidget->addTab(MainTab, QString());
         ReportsTab = new QWidget();
         ReportsTab->setObjectName(QStringLiteral("ReportsTab"));
@@ -123,14 +115,6 @@ public:
         yLabel->setText(QApplication::translate("MainWindow", "Y:", Q_NULLPTR));
         newShapeButton->setText(QApplication::translate("MainWindow", "New Shape", Q_NULLPTR));
         deleteShapeButton->setText(QApplication::translate("MainWindow", "Delete Shape", Q_NULLPTR));
-        sortComboBox->clear();
-        sortComboBox->insertItems(0, QStringList()
-         << QApplication::translate("MainWindow", "...", Q_NULLPTR)
-         << QApplication::translate("MainWindow", "ID", Q_NULLPTR)
-         << QApplication::translate("MainWindow", "Area", Q_NULLPTR)
-         << QApplication::translate("MainWindow", "Perimeter", Q_NULLPTR)
-        );
-        sortLabel->setText(QApplication::translate("MainWindow", "Sort Shape List By:", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(MainTab), QApplication::translate("MainWindow", "2D Graphics Render", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(ReportsTab), QApplication::translate("MainWindow", "Reports", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(ReviewTab), QApplication::translate("MainWindow", "Reviews", Q_NULLPTR));
