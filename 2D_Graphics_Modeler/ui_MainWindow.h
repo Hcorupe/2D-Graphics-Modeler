@@ -87,10 +87,6 @@ public:
         renderArea->setMinimumSize(QSize(1000, 500));
         renderArea->setAutoFillBackground(false);
         sortComboBox = new QComboBox(MainTab);
-        sortComboBox->addItem(QString());
-        sortComboBox->addItem(QString());
-        sortComboBox->addItem(QString());
-        sortComboBox->addItem(QString());
         sortComboBox->setObjectName(QString::fromUtf8("sortComboBox"));
         sortComboBox->setGeometry(QRect(590, 540, 201, 22));
         sortLabel = new QLabel(MainTab);
