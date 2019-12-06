@@ -20,6 +20,7 @@
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QWidget>
+#include <QtWidgets/QListWidget>
 #include "renderarea.h"
 
 QT_BEGIN_NAMESPACE
@@ -40,6 +41,9 @@ public:
     QPushButton *deleteShapeButton;
     RenderArea *renderArea;
     QWidget *ReportsTab;
+    QComboBox *sortComboBox;
+    QLabel *sortLabel;
+    QListWidget *shapeList;
     QWidget *ReviewTab;
     QWidget *ContactTab;
 
@@ -91,6 +95,15 @@ public:
         ReportsTab = new QWidget();
         ReportsTab->setObjectName(QStringLiteral("ReportsTab"));
         tabWidget->addTab(ReportsTab, QString());
+        sortComboBox = new QComboBox(ReportsTab);
+        sortComboBox->setObjectName(QString::fromUtf8("sortComboBox"));
+        sortComboBox->setGeometry(QRect(750, 170, 201, 31));
+        sortLabel = new QLabel(ReportsTab);
+        sortLabel->setObjectName(QString::fromUtf8("sortLabel"));
+        sortLabel->setGeometry(QRect(790, 140, 111, 16));
+        shapeList = new QListWidget(ReportsTab);
+        shapeList->setObjectName(QString::fromUtf8("shapeList"));
+        shapeList->setGeometry(QRect(20, 50, 571, 511));
         ReviewTab = new QWidget();
         ReviewTab->setObjectName(QStringLiteral("ReviewTab"));
         tabWidget->addTab(ReviewTab, QString());
@@ -117,6 +130,10 @@ public:
         deleteShapeButton->setText(QApplication::translate("MainWindow", "Delete Shape", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(MainTab), QApplication::translate("MainWindow", "2D Graphics Render", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(ReportsTab), QApplication::translate("MainWindow", "Reports", Q_NULLPTR));
+        sortComboBox->setItemText(0, QApplication::translate("MainWindow", "ID", nullptr));
+        sortComboBox->setItemText(1, QApplication::translate("MainWindow", "Area", nullptr));
+        sortComboBox->setItemText(2, QApplication::translate("MainWindow", "Perimeter", nullptr));
+        sortLabel->setText(QApplication::translate("MainWindow", "Sort Shape List By:", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(ReviewTab), QApplication::translate("MainWindow", "Reviews", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(ContactTab), QApplication::translate("MainWindow", "Contact Us", Q_NULLPTR));
     } // retranslateUi

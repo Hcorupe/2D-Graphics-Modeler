@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="MainTab">
     <attribute name="title">
@@ -167,6 +167,39 @@
     <attribute name="title">
      <string>Reports</string>
     </attribute>
+    <widget class="QListWidget" name="listWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>50</y>
+       <width>571</width>
+       <height>511</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="sortComboBox">
+     <property name="geometry">
+      <rect>
+       <x>750</x>
+       <y>170</y>
+       <width>201</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="sortLabel">
+     <property name="geometry">
+      <rect>
+       <x>790</x>
+       <y>140</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Sort Shape List By:</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="ReviewTab">
     <attribute name="title">

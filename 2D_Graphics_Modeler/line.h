@@ -111,6 +111,10 @@ class Line : public Shape
             return LINE;
         }
 
+        const char* GetShapeTypeString() override
+        {
+            return "Line";
+        }
 
     private:
         /*!

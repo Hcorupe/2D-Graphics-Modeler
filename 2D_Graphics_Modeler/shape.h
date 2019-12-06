@@ -266,6 +266,9 @@ class Shape
         //! Pure virtual function
         virtual SHAPE getShapeType() = 0;
 
+        //! Pure virtual function
+        virtual const char* GetShapeTypeString() = 0;
+
     private:
             //! Private int variable
             int shapeID;

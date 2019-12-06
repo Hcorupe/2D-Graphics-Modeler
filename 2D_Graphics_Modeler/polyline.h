@@ -125,6 +125,11 @@ class Polyline: public Shape
             return POLYLINE;
         }
 
+        const char* GetShapeTypeString() override
+        {
+            return "Polyline";
+        }
+
     private:
         /*!
          * \brief Vector of QPoints of polyline

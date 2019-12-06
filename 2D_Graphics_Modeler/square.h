@@ -54,6 +54,10 @@ class Square : public Rectangle
             return SQUARE;
         }
 
+        const char* GetShapeTypeString() override
+        {
+            return "Square";
+        }
 };
 
 

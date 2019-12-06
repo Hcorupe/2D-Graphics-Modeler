@@ -64,6 +64,11 @@ class Circle : public Ellipse
         {
             return CIRCLE;
         }
+
+        const char* GetShapeTypeString() override
+        {
+            return "Circle";
+        }
 };
 
 #endif // CIRCLE_H

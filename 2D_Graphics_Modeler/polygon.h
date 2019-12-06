@@ -127,6 +127,11 @@ class Polygon: public Shape
             return POLYGON;
         }
 
+        const char* GetShapeTypeString() override
+        {
+            return "Polygon";
+        }
+
     private:
         /*!
          * \brief QVector of polygon points

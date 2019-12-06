@@ -119,6 +119,10 @@ class Ellipse : public Shape
             return ELLIPSE;
         }
 
+        const char* GetShapeTypeString() override
+        {
+            return "Ellipse";
+        }
 
       private:
         //! Major axis length

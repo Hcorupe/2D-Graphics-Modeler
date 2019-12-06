@@ -27,6 +27,10 @@ MainWindow::MainWindow(QWidget *parent)
         ui->idComboBox->addItem(QString::number((ui->renderArea->shapes[i]->getShapeId())));
     }
 
+    //Add sort options to combobox
+    ui->sortComboBox->addItem(QString(("ID")));
+    ui->sortComboBox->addItem(QString(("Area")));
+    ui->sortComboBox->addItem(QString(("Perimeter")));
 }
 
 void MainWindow::disableEdit()
@@ -133,6 +137,11 @@ void MainWindow::receiveShape(Shape* shape, Text* text)
     ui->renderArea->shapes.push_back(shape);
     ui->renderArea->shapeLabels.push_back(text);
 
+    ui->shapeList->addItem(QString(QString::number((shape->getShapeId())))
+                      + "     " + (QString((shape->GetShapeTypeString())))
+                      + "     " + (QString::number((shape->GetArea())))
+                      + "     " + (QString::number((shape->GetPerimeter()))));
+
     ui->idComboBox->addItem(QString::number(shape->getShapeId()));
 
     ui->renderArea->update();
@@ -140,3 +149,40 @@ void MainWindow::receiveShape(Shape* shape, Text* text)
     ui->idComboBox->setCurrentIndex(ui->renderArea->shapes.size() - 1);
 }
 
+void MainWindow::on_sortComboBox_currentIndexChanged(int index)
+{
+    if(ui->renderArea->shapes.size() > 0)
+    {
+        myStd::vector<Shape*> shapesForList(ui->renderArea->shapes);
+        QListWidgetItem* deleteItem;
+
+        switch(index)
+        {
+        case 0:
+            IdSort(shapesForList, 0, shapesForList.size() - 1);
+            break;
+        case 1:
+            AreaSort(shapesForList, 0, shapesForList.size() - 1);
+            break;
+        case 2:
+            PerimSort(shapesForList, 0, shapesForList.size() - 1);
+            break;
+        default:
+            break;
+        }
+
+        for (int i = 0; i < ui->renderArea->shapes.size(); i++)
+        {
+            ui->shapeList->addItem(QString(QString::number((shapesForList[i]->getShapeId())))
+                              + "     " + (QString((shapesForList[i]->GetShapeTypeString())))
+                              + "     " + (QString::number((shapesForList[i]->GetArea())))
+                              + "     " + (QString::number((shapesForList[i]->GetPerimeter()))));
+        }
+
+        for(int i = 0; i <= shapesForList.size() - 1; i++)
+        {
+            deleteItem = ui->shapeList->takeItem(0);
+            delete deleteItem;
+        }
+    }
+}

@@ -223,6 +223,10 @@ class Text: public Shape
             return TEXT;
         }
 
+        const char* GetShapeTypeString() override
+        {
+            return "Text";
+        }
 
     private:
         //! Text font

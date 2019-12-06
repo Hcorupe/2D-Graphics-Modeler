@@ -120,6 +120,11 @@ class Rectangle : public Shape
             return RECTANGLE;
         }
 
+        const char* GetShapeTypeString() override
+        {
+            return "Rectangle";
+        }
+
       private:
         /*!
          * \brief Rectangle's length
