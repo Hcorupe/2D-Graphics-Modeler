@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['getalignment_177',['getAlignment',['../class_text.html#a6d443e3c6532c384a46f5ab2552f98e3',1,'Text']]],
+  ['getarea_178',['GetArea',['../class_ellipse.html#acc99e278ea19dd7a9fa4c12d004012a7',1,'Ellipse::GetArea()'],['../class_line.html#a283ef49681a60e1fda135eb8a6f8516b',1,'Line::GetArea()'],['../class_polygon.html#a9712d50ce4fa4879e7a14809b62e21f0',1,'Polygon::GetArea()'],['../class_polyline.html#a2ea166a9e72f15fde3895ff3b4e02d4d',1,'Polyline::GetArea()'],['../class_rectangle.html#ad23beefafa75650285343cb97dce73ce',1,'Rectangle::GetArea()'],['../class_shape.html#a60821279492d8c2daf0c83e494ea2973',1,'Shape::GetArea()'],['../class_text.html#af3f37cdcb398831e4e758733b68fe760',1,'Text::GetArea()']]],
+  ['getbrush_179',['getBrush',['../class_shape.html#a89bf4b5a14f75ac6215b1c0cb45d813c',1,'Shape']]],
+  ['getendpoint_180',['getEndPoint',['../class_line.html#a0a272d2505b8c84d8c74d60672c2f49a',1,'Line']]],
+  ['getfont_181',['getFont',['../class_text.html#acb0cbec93eb68a03faffc9e70f5895b7',1,'Text']]],
+  ['getheight_182',['getHeight',['../class_text.html#ad8f14955feaeac94cd1da811f5f05253',1,'Text']]],
+  ['getlength_183',['getLength',['../class_rectangle.html#a58c26a2910e8982b49fafd02d1d3aa47',1,'Rectangle']]],
+  ['getmajoraxisa_184',['getMajorAxisA',['../class_ellipse.html#ab5d00b9ae1410e2ef0a8a82d119aa7d2',1,'Ellipse']]],
+  ['getmessage_185',['getMessage',['../class_text.html#a3c1eb85e86906273ba0f12df128db87f',1,'Text']]],
+  ['getminoraxisb_186',['getMinorAxisB',['../class_ellipse.html#a66dacde2a59d7ea5179fcfbab11be9de',1,'Ellipse']]],
+  ['getpen_187',['getPen',['../class_shape.html#ae732f2c738cc060721b5ba0628f03536',1,'Shape']]],
+  ['getperimeter_188',['GetPerimeter',['../class_ellipse.html#a8fe9bb0575a4db359de7b2b5f6ef72bf',1,'Ellipse::GetPerimeter()'],['../class_line.html#aa9f85d240ab3eea5ed5d9e0bcc4aea8f',1,'Line::GetPerimeter()'],['../class_polygon.html#ab200bca204ddb33eea157d61829e0c26',1,'Polygon::GetPerimeter()'],['../class_polyline.html#a2998ca2e6fcd47f9881cac4ef5c24cf4',1,'Polyline::GetPerimeter()'],['../class_rectangle.html#a8bbc499aea7b37c05e3f4f1b79c50af1',1,'Rectangle::GetPerimeter()'],['../class_shape.html#aaf9dd4c6c3b26aba2f0aeb431a0d8d0d',1,'Shape::GetPerimeter()'],['../class_text.html#a20bd0654b0f9a590c5ab21e5eb433b8d',1,'Text::GetPerimeter()']]],
+  ['getpoints_189',['getPoints',['../class_polygon.html#ac4516a4f9e5d628f08b30577797a9fb2',1,'Polygon::getPoints()'],['../class_polyline.html#ac7e2407e0aa8b6073f8a54b1a6eed794',1,'Polyline::getPoints()']]],
+  ['getshapeid_190',['getShapeId',['../class_shape.html#a8a44602301f95906da9786052f82d824',1,'Shape']]],
+  ['getshapetype_191',['getShapeType',['../class_circle.html#ac592484082737126352bcca6111a8038',1,'Circle::getShapeType()'],['../class_ellipse.html#a1cf49e2d38e4c8a22d6c771e578b41cb',1,'Ellipse::getShapeType()'],['../class_line.html#a3807c6900534506ba1bfe6898bbd8438',1,'Line::getShapeType()'],['../class_polygon.html#ab412b45a9a20ef3a11ea858ada4a3a6c',1,'Polygon::getShapeType()'],['../class_polyline.html#abc4758f7d95a379ddd9503d6fad8f104',1,'Polyline::getShapeType()'],['../class_rectangle.html#a80c545ccad182af999bd98e70e55f2bc',1,'Rectangle::getShapeType()'],['../class_shape.html#a38f85d9634a1999cf8005ce9fbdb75e3',1,'Shape::getShapeType()'],['../class_square.html#a37d2704bdf5a74bad5ad4fbceb6e5c72',1,'Square::getShapeType()'],['../class_text.html#a003d43b45e7b24084e72100ecdd52886',1,'Text::getShapeType()']]],
+  ['getstartpoint_192',['getStartPoint',['../class_polygon.html#a97ef77cd24bbfcf25a72475093b325ea',1,'Polygon::getStartPoint()'],['../class_polyline.html#ae36678b74412355d11b2f766820abb42',1,'Polyline::getStartPoint()'],['../class_shape.html#a2100daebd19b833dd4a8a8c29ae35c1f',1,'Shape::getStartPoint()']]],
+  ['getwidth_193',['getWidth',['../class_rectangle.html#ab750e4f0666df9c303ad649342bf3efd',1,'Rectangle::getWidth()'],['../class_text.html#aa426e679627149ff986a2c793b2ac71d',1,'Text::getWidth()']]]
+];

@@ -137,12 +137,54 @@ class Text: public Shape
         }
 
         /*!
+         * \brief getFontFamily returns font family
+         * \return QString
+         */
+        QString getFontFamily()
+        {
+            return font.family();
+        }
+
+        /*!
+         * \brief getFontStyle returns font style
+         * \return QFont::Style
+         */
+        QFont::Style getFontStyle()
+        {
+            return font.style();
+        }
+
+        QFont::Weight getWeight()
+        {
+            switch(font.weight())
+            {
+            case 0:
+                return QFont::Thin;
+            case 25:
+                return QFont::Light;
+            case 50:
+                return QFont::Normal;
+            case 75:
+                return QFont::Bold;
+            }
+        }
+
+        /*!
          * \brief getAlignment returns text alignment
          * \return AlignmentFlag
          */
         Qt::AlignmentFlag getAlignment()
         {
             return alignment;
+        }
+
+        /*!
+         * \brief getPointSize returns point size
+         * \return
+         */
+        int getPointSize()
+        {
+            return font.pointSize();
         }
 
         /*!

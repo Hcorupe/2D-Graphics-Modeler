@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['setalignment_257',['setAlignment',['../class_text.html#a7d10415d6606939de9227af04c1066fd',1,'Text']]],
+  ['setbrushcolor_258',['setBrushColor',['../class_shape.html#a160ecc98cea4f21ab46f371b4789b646',1,'Shape']]],
+  ['setbrushstyle_259',['setBrushStyle',['../class_shape.html#a45610f0be02b7bb5c65f699c8fe30319',1,'Shape']]],
+  ['setendpoint_260',['setEndPoint',['../class_line.html#a6c42047f0204cbd300af573c15a6b3f6',1,'Line']]],
+  ['setfontfamily_261',['setFontFamily',['../class_text.html#ae15f33b5198a2cbc5381df06abda66c1',1,'Text']]],
+  ['setlength_262',['setLength',['../class_rectangle.html#a854ff1c39924b07427e242468eb6e7f4',1,'Rectangle::setLength()'],['../class_square.html#a78bdb4992dfb40374f8330abd3155000',1,'Square::setLength()']]],
+  ['setmajoraxisa_263',['setMajorAxisA',['../class_circle.html#a2ebfea6254b4a93745d3631097f23b46',1,'Circle::setMajorAxisA()'],['../class_ellipse.html#a3390187cef1343e7c222d5d8a1f40535',1,'Ellipse::setMajorAxisA()']]],
+  ['setminoraxisb_264',['setMinorAxisB',['../class_circle.html#a50a4191ec3c6c2d62f3c69fc5b3f8290',1,'Circle::setMinorAxisB()'],['../class_ellipse.html#af881287bb5523eacd4e2020813eaa922',1,'Ellipse::setMinorAxisB()']]],
+  ['setpencapstyle_265',['setPenCapStyle',['../class_shape.html#a067f05c4d4a42159e1e9e085925a7ca1',1,'Shape']]],
+  ['setpencolor_266',['setPenColor',['../class_shape.html#a855ed3b6a35ae539221e2c75917ca083',1,'Shape']]],
+  ['setpenjoinstyle_267',['setPenJoinStyle',['../class_shape.html#abb6e9d015d26b87b8cad42b01ac55822',1,'Shape']]],
+  ['setpenstyle_268',['setPenStyle',['../class_shape.html#a2455509c068d651a44768abfe3920d82',1,'Shape']]],
+  ['setpenwidth_269',['setPenWidth',['../class_shape.html#adff7bd0e77ce951c301d3c822eb14f1c',1,'Shape']]],
+  ['setpoints_270',['setPoints',['../class_polygon.html#acde153da73fbcbde6f14feb6239b23e6',1,'Polygon::setPoints()'],['../class_polyline.html#a7efbac87f39a67f5d0458c0e9a617ca5',1,'Polyline::setPoints()']]],
+  ['setpointsize_271',['setPointSize',['../class_text.html#ac1c3862dab83863659ac9a44884c945c',1,'Text']]],
+  ['setshapeid_272',['setShapeId',['../class_shape.html#a171dca4c400ae9ebc739c2309e68fe81',1,'Shape']]],
+  ['setstartpoint_273',['setStartPoint',['../class_shape.html#aee5fd8f3ee95a0ccbc4a071ad2e987fc',1,'Shape']]],
+  ['setstyle_274',['setStyle',['../class_text.html#a9f6401e4f572adfb8767a196bdd3b40e',1,'Text']]],
+  ['setweight_275',['setWeight',['../class_text.html#a77b58b18aec83f57f798970af473010a',1,'Text']]],
+  ['setwidth_276',['setWidth',['../class_rectangle.html#a861bbda84fefecdb8e2a296101006e23',1,'Rectangle::setWidth()'],['../class_square.html#abefffd3486d36f3e20f4ac0ea707844d',1,'Square::setWidth()']]],
+  ['shape_277',['Shape',['../class_shape.html#aaa8d87171e65e0d8ba3c5459978992a7',1,'Shape::Shape()'],['../class_shape.html#ad7fd0fd67d7dbe06af95216ea27a0983',1,'Shape::Shape(int ID, QPoint sPoint, Qt::GlobalColor penColor, int penWidth, Qt::PenStyle penStyle, Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle, Qt::GlobalColor brushColor, Qt::BrushStyle brushStyle)']]],
+  ['size_278',['size',['../classmy_std_1_1vector.html#a72c4cf7716f3fb1db42b8cdc2347ef49',1,'myStd::vector']]],
+  ['skipline_279',['skipLine',['../class_parser.html#aec3d32e3e29a68dcea3bcae308b0daa0',1,'Parser']]],
+  ['square_280',['Square',['../class_square.html#a3dc7ff9aefc2725172b5d3153973d243',1,'Square::Square()'],['../class_square.html#accbaba1425b3dc065c950e3541f910a3',1,'Square::Square(int ID, QPoint sPoint, int side, Qt::GlobalColor penColor, int penWidth, Qt::PenStyle penStyle, Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle, Qt::GlobalColor brushColor, Qt::BrushStyle brushStyle)']]]
+];

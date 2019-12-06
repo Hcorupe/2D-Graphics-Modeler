@@ -1,0 +1,212 @@
+\hypertarget{class_ellipse}{}\doxysection{Ellipse Class Reference}
+\label{class_ellipse}\index{Ellipse@{Ellipse}}
+
+
+The \mbox{\hyperlink{class_ellipse}{Ellipse}} class inherits from \mbox{\hyperlink{class_shape}{Shape}} class.  
+
+
+
+
+{\ttfamily \#include $<$ellipse.\+h$>$}
+
+Inheritance diagram for Ellipse\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_ellipse}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_ellipse_aaff4917eddd8882616fe2f956151ba9b}\label{class_ellipse_aaff4917eddd8882616fe2f956151ba9b}} 
+\mbox{\hyperlink{class_ellipse_aaff4917eddd8882616fe2f956151ba9b}{Ellipse}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ellipse_a38bf1756b530aaeb197e7af8a07f9192}{Ellipse}} (int ID, Q\+Point s\+Point, Qt\+::\+Global\+Color pen\+Color, int pen\+Width, Qt\+::\+Pen\+Style pen\+Style, Qt\+::\+Pen\+Cap\+Style cap\+Style, Qt\+::\+Pen\+Join\+Style join\+Style, Qt\+::\+Global\+Color brush\+Color, Qt\+::\+Brush\+Style brush\+Style, int major, int minor)
+\begin{DoxyCompactList}\small\item\em Alternate constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ellipse_af7b546b29a2f8ce3494f9d02143a621c}\label{class_ellipse_af7b546b29a2f8ce3494f9d02143a621c}} 
+\mbox{\hyperlink{class_ellipse_af7b546b29a2f8ce3494f9d02143a621c}{$\sim$\+Ellipse}} () override
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ellipse_ae83718bf96925955fa48c14a4217c73c}{draw}} (Q\+Paint\+Device $\ast$device) override
+\begin{DoxyCompactList}\small\item\em Draws ellipse. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_ellipse_a3390187cef1343e7c222d5d8a1f40535}{set\+Major\+AxisA}} (const int a\+\_\+\+Value)
+\begin{DoxyCompactList}\small\item\em set\+Major\+AxisA sets the ellipse\textquotesingle{}s major axis length \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_ellipse_af881287bb5523eacd4e2020813eaa922}{set\+Minor\+AxisB}} (const int b\+\_\+\+Value)
+\begin{DoxyCompactList}\small\item\em set\+Minor\+AxisB sets the ellipse\textquotesingle{}s minor axis length \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_ellipse_acc99e278ea19dd7a9fa4c12d004012a7}{Get\+Area}} () override
+\begin{DoxyCompactList}\small\item\em Get\+Area gets the ellipse\textquotesingle{}s area. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_ellipse_a8fe9bb0575a4db359de7b2b5f6ef72bf}{Get\+Perimeter}} () override
+\begin{DoxyCompactList}\small\item\em Get\+Perimeter gets the ellipse\textquotesingle{}s perimeter. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_ellipse_ab5d00b9ae1410e2ef0a8a82d119aa7d2}{get\+Major\+AxisA}} ()
+\begin{DoxyCompactList}\small\item\em get\+Major\+AxisA gets the major axis length \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_ellipse_a66dacde2a59d7ea5179fcfbab11be9de}{get\+Minor\+AxisB}} ()
+\begin{DoxyCompactList}\small\item\em get\+Minor\+AxisB gets the minor axis length \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ellipse_a1cf49e2d38e4c8a22d6c771e578b41cb}\label{class_ellipse_a1cf49e2d38e4c8a22d6c771e578b41cb}} 
+S\+H\+A\+PE \mbox{\hyperlink{class_ellipse_a1cf49e2d38e4c8a22d6c771e578b41cb}{get\+Shape\+Type}} () override
+\begin{DoxyCompactList}\small\item\em Pure virtual function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_ellipse}{Ellipse}} class inherits from \mbox{\hyperlink{class_shape}{Shape}} class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_ellipse_a38bf1756b530aaeb197e7af8a07f9192}\label{class_ellipse_a38bf1756b530aaeb197e7af8a07f9192}} 
+\index{Ellipse@{Ellipse}!Ellipse@{Ellipse}}
+\index{Ellipse@{Ellipse}!Ellipse@{Ellipse}}
+\doxysubsubsection{\texorpdfstring{Ellipse()}{Ellipse()}}
+{\footnotesize\ttfamily Ellipse\+::\+Ellipse (\begin{DoxyParamCaption}\item[{int}]{ID,  }\item[{Q\+Point}]{s\+Point,  }\item[{Qt\+::\+Global\+Color}]{pen\+Color,  }\item[{int}]{pen\+Width,  }\item[{Qt\+::\+Pen\+Style}]{pen\+Style,  }\item[{Qt\+::\+Pen\+Cap\+Style}]{cap\+Style,  }\item[{Qt\+::\+Pen\+Join\+Style}]{join\+Style,  }\item[{Qt\+::\+Global\+Color}]{brush\+Color,  }\item[{Qt\+::\+Brush\+Style}]{brush\+Style,  }\item[{int}]{major,  }\item[{int}]{minor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Alternate constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & \\
+\hline
+{\em s\+Point} & \\
+\hline
+{\em pen\+Color} & \\
+\hline
+{\em pen\+Width} & \\
+\hline
+{\em pen\+Style} & \\
+\hline
+{\em cap\+Style} & \\
+\hline
+{\em join\+Style} & \\
+\hline
+{\em brush\+Color} & \\
+\hline
+{\em brush\+Style} & \\
+\hline
+{\em major} & \\
+\hline
+{\em minor} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ellipse_ae83718bf96925955fa48c14a4217c73c}\label{class_ellipse_ae83718bf96925955fa48c14a4217c73c}} 
+\index{Ellipse@{Ellipse}!draw@{draw}}
+\index{draw@{draw}!Ellipse@{Ellipse}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Ellipse\+::draw (\begin{DoxyParamCaption}\item[{Q\+Paint\+Device $\ast$}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws ellipse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_shape_ad2ab549a1b0cc0e23af8be1fd1b61a1b}{Shape}}.
+
+\mbox{\Hypertarget{class_ellipse_acc99e278ea19dd7a9fa4c12d004012a7}\label{class_ellipse_acc99e278ea19dd7a9fa4c12d004012a7}} 
+\index{Ellipse@{Ellipse}!GetArea@{GetArea}}
+\index{GetArea@{GetArea}!Ellipse@{Ellipse}}
+\doxysubsubsection{\texorpdfstring{GetArea()}{GetArea()}}
+{\footnotesize\ttfamily double Ellipse\+::\+Get\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get\+Area gets the ellipse\textquotesingle{}s area. 
+
+\begin{DoxyReturn}{Returns}
+double area 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape_a60821279492d8c2daf0c83e494ea2973}{Shape}}.
+
+\mbox{\Hypertarget{class_ellipse_ab5d00b9ae1410e2ef0a8a82d119aa7d2}\label{class_ellipse_ab5d00b9ae1410e2ef0a8a82d119aa7d2}} 
+\index{Ellipse@{Ellipse}!getMajorAxisA@{getMajorAxisA}}
+\index{getMajorAxisA@{getMajorAxisA}!Ellipse@{Ellipse}}
+\doxysubsubsection{\texorpdfstring{getMajorAxisA()}{getMajorAxisA()}}
+{\footnotesize\ttfamily int Ellipse\+::get\+Major\+AxisA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Major\+AxisA gets the major axis length 
+
+\begin{DoxyReturn}{Returns}
+int major axis length 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_ellipse_a66dacde2a59d7ea5179fcfbab11be9de}\label{class_ellipse_a66dacde2a59d7ea5179fcfbab11be9de}} 
+\index{Ellipse@{Ellipse}!getMinorAxisB@{getMinorAxisB}}
+\index{getMinorAxisB@{getMinorAxisB}!Ellipse@{Ellipse}}
+\doxysubsubsection{\texorpdfstring{getMinorAxisB()}{getMinorAxisB()}}
+{\footnotesize\ttfamily int Ellipse\+::get\+Minor\+AxisB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Minor\+AxisB gets the minor axis length 
+
+\begin{DoxyReturn}{Returns}
+int minor axis length 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_ellipse_a8fe9bb0575a4db359de7b2b5f6ef72bf}\label{class_ellipse_a8fe9bb0575a4db359de7b2b5f6ef72bf}} 
+\index{Ellipse@{Ellipse}!GetPerimeter@{GetPerimeter}}
+\index{GetPerimeter@{GetPerimeter}!Ellipse@{Ellipse}}
+\doxysubsubsection{\texorpdfstring{GetPerimeter()}{GetPerimeter()}}
+{\footnotesize\ttfamily double Ellipse\+::\+Get\+Perimeter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get\+Perimeter gets the ellipse\textquotesingle{}s perimeter. 
+
+\begin{DoxyReturn}{Returns}
+double perimeter 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape_aaf9dd4c6c3b26aba2f0aeb431a0d8d0d}{Shape}}.
+
+\mbox{\Hypertarget{class_ellipse_a3390187cef1343e7c222d5d8a1f40535}\label{class_ellipse_a3390187cef1343e7c222d5d8a1f40535}} 
+\index{Ellipse@{Ellipse}!setMajorAxisA@{setMajorAxisA}}
+\index{setMajorAxisA@{setMajorAxisA}!Ellipse@{Ellipse}}
+\doxysubsubsection{\texorpdfstring{setMajorAxisA()}{setMajorAxisA()}}
+{\footnotesize\ttfamily virtual void Ellipse\+::set\+Major\+AxisA (\begin{DoxyParamCaption}\item[{const int}]{a\+\_\+\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+set\+Major\+AxisA sets the ellipse\textquotesingle{}s major axis length 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+\+Value} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_circle_a2ebfea6254b4a93745d3631097f23b46}{Circle}}.
+
+\mbox{\Hypertarget{class_ellipse_af881287bb5523eacd4e2020813eaa922}\label{class_ellipse_af881287bb5523eacd4e2020813eaa922}} 
+\index{Ellipse@{Ellipse}!setMinorAxisB@{setMinorAxisB}}
+\index{setMinorAxisB@{setMinorAxisB}!Ellipse@{Ellipse}}
+\doxysubsubsection{\texorpdfstring{setMinorAxisB()}{setMinorAxisB()}}
+{\footnotesize\ttfamily virtual void Ellipse\+::set\+Minor\+AxisB (\begin{DoxyParamCaption}\item[{const int}]{b\+\_\+\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+set\+Minor\+AxisB sets the ellipse\textquotesingle{}s minor axis length 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b\+\_\+\+Value} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_circle_a50a4191ec3c6c2d62f3c69fc5b3f8290}{Circle}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+ellipse.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,422 @@
+\hypertarget{class_shape}{}\doxysection{Shape Class Reference}
+\label{class_shape}\index{Shape@{Shape}}
+Inheritance diagram for Shape\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_shape}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shape_aaa8d87171e65e0d8ba3c5459978992a7}{Shape}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_shape_ad7fd0fd67d7dbe06af95216ea27a0983}{Shape}} (int ID, Q\+Point s\+Point, Qt\+::\+Global\+Color pen\+Color, int pen\+Width, Qt\+::\+Pen\+Style pen\+Style, Qt\+::\+Pen\+Cap\+Style cap\+Style, Qt\+::\+Pen\+Join\+Style join\+Style, Qt\+::\+Global\+Color brush\+Color, Qt\+::\+Brush\+Style brush\+Style)
+\begin{DoxyCompactList}\small\item\em Alternate constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_shape_ac3b9fc48965274893f25b18aa14ba665}\label{class_shape_ac3b9fc48965274893f25b18aa14ba665}} 
+virtual \mbox{\hyperlink{class_shape_ac3b9fc48965274893f25b18aa14ba665}{$\sim$\+Shape}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_shape_a3b001c1e55c9087a9819e69783799914}{operator$<$}} (const \mbox{\hyperlink{class_shape}{Shape}} \&R\+HS)
+\begin{DoxyCompactList}\small\item\em Overloaded $<$ operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_shape_adcf32cfed2567e6316b0e27f5421f874}{operator$>$}} (const \mbox{\hyperlink{class_shape}{Shape}} \&R\+HS)
+\begin{DoxyCompactList}\small\item\em Overloaded $>$ operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_shape_a97ae90cec46f3ca7a7d5591ae614d79f}{operator==}} (const \mbox{\hyperlink{class_shape}{Shape}} \&R\+HS)
+\begin{DoxyCompactList}\small\item\em Overloaded == operator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_a171dca4c400ae9ebc739c2309e68fe81}{set\+Shape\+Id}} (const int num)
+\begin{DoxyCompactList}\small\item\em Sets shape\+ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_adff7bd0e77ce951c301d3c822eb14f1c}{set\+Pen\+Width}} (const int w)
+\begin{DoxyCompactList}\small\item\em Sets pen\+Width. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_a855ed3b6a35ae539221e2c75917ca083}{set\+Pen\+Color}} (const Qt\+::\+Global\+Color color)
+\begin{DoxyCompactList}\small\item\em Sets pen\textquotesingle{}s color. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_a2455509c068d651a44768abfe3920d82}{set\+Pen\+Style}} (const Qt\+::\+Pen\+Style p\+Style)
+\begin{DoxyCompactList}\small\item\em Set pen\textquotesingle{}s style. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_a067f05c4d4a42159e1e9e085925a7ca1}{set\+Pen\+Cap\+Style}} (const Qt\+::\+Pen\+Cap\+Style cap)
+\begin{DoxyCompactList}\small\item\em Set pen\textquotesingle{}s cap style. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_abb6e9d015d26b87b8cad42b01ac55822}{set\+Pen\+Join\+Style}} (const Qt\+::\+Pen\+Join\+Style join)
+\begin{DoxyCompactList}\small\item\em Set pen\textquotesingle{}s join style. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_a160ecc98cea4f21ab46f371b4789b646}{set\+Brush\+Color}} (const Qt\+::\+Global\+Color color)
+\begin{DoxyCompactList}\small\item\em Set brush\textquotesingle{}s color. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_a45610f0be02b7bb5c65f699c8fe30319}{set\+Brush\+Style}} (const Qt\+::\+Brush\+Style b\+Style)
+\begin{DoxyCompactList}\small\item\em Set brush\textquotesingle{}s style. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_aee5fd8f3ee95a0ccbc4a071ad2e987fc}{set\+Start\+Point}} (const Q\+Point s\+Point)
+\begin{DoxyCompactList}\small\item\em Set shape\textquotesingle{}s start point. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_shape_a8a44602301f95906da9786052f82d824}{get\+Shape\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Gets shape\textquotesingle{}s shape\+ID. \end{DoxyCompactList}\item 
+Q\+Pen \mbox{\hyperlink{class_shape_ae732f2c738cc060721b5ba0628f03536}{get\+Pen}} ()
+\begin{DoxyCompactList}\small\item\em Gets shape\textquotesingle{}s pen. \end{DoxyCompactList}\item 
+Q\+Brush \mbox{\hyperlink{class_shape_a89bf4b5a14f75ac6215b1c0cb45d813c}{get\+Brush}} ()
+\begin{DoxyCompactList}\small\item\em Gets shape\textquotesingle{}s brush. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_shape_a4a0816e50c322100ea472759f7f0c4fa}{move}} (Q\+Point point)
+\begin{DoxyCompactList}\small\item\em Virtual function. \end{DoxyCompactList}\item 
+virtual Q\+Point \mbox{\hyperlink{class_shape_a2100daebd19b833dd4a8a8c29ae35c1f}{get\+Start\+Point}} ()
+\begin{DoxyCompactList}\small\item\em Gets shape\textquotesingle{}s start point. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_shape_a60821279492d8c2daf0c83e494ea2973}\label{class_shape_a60821279492d8c2daf0c83e494ea2973}} 
+virtual double \mbox{\hyperlink{class_shape_a60821279492d8c2daf0c83e494ea2973}{Get\+Area}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_shape_aaf9dd4c6c3b26aba2f0aeb431a0d8d0d}\label{class_shape_aaf9dd4c6c3b26aba2f0aeb431a0d8d0d}} 
+virtual double \mbox{\hyperlink{class_shape_aaf9dd4c6c3b26aba2f0aeb431a0d8d0d}{Get\+Perimeter}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_shape_ad2ab549a1b0cc0e23af8be1fd1b61a1b}\label{class_shape_ad2ab549a1b0cc0e23af8be1fd1b61a1b}} 
+virtual void \mbox{\hyperlink{class_shape_ad2ab549a1b0cc0e23af8be1fd1b61a1b}{draw}} (Q\+Paint\+Device $\ast$device)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_shape_a38f85d9634a1999cf8005ce9fbdb75e3}\label{class_shape_a38f85d9634a1999cf8005ce9fbdb75e3}} 
+virtual S\+H\+A\+PE \mbox{\hyperlink{class_shape_a38f85d9634a1999cf8005ce9fbdb75e3}{get\+Shape\+Type}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Painter \mbox{\hyperlink{class_shape_a761a117dfc4b157944e512b8a4c89fde}{painter}}
+\begin{DoxyCompactList}\small\item\em Public Painter variable. \end{DoxyCompactList}\item 
+Q\+Pen \mbox{\hyperlink{class_shape_a75d192b68eddd2622bdea8a4ac1058d1}{pen}}
+\begin{DoxyCompactList}\small\item\em Public Pen variable. \end{DoxyCompactList}\item 
+Q\+Brush \mbox{\hyperlink{class_shape_aa67647c3a5d39d1e3f63a241208e59f2}{brush}}
+\begin{DoxyCompactList}\small\item\em Public Brush Variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_shape_aaa8d87171e65e0d8ba3c5459978992a7}\label{class_shape_aaa8d87171e65e0d8ba3c5459978992a7}} 
+\index{Shape@{Shape}!Shape@{Shape}}
+\index{Shape@{Shape}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{Shape()}{Shape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Shape\+::\+Shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+Sets start point to (0,0), sets pen and brush to default settings. \mbox{\Hypertarget{class_shape_ad7fd0fd67d7dbe06af95216ea27a0983}\label{class_shape_ad7fd0fd67d7dbe06af95216ea27a0983}} 
+\index{Shape@{Shape}!Shape@{Shape}}
+\index{Shape@{Shape}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{Shape()}{Shape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Shape\+::\+Shape (\begin{DoxyParamCaption}\item[{int}]{ID,  }\item[{Q\+Point}]{s\+Point,  }\item[{Qt\+::\+Global\+Color}]{pen\+Color,  }\item[{int}]{pen\+Width,  }\item[{Qt\+::\+Pen\+Style}]{pen\+Style,  }\item[{Qt\+::\+Pen\+Cap\+Style}]{cap\+Style,  }\item[{Qt\+::\+Pen\+Join\+Style}]{join\+Style,  }\item[{Qt\+::\+Global\+Color}]{brush\+Color,  }\item[{Qt\+::\+Brush\+Style}]{brush\+Style }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Alternate constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & int shape\+ID \\
+\hline
+{\em s\+Point} & Q\+Point start point \\
+\hline
+{\em pen\+Color} & Qt\+::\+Global\+Color pen color \\
+\hline
+{\em pen\+Width} & int pen width \\
+\hline
+{\em pen\+Style} & Qt\+::\+Pen\+Style pen style \\
+\hline
+{\em cap\+Style} & Qt\+::\+Pen\+Cap\+Style pen\textquotesingle{}s cap style \\
+\hline
+{\em join\+Style} & Qt\+::\+Pen\+Join\+Style pen\textquotesingle{}s join style \\
+\hline
+{\em brush\+Color} & Qt\+::\+Global\+Color brush\textquotesingle{}s color \\
+\hline
+{\em brush\+Style} & Qt\+::\+Brush\+Style brush\textquotesingle{}s style \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_shape_a89bf4b5a14f75ac6215b1c0cb45d813c}\label{class_shape_a89bf4b5a14f75ac6215b1c0cb45d813c}} 
+\index{Shape@{Shape}!getBrush@{getBrush}}
+\index{getBrush@{getBrush}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{getBrush()}{getBrush()}}
+{\footnotesize\ttfamily Q\+Brush Shape\+::get\+Brush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets shape\textquotesingle{}s brush. 
+
+\begin{DoxyReturn}{Returns}
+shape\textquotesingle{}s Q\+Brush 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shape_ae732f2c738cc060721b5ba0628f03536}\label{class_shape_ae732f2c738cc060721b5ba0628f03536}} 
+\index{Shape@{Shape}!getPen@{getPen}}
+\index{getPen@{getPen}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{getPen()}{getPen()}}
+{\footnotesize\ttfamily Q\+Pen Shape\+::get\+Pen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets shape\textquotesingle{}s pen. 
+
+\begin{DoxyReturn}{Returns}
+shape\textquotesingle{}s Q\+Pen 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shape_a8a44602301f95906da9786052f82d824}\label{class_shape_a8a44602301f95906da9786052f82d824}} 
+\index{Shape@{Shape}!getShapeId@{getShapeId}}
+\index{getShapeId@{getShapeId}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{getShapeId()}{getShapeId()}}
+{\footnotesize\ttfamily int Shape\+::get\+Shape\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets shape\textquotesingle{}s shape\+ID. 
+
+\begin{DoxyReturn}{Returns}
+int shape\+ID 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shape_a2100daebd19b833dd4a8a8c29ae35c1f}\label{class_shape_a2100daebd19b833dd4a8a8c29ae35c1f}} 
+\index{Shape@{Shape}!getStartPoint@{getStartPoint}}
+\index{getStartPoint@{getStartPoint}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{getStartPoint()}{getStartPoint()}}
+{\footnotesize\ttfamily virtual Q\+Point Shape\+::get\+Start\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gets shape\textquotesingle{}s start point. 
+
+\begin{DoxyReturn}{Returns}
+Q\+Point start\+Point 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_polygon_a97ef77cd24bbfcf25a72475093b325ea}{Polygon}}, and \mbox{\hyperlink{class_polyline_ae36678b74412355d11b2f766820abb42}{Polyline}}.
+
+\mbox{\Hypertarget{class_shape_a4a0816e50c322100ea472759f7f0c4fa}\label{class_shape_a4a0816e50c322100ea472759f7f0c4fa}} 
+\index{Shape@{Shape}!move@{move}}
+\index{move@{move}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily virtual void Shape\+::move (\begin{DoxyParamCaption}\item[{Q\+Point}]{point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual function. 
+
+Moves shape 
+\begin{DoxyParams}{Parameters}
+{\em point} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_polygon_a73cd065832ab2d72c0f9c3e9b97cead5}{Polygon}}, \mbox{\hyperlink{class_polyline_addbe012b0593663a9d2f126e67b2a076}{Polyline}}, and \mbox{\hyperlink{class_line_a67c1e50346f952c10c72fbff6fbe80ce}{Line}}.
+
+\mbox{\Hypertarget{class_shape_a3b001c1e55c9087a9819e69783799914}\label{class_shape_a3b001c1e55c9087a9819e69783799914}} 
+\index{Shape@{Shape}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Shape\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_shape}{Shape}} \&}]{R\+HS }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overloaded $<$ operator. 
+
+Overloads $<$ operator to compare shape\+ID\textquotesingle{}s 
+\begin{DoxyParams}{Parameters}
+{\em R\+HS} & other \mbox{\hyperlink{class_shape}{Shape}} to compare to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Bool, returns true if shape\+ID $<$ R\+HS\textquotesingle{}s shape\+ID 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shape_a97ae90cec46f3ca7a7d5591ae614d79f}\label{class_shape_a97ae90cec46f3ca7a7d5591ae614d79f}} 
+\index{Shape@{Shape}!operator==@{operator==}}
+\index{operator==@{operator==}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Shape\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_shape}{Shape}} \&}]{R\+HS }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overloaded == operator. 
+
+Overloads == to compare shape\+ID\textquotesingle{}s 
+\begin{DoxyParams}{Parameters}
+{\em R\+HS} & other \mbox{\hyperlink{class_shape}{Shape}} to compare to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Bool, returns true if shape\+ID == R\+HS\textquotesingle{}s shape\+ID 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shape_adcf32cfed2567e6316b0e27f5421f874}\label{class_shape_adcf32cfed2567e6316b0e27f5421f874}} 
+\index{Shape@{Shape}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool Shape\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_shape}{Shape}} \&}]{R\+HS }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overloaded $>$ operator. 
+
+Overloads $>$ operator to compare shape\+ID\textquotesingle{}s 
+\begin{DoxyParams}{Parameters}
+{\em R\+HS} & other \mbox{\hyperlink{class_shape}{Shape}} to compare to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Bool, returns true if shape\+ID $>$ R\+HS\textquotesingle{}s shape\+ID 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_shape_a160ecc98cea4f21ab46f371b4789b646}\label{class_shape_a160ecc98cea4f21ab46f371b4789b646}} 
+\index{Shape@{Shape}!setBrushColor@{setBrushColor}}
+\index{setBrushColor@{setBrushColor}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{setBrushColor()}{setBrushColor()}}
+{\footnotesize\ttfamily void Shape\+::set\+Brush\+Color (\begin{DoxyParamCaption}\item[{const Qt\+::\+Global\+Color}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set brush\textquotesingle{}s color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_shape_a45610f0be02b7bb5c65f699c8fe30319}\label{class_shape_a45610f0be02b7bb5c65f699c8fe30319}} 
+\index{Shape@{Shape}!setBrushStyle@{setBrushStyle}}
+\index{setBrushStyle@{setBrushStyle}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{setBrushStyle()}{setBrushStyle()}}
+{\footnotesize\ttfamily void Shape\+::set\+Brush\+Style (\begin{DoxyParamCaption}\item[{const Qt\+::\+Brush\+Style}]{b\+Style }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set brush\textquotesingle{}s style. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b\+Style} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_shape_a067f05c4d4a42159e1e9e085925a7ca1}\label{class_shape_a067f05c4d4a42159e1e9e085925a7ca1}} 
+\index{Shape@{Shape}!setPenCapStyle@{setPenCapStyle}}
+\index{setPenCapStyle@{setPenCapStyle}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{setPenCapStyle()}{setPenCapStyle()}}
+{\footnotesize\ttfamily void Shape\+::set\+Pen\+Cap\+Style (\begin{DoxyParamCaption}\item[{const Qt\+::\+Pen\+Cap\+Style}]{cap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set pen\textquotesingle{}s cap style. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cap} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_shape_a855ed3b6a35ae539221e2c75917ca083}\label{class_shape_a855ed3b6a35ae539221e2c75917ca083}} 
+\index{Shape@{Shape}!setPenColor@{setPenColor}}
+\index{setPenColor@{setPenColor}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{setPenColor()}{setPenColor()}}
+{\footnotesize\ttfamily void Shape\+::set\+Pen\+Color (\begin{DoxyParamCaption}\item[{const Qt\+::\+Global\+Color}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets pen\textquotesingle{}s color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_shape_abb6e9d015d26b87b8cad42b01ac55822}\label{class_shape_abb6e9d015d26b87b8cad42b01ac55822}} 
+\index{Shape@{Shape}!setPenJoinStyle@{setPenJoinStyle}}
+\index{setPenJoinStyle@{setPenJoinStyle}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{setPenJoinStyle()}{setPenJoinStyle()}}
+{\footnotesize\ttfamily void Shape\+::set\+Pen\+Join\+Style (\begin{DoxyParamCaption}\item[{const Qt\+::\+Pen\+Join\+Style}]{join }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set pen\textquotesingle{}s join style. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em join} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_shape_a2455509c068d651a44768abfe3920d82}\label{class_shape_a2455509c068d651a44768abfe3920d82}} 
+\index{Shape@{Shape}!setPenStyle@{setPenStyle}}
+\index{setPenStyle@{setPenStyle}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{setPenStyle()}{setPenStyle()}}
+{\footnotesize\ttfamily void Shape\+::set\+Pen\+Style (\begin{DoxyParamCaption}\item[{const Qt\+::\+Pen\+Style}]{p\+Style }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set pen\textquotesingle{}s style. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Style} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_shape_adff7bd0e77ce951c301d3c822eb14f1c}\label{class_shape_adff7bd0e77ce951c301d3c822eb14f1c}} 
+\index{Shape@{Shape}!setPenWidth@{setPenWidth}}
+\index{setPenWidth@{setPenWidth}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{setPenWidth()}{setPenWidth()}}
+{\footnotesize\ttfamily void Shape\+::set\+Pen\+Width (\begin{DoxyParamCaption}\item[{const int}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets pen\+Width. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_shape_a171dca4c400ae9ebc739c2309e68fe81}\label{class_shape_a171dca4c400ae9ebc739c2309e68fe81}} 
+\index{Shape@{Shape}!setShapeId@{setShapeId}}
+\index{setShapeId@{setShapeId}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{setShapeId()}{setShapeId()}}
+{\footnotesize\ttfamily void Shape\+::set\+Shape\+Id (\begin{DoxyParamCaption}\item[{const int}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets shape\+ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_shape_aee5fd8f3ee95a0ccbc4a071ad2e987fc}\label{class_shape_aee5fd8f3ee95a0ccbc4a071ad2e987fc}} 
+\index{Shape@{Shape}!setStartPoint@{setStartPoint}}
+\index{setStartPoint@{setStartPoint}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{setStartPoint()}{setStartPoint()}}
+{\footnotesize\ttfamily void Shape\+::set\+Start\+Point (\begin{DoxyParamCaption}\item[{const Q\+Point}]{s\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set shape\textquotesingle{}s start point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s\+Point} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_shape_aa67647c3a5d39d1e3f63a241208e59f2}\label{class_shape_aa67647c3a5d39d1e3f63a241208e59f2}} 
+\index{Shape@{Shape}!brush@{brush}}
+\index{brush@{brush}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{brush}{brush}}
+{\footnotesize\ttfamily Q\+Brush Shape\+::brush}
+
+
+
+Public Brush Variable. 
+
+Brush used to fill shape. \mbox{\Hypertarget{class_shape_a761a117dfc4b157944e512b8a4c89fde}\label{class_shape_a761a117dfc4b157944e512b8a4c89fde}} 
+\index{Shape@{Shape}!painter@{painter}}
+\index{painter@{painter}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{painter}{painter}}
+{\footnotesize\ttfamily Q\+Painter Shape\+::painter}
+
+
+
+Public Painter variable. 
+
+Q\+Painter used to paint the shape. \mbox{\Hypertarget{class_shape_a75d192b68eddd2622bdea8a4ac1058d1}\label{class_shape_a75d192b68eddd2622bdea8a4ac1058d1}} 
+\index{Shape@{Shape}!pen@{pen}}
+\index{pen@{pen}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{pen}{pen}}
+{\footnotesize\ttfamily Q\+Pen Shape\+::pen}
+
+
+
+Public Pen variable. 
+
+Pen used to draw the shape. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+shape.\+h\end{DoxyCompactItemize}

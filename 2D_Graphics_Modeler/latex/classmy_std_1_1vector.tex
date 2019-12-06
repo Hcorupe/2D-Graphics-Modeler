@@ -1,0 +1,291 @@
+\hypertarget{classmy_std_1_1vector}{}\doxysection{my\+Std\+::vector$<$ T $>$ Class Template Reference}
+\label{classmy_std_1_1vector}\index{myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}}
+
+
+Templated Vector class.  
+
+
+
+
+{\ttfamily \#include $<$vector.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmy_std_1_1vector_a667a65b093f1253d2229d06768aa3bf9}\label{classmy_std_1_1vector_a667a65b093f1253d2229d06768aa3bf9}} 
+using {\bfseries iterator} = T $\ast$
+\item 
+\mbox{\Hypertarget{classmy_std_1_1vector_ae8f53b1db01169b861f0299f9ced0e37}\label{classmy_std_1_1vector_ae8f53b1db01169b861f0299f9ced0e37}} 
+using {\bfseries const\+\_\+iterator} = const T $\ast$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmy_std_1_1vector_a40e5c01ceb5d0c2bc64b23005c21ba04}\label{classmy_std_1_1vector_a40e5c01ceb5d0c2bc64b23005c21ba04}} 
+\mbox{\hyperlink{classmy_std_1_1vector_a40e5c01ceb5d0c2bc64b23005c21ba04}{vector}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmy_std_1_1vector_a3f942029ffea510e3c6e67310c18abb7}\label{classmy_std_1_1vector_a3f942029ffea510e3c6e67310c18abb7}} 
+\mbox{\hyperlink{classmy_std_1_1vector_a3f942029ffea510e3c6e67310c18abb7}{vector}} (int s)
+\begin{DoxyCompactList}\small\item\em Alternate constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmy_std_1_1vector_ae425fb0a79cfa7870cf3603c8abe3369}\label{classmy_std_1_1vector_ae425fb0a79cfa7870cf3603c8abe3369}} 
+\mbox{\hyperlink{classmy_std_1_1vector_ae425fb0a79cfa7870cf3603c8abe3369}{vector}} (const \mbox{\hyperlink{classmy_std_1_1vector}{vector}} \&src)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmy_std_1_1vector_a5cbbf45fd8ead8b9cbf4b0c7acf5010f}\label{classmy_std_1_1vector_a5cbbf45fd8ead8b9cbf4b0c7acf5010f}} 
+\mbox{\hyperlink{classmy_std_1_1vector}{vector}} \& \mbox{\hyperlink{classmy_std_1_1vector_a5cbbf45fd8ead8b9cbf4b0c7acf5010f}{operator=}} (const \mbox{\hyperlink{classmy_std_1_1vector}{vector}} \&src)
+\begin{DoxyCompactList}\small\item\em Copy assignment. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmy_std_1_1vector_aaf4331a544887b4358befcfbce2deab4}\label{classmy_std_1_1vector_aaf4331a544887b4358befcfbce2deab4}} 
+\mbox{\hyperlink{classmy_std_1_1vector_aaf4331a544887b4358befcfbce2deab4}{$\sim$vector}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classmy_std_1_1vector_a7840f76cb8fdb56e3a70506c7e0fbf5a}{operator\mbox{[}$\,$\mbox{]}}} (int n)
+\begin{DoxyCompactList}\small\item\em operator \mbox{[}\mbox{]} returns element and index n \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classmy_std_1_1vector_a74f73fa926d09d684715feec8956a138}{operator\mbox{[}$\,$\mbox{]}}} (int n) const
+\begin{DoxyCompactList}\small\item\em operator \mbox{[}\mbox{]} returns constant element at index n \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmy_std_1_1vector_a72c4cf7716f3fb1db42b8cdc2347ef49}{size}} () const
+\begin{DoxyCompactList}\small\item\em size returns vector\textquotesingle{}s size \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmy_std_1_1vector_a3a84d877c0808556734d2e012f8bbdaf}{capacity}} () const
+\begin{DoxyCompactList}\small\item\em capacity returns vector\textquotesingle{}s capacity \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_std_1_1vector_aa54bd9c3d8d3b6191d7eb7f85490eadb}{resize}} (int newsize)
+\begin{DoxyCompactList}\small\item\em resize grows vector to have newsize elements Initializes each element with default value \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_std_1_1vector_a2890899eda7ef56e35177bec9fec6b08}{push\+\_\+back}} (T new\+Item)
+\begin{DoxyCompactList}\small\item\em push\+\_\+back adds new\+Item to vector \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmy_std_1_1vector_ab3ff310fe774d28ac26161098afd55b9}{reserve}} (int new\+Alloc)
+\begin{DoxyCompactList}\small\item\em reserve allocates new space in vector \end{DoxyCompactList}\item 
+iterator \mbox{\hyperlink{classmy_std_1_1vector_adaa284b6b387f70d3244b4d6e64869c3}{begin}} ()
+\begin{DoxyCompactList}\small\item\em begin points to first element \end{DoxyCompactList}\item 
+const\+\_\+iterator \mbox{\hyperlink{classmy_std_1_1vector_ad22f43aad2b965682d953dec7dd6edfb}{begin}} () const
+\begin{DoxyCompactList}\small\item\em begin points to first element \end{DoxyCompactList}\item 
+iterator \mbox{\hyperlink{classmy_std_1_1vector_a8fc7ec068c194f5ecb5a08e17a9c9ac4}{end}} ()
+\begin{DoxyCompactList}\small\item\em end points to one beyond last element \end{DoxyCompactList}\item 
+const\+\_\+iterator \mbox{\hyperlink{classmy_std_1_1vector_afc5b4c0fa098396326835e4e8f008177}{end}} () const
+\begin{DoxyCompactList}\small\item\em end points to one beyond last element \end{DoxyCompactList}\item 
+iterator \mbox{\hyperlink{classmy_std_1_1vector_a2dfafafc64febfbb0869be81f6bd4de7}{insert}} (iterator p, const T \&val)
+\begin{DoxyCompactList}\small\item\em insert a new element before p \end{DoxyCompactList}\item 
+iterator \mbox{\hyperlink{classmy_std_1_1vector_aa4ecb71647140e3c5226299f84828984}{erase}} (iterator p)
+\begin{DoxyCompactList}\small\item\em erase removes element pointed to by p \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmy_std_1_1vector_a366be36c8ce8489e9a88908f718e8c42}\label{classmy_std_1_1vector_a366be36c8ce8489e9a88908f718e8c42}} 
+bool {\bfseries search} (T item)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class my\+Std\+::vector$<$ T $>$}
+
+Templated Vector class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmy_std_1_1vector_adaa284b6b387f70d3244b4d6e64869c3}\label{classmy_std_1_1vector_adaa284b6b387f70d3244b4d6e64869c3}} 
+\index{myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+iterator \mbox{\hyperlink{classmy_std_1_1vector}{my\+Std\+::vector}}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+begin points to first element 
+
+\begin{DoxyReturn}{Returns}
+iterator to first element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmy_std_1_1vector_ad22f43aad2b965682d953dec7dd6edfb}\label{classmy_std_1_1vector_ad22f43aad2b965682d953dec7dd6edfb}} 
+\index{myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+const\+\_\+iterator \mbox{\hyperlink{classmy_std_1_1vector}{my\+Std\+::vector}}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+begin points to first element 
+
+\begin{DoxyReturn}{Returns}
+constant iterator to first element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmy_std_1_1vector_a3a84d877c0808556734d2e012f8bbdaf}\label{classmy_std_1_1vector_a3a84d877c0808556734d2e012f8bbdaf}} 
+\index{myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}!capacity@{capacity}}
+\index{capacity@{capacity}!myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{capacity()}{capacity()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+int \mbox{\hyperlink{classmy_std_1_1vector}{my\+Std\+::vector}}$<$ T $>$\+::capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+capacity returns vector\textquotesingle{}s capacity 
+
+\begin{DoxyReturn}{Returns}
+int vector capacity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmy_std_1_1vector_a8fc7ec068c194f5ecb5a08e17a9c9ac4}\label{classmy_std_1_1vector_a8fc7ec068c194f5ecb5a08e17a9c9ac4}} 
+\index{myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}!end@{end}}
+\index{end@{end}!myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+iterator \mbox{\hyperlink{classmy_std_1_1vector}{my\+Std\+::vector}}$<$ T $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+end points to one beyond last element 
+
+\begin{DoxyReturn}{Returns}
+iterator to one beyond last element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmy_std_1_1vector_afc5b4c0fa098396326835e4e8f008177}\label{classmy_std_1_1vector_afc5b4c0fa098396326835e4e8f008177}} 
+\index{myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}!end@{end}}
+\index{end@{end}!myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+const\+\_\+iterator \mbox{\hyperlink{classmy_std_1_1vector}{my\+Std\+::vector}}$<$ T $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+end points to one beyond last element 
+
+\begin{DoxyReturn}{Returns}
+constant iterator to one beyond last element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmy_std_1_1vector_aa4ecb71647140e3c5226299f84828984}\label{classmy_std_1_1vector_aa4ecb71647140e3c5226299f84828984}} 
+\index{myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}!erase@{erase}}
+\index{erase@{erase}!myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+iterator \mbox{\hyperlink{classmy_std_1_1vector}{my\+Std\+::vector}}$<$ T $>$\+::erase (\begin{DoxyParamCaption}\item[{iterator}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+erase removes element pointed to by p 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+iterator to p 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmy_std_1_1vector_a2dfafafc64febfbb0869be81f6bd4de7}\label{classmy_std_1_1vector_a2dfafafc64febfbb0869be81f6bd4de7}} 
+\index{myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+iterator \mbox{\hyperlink{classmy_std_1_1vector}{my\+Std\+::vector}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{iterator}]{p,  }\item[{const T \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+insert a new element before p 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+{\em val} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+iterator to p 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmy_std_1_1vector_a7840f76cb8fdb56e3a70506c7e0fbf5a}\label{classmy_std_1_1vector_a7840f76cb8fdb56e3a70506c7e0fbf5a}} 
+\index{myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+T\& \mbox{\hyperlink{classmy_std_1_1vector}{my\+Std\+::vector}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator \mbox{[}\mbox{]} returns element and index n 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T element at index n 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmy_std_1_1vector_a74f73fa926d09d684715feec8956a138}\label{classmy_std_1_1vector_a74f73fa926d09d684715feec8956a138}} 
+\index{myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+const T\& \mbox{\hyperlink{classmy_std_1_1vector}{my\+Std\+::vector}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+operator \mbox{[}\mbox{]} returns constant element at index n 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const T element at index n 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmy_std_1_1vector_a2890899eda7ef56e35177bec9fec6b08}\label{classmy_std_1_1vector_a2890899eda7ef56e35177bec9fec6b08}} 
+\index{myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+void \mbox{\hyperlink{classmy_std_1_1vector}{my\+Std\+::vector}}$<$ T $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{T}]{new\+Item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+push\+\_\+back adds new\+Item to vector 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Item} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmy_std_1_1vector_ab3ff310fe774d28ac26161098afd55b9}\label{classmy_std_1_1vector_ab3ff310fe774d28ac26161098afd55b9}} 
+\index{myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}!reserve@{reserve}}
+\index{reserve@{reserve}!myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reserve()}{reserve()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+void \mbox{\hyperlink{classmy_std_1_1vector}{my\+Std\+::vector}}$<$ T $>$\+::reserve (\begin{DoxyParamCaption}\item[{int}]{new\+Alloc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+reserve allocates new space in vector 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Alloc} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmy_std_1_1vector_aa54bd9c3d8d3b6191d7eb7f85490eadb}\label{classmy_std_1_1vector_aa54bd9c3d8d3b6191d7eb7f85490eadb}} 
+\index{myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}!resize@{resize}}
+\index{resize@{resize}!myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+void \mbox{\hyperlink{classmy_std_1_1vector}{my\+Std\+::vector}}$<$ T $>$\+::resize (\begin{DoxyParamCaption}\item[{int}]{newsize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+resize grows vector to have newsize elements Initializes each element with default value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em newsize} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmy_std_1_1vector_a72c4cf7716f3fb1db42b8cdc2347ef49}\label{classmy_std_1_1vector_a72c4cf7716f3fb1db42b8cdc2347ef49}} 
+\index{myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}!size@{size}}
+\index{size@{size}!myStd::vector$<$ T $>$@{myStd::vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+int \mbox{\hyperlink{classmy_std_1_1vector}{my\+Std\+::vector}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+size returns vector\textquotesingle{}s size 
+
+\begin{DoxyReturn}{Returns}
+int vector size 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vector.\+h\end{DoxyCompactItemize}

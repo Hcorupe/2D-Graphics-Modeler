@@ -1,0 +1,208 @@
+\hypertarget{class_polygon}{}\doxysection{Polygon Class Reference}
+\label{class_polygon}\index{Polygon@{Polygon}}
+
+
+The \mbox{\hyperlink{class_polygon}{Polygon}} class inherits from \mbox{\hyperlink{class_shape}{Shape}}.  
+
+
+
+
+{\ttfamily \#include $<$polygon.\+h$>$}
+
+Inheritance diagram for Polygon\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_polygon}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_polygon_ac183e712f8be1e13f1c9d5b4d4512ead}\label{class_polygon_ac183e712f8be1e13f1c9d5b4d4512ead}} 
+\mbox{\hyperlink{class_polygon_ac183e712f8be1e13f1c9d5b4d4512ead}{Polygon}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_polygon_a8dcf2e2e8ea15552e4fc31a17d3e9de7}{Polygon}} (int ID, \mbox{\hyperlink{classmy_std_1_1vector}{my\+Std\+::vector}}$<$ Q\+Point $>$ new\+Points, Qt\+::\+Global\+Color pen\+Color, int pen\+Width, Qt\+::\+Pen\+Style pen\+Style, Qt\+::\+Pen\+Cap\+Style cap\+Style, Qt\+::\+Pen\+Join\+Style join\+Style, Qt\+::\+Global\+Color brush\+Color, Qt\+::\+Brush\+Style brush\+Style)
+\begin{DoxyCompactList}\small\item\em Alternate constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_polygon_ad289583dba86760f78296670c95b1eb7}\label{class_polygon_ad289583dba86760f78296670c95b1eb7}} 
+\mbox{\hyperlink{class_polygon_ad289583dba86760f78296670c95b1eb7}{$\sim$\+Polygon}} () override
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_polygon_a574e7447f0d8d857dbe6e975fcd0e1a4}{draw}} (Q\+Paint\+Device $\ast$device) override
+\begin{DoxyCompactList}\small\item\em draws polygon \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_polygon_a73cd065832ab2d72c0f9c3e9b97cead5}{move}} (Q\+Point point) override
+\begin{DoxyCompactList}\small\item\em moves polygon \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_polygon_acde153da73fbcbde6f14feb6239b23e6}{set\+Points}} (const \mbox{\hyperlink{classmy_std_1_1vector}{my\+Std\+::vector}}$<$ Q\+Point $>$ new\+Points)
+\begin{DoxyCompactList}\small\item\em set\+Points sets the vector of Q\+Points \end{DoxyCompactList}\item 
+Q\+Point \mbox{\hyperlink{class_polygon_a97ef77cd24bbfcf25a72475093b325ea}{get\+Start\+Point}} () override
+\begin{DoxyCompactList}\small\item\em get\+Start\+Point returns first point \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmy_std_1_1vector}{my\+Std\+::vector}}$<$ Q\+Point $>$ \mbox{\hyperlink{class_polygon_ac4516a4f9e5d628f08b30577797a9fb2}{get\+Points}} ()
+\begin{DoxyCompactList}\small\item\em get\+Points returns vector of Q\+Points \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_polygon_a9712d50ce4fa4879e7a14809b62e21f0}{Get\+Area}} () override
+\begin{DoxyCompactList}\small\item\em Get\+Area returns 0. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_polygon_ab200bca204ddb33eea157d61829e0c26}{Get\+Perimeter}} () override
+\begin{DoxyCompactList}\small\item\em Get\+Perimeter returns 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_polygon_ab412b45a9a20ef3a11ea858ada4a3a6c}\label{class_polygon_ab412b45a9a20ef3a11ea858ada4a3a6c}} 
+S\+H\+A\+PE \mbox{\hyperlink{class_polygon_ab412b45a9a20ef3a11ea858ada4a3a6c}{get\+Shape\+Type}} () override
+\begin{DoxyCompactList}\small\item\em Pure virtual function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_polygon}{Polygon}} class inherits from \mbox{\hyperlink{class_shape}{Shape}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_polygon_a8dcf2e2e8ea15552e4fc31a17d3e9de7}\label{class_polygon_a8dcf2e2e8ea15552e4fc31a17d3e9de7}} 
+\index{Polygon@{Polygon}!Polygon@{Polygon}}
+\index{Polygon@{Polygon}!Polygon@{Polygon}}
+\doxysubsubsection{\texorpdfstring{Polygon()}{Polygon()}}
+{\footnotesize\ttfamily Polygon\+::\+Polygon (\begin{DoxyParamCaption}\item[{int}]{ID,  }\item[{\mbox{\hyperlink{classmy_std_1_1vector}{my\+Std\+::vector}}$<$ Q\+Point $>$}]{new\+Points,  }\item[{Qt\+::\+Global\+Color}]{pen\+Color,  }\item[{int}]{pen\+Width,  }\item[{Qt\+::\+Pen\+Style}]{pen\+Style,  }\item[{Qt\+::\+Pen\+Cap\+Style}]{cap\+Style,  }\item[{Qt\+::\+Pen\+Join\+Style}]{join\+Style,  }\item[{Qt\+::\+Global\+Color}]{brush\+Color,  }\item[{Qt\+::\+Brush\+Style}]{brush\+Style }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Alternate constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & \\
+\hline
+{\em new\+Points} & \\
+\hline
+{\em pen\+Color} & \\
+\hline
+{\em pen\+Width} & \\
+\hline
+{\em pen\+Style} & \\
+\hline
+{\em cap\+Style} & \\
+\hline
+{\em join\+Style} & \\
+\hline
+{\em brush\+Color} & \\
+\hline
+{\em brush\+Style} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_polygon_a574e7447f0d8d857dbe6e975fcd0e1a4}\label{class_polygon_a574e7447f0d8d857dbe6e975fcd0e1a4}} 
+\index{Polygon@{Polygon}!draw@{draw}}
+\index{draw@{draw}!Polygon@{Polygon}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Polygon\+::draw (\begin{DoxyParamCaption}\item[{Q\+Paint\+Device $\ast$}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+draws polygon 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_shape_ad2ab549a1b0cc0e23af8be1fd1b61a1b}{Shape}}.
+
+\mbox{\Hypertarget{class_polygon_a9712d50ce4fa4879e7a14809b62e21f0}\label{class_polygon_a9712d50ce4fa4879e7a14809b62e21f0}} 
+\index{Polygon@{Polygon}!GetArea@{GetArea}}
+\index{GetArea@{GetArea}!Polygon@{Polygon}}
+\doxysubsubsection{\texorpdfstring{GetArea()}{GetArea()}}
+{\footnotesize\ttfamily double Polygon\+::\+Get\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get\+Area returns 0. 
+
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape_a60821279492d8c2daf0c83e494ea2973}{Shape}}.
+
+\mbox{\Hypertarget{class_polygon_ab200bca204ddb33eea157d61829e0c26}\label{class_polygon_ab200bca204ddb33eea157d61829e0c26}} 
+\index{Polygon@{Polygon}!GetPerimeter@{GetPerimeter}}
+\index{GetPerimeter@{GetPerimeter}!Polygon@{Polygon}}
+\doxysubsubsection{\texorpdfstring{GetPerimeter()}{GetPerimeter()}}
+{\footnotesize\ttfamily double Polygon\+::\+Get\+Perimeter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get\+Perimeter returns 0. 
+
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape_aaf9dd4c6c3b26aba2f0aeb431a0d8d0d}{Shape}}.
+
+\mbox{\Hypertarget{class_polygon_ac4516a4f9e5d628f08b30577797a9fb2}\label{class_polygon_ac4516a4f9e5d628f08b30577797a9fb2}} 
+\index{Polygon@{Polygon}!getPoints@{getPoints}}
+\index{getPoints@{getPoints}!Polygon@{Polygon}}
+\doxysubsubsection{\texorpdfstring{getPoints()}{getPoints()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmy_std_1_1vector}{my\+Std\+::vector}}$<$Q\+Point$>$ Polygon\+::get\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Points returns vector of Q\+Points 
+
+\begin{DoxyReturn}{Returns}
+Q\+Point vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_polygon_a97ef77cd24bbfcf25a72475093b325ea}\label{class_polygon_a97ef77cd24bbfcf25a72475093b325ea}} 
+\index{Polygon@{Polygon}!getStartPoint@{getStartPoint}}
+\index{getStartPoint@{getStartPoint}!Polygon@{Polygon}}
+\doxysubsubsection{\texorpdfstring{getStartPoint()}{getStartPoint()}}
+{\footnotesize\ttfamily Q\+Point Polygon\+::get\+Start\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get\+Start\+Point returns first point 
+
+\begin{DoxyReturn}{Returns}
+Q\+Point points\mbox{[}0\mbox{]} 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_shape_a2100daebd19b833dd4a8a8c29ae35c1f}{Shape}}.
+
+\mbox{\Hypertarget{class_polygon_a73cd065832ab2d72c0f9c3e9b97cead5}\label{class_polygon_a73cd065832ab2d72c0f9c3e9b97cead5}} 
+\index{Polygon@{Polygon}!move@{move}}
+\index{move@{move}!Polygon@{Polygon}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Polygon\+::move (\begin{DoxyParamCaption}\item[{Q\+Point}]{point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+moves polygon 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_shape_a4a0816e50c322100ea472759f7f0c4fa}{Shape}}.
+
+\mbox{\Hypertarget{class_polygon_acde153da73fbcbde6f14feb6239b23e6}\label{class_polygon_acde153da73fbcbde6f14feb6239b23e6}} 
+\index{Polygon@{Polygon}!setPoints@{setPoints}}
+\index{setPoints@{setPoints}!Polygon@{Polygon}}
+\doxysubsubsection{\texorpdfstring{setPoints()}{setPoints()}}
+{\footnotesize\ttfamily void Polygon\+::set\+Points (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmy_std_1_1vector}{my\+Std\+::vector}}$<$ Q\+Point $>$}]{new\+Points }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Points sets the vector of Q\+Points 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Points} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+polygon.\+h\end{DoxyCompactItemize}

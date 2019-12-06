@@ -1,0 +1,298 @@
+\hypertarget{class_text}{}\doxysection{Text Class Reference}
+\label{class_text}\index{Text@{Text}}
+
+
+The \mbox{\hyperlink{class_text}{Text}} class inherits from \mbox{\hyperlink{class_shape}{Shape}} class.  
+
+
+
+
+{\ttfamily \#include $<$text.\+h$>$}
+
+Inheritance diagram for Text\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_text}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_text_ab3e26143fccc52699bcc5149cae852bc}\label{class_text_ab3e26143fccc52699bcc5149cae852bc}} 
+\mbox{\hyperlink{class_text_ab3e26143fccc52699bcc5149cae852bc}{Text}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_text_a89430eead98aa5987134e728e687a621}{Text}} (int ID, Q\+Point s\+Point, int w, int h, Q\+String text, Qt\+::\+Global\+Color color, Qt\+::\+Alignment\+Flag align, int point\+Size, Q\+String family, Q\+Font\+::\+Style style, Q\+Font\+::\+Weight weight)
+\begin{DoxyCompactList}\small\item\em Alternate constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_text_a4e7641708dfbf9c6bbbd41e897e9139c}\label{class_text_a4e7641708dfbf9c6bbbd41e897e9139c}} 
+\mbox{\hyperlink{class_text_a4e7641708dfbf9c6bbbd41e897e9139c}{$\sim$\+Text}} () override
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_text_ab61ad3ccfbddc8b8588725d36f323caa}\label{class_text_ab61ad3ccfbddc8b8588725d36f323caa}} 
+void \mbox{\hyperlink{class_text_ab61ad3ccfbddc8b8588725d36f323caa}{draw}} (Q\+Paint\+Device $\ast$device) override
+\begin{DoxyCompactList}\small\item\em Pure virtual function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_text_ae15f33b5198a2cbc5381df06abda66c1}{set\+Font\+Family}} (const Q\+String family)
+\begin{DoxyCompactList}\small\item\em set\+Font\+Family sets text font family \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_text_a9f6401e4f572adfb8767a196bdd3b40e}{set\+Style}} (const Q\+Font\+::\+Style style)
+\begin{DoxyCompactList}\small\item\em set\+Style sets text style \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_text_a77b58b18aec83f57f798970af473010a}{set\+Weight}} (const Q\+Font\+::\+Weight weight)
+\begin{DoxyCompactList}\small\item\em set\+Weight sets text weight \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_text_ac1c3862dab83863659ac9a44884c945c}{set\+Point\+Size}} (const int size)
+\begin{DoxyCompactList}\small\item\em set\+Point\+Size sets text point size \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_text_a7d10415d6606939de9227af04c1066fd}{set\+Alignment}} (const Qt\+::\+Alignment\+Flag align)
+\begin{DoxyCompactList}\small\item\em set\+Alignment sets text alignment \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_text_af3f37cdcb398831e4e758733b68fe760}{Get\+Area}} () override
+\begin{DoxyCompactList}\small\item\em Get\+Area returns 0 (\mbox{\hyperlink{class_text}{Text}} has no area) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_text_a20bd0654b0f9a590c5ab21e5eb433b8d}{Get\+Perimeter}} () override
+\begin{DoxyCompactList}\small\item\em Get\+Perimeter returns 0 (\mbox{\hyperlink{class_text}{Text}} has no perimeter) \end{DoxyCompactList}\item 
+Q\+Font \mbox{\hyperlink{class_text_acb0cbec93eb68a03faffc9e70f5895b7}{get\+Font}} ()
+\begin{DoxyCompactList}\small\item\em Get\+Font returns font. \end{DoxyCompactList}\item 
+Qt\+::\+Alignment\+Flag \mbox{\hyperlink{class_text_a6d443e3c6532c384a46f5ab2552f98e3}{get\+Alignment}} ()
+\begin{DoxyCompactList}\small\item\em get\+Alignment returns text alignment \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_text_aa426e679627149ff986a2c793b2ac71d}{get\+Width}} ()
+\begin{DoxyCompactList}\small\item\em get\+Width returns text box width \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_text_ad8f14955feaeac94cd1da811f5f05253}{get\+Height}} ()
+\begin{DoxyCompactList}\small\item\em get\+Height returns text box height \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_text_a3c1eb85e86906273ba0f12df128db87f}{get\+Message}} ()
+\begin{DoxyCompactList}\small\item\em get\+Message returns text message \end{DoxyCompactList}\item 
+S\+H\+A\+PE \mbox{\hyperlink{class_text_a003d43b45e7b24084e72100ecdd52886}{get\+Shape\+Type}} () override
+\begin{DoxyCompactList}\small\item\em get\+Shape\+Type returns shape type \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_text}{Text}} class inherits from \mbox{\hyperlink{class_shape}{Shape}} class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_text_a89430eead98aa5987134e728e687a621}\label{class_text_a89430eead98aa5987134e728e687a621}} 
+\index{Text@{Text}!Text@{Text}}
+\index{Text@{Text}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{Text()}{Text()}}
+{\footnotesize\ttfamily Text\+::\+Text (\begin{DoxyParamCaption}\item[{int}]{ID,  }\item[{Q\+Point}]{s\+Point,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{Q\+String}]{text,  }\item[{Qt\+::\+Global\+Color}]{color,  }\item[{Qt\+::\+Alignment\+Flag}]{align,  }\item[{int}]{point\+Size,  }\item[{Q\+String}]{family,  }\item[{Q\+Font\+::\+Style}]{style,  }\item[{Q\+Font\+::\+Weight}]{weight }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Alternate constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & \\
+\hline
+{\em s\+Point} & \\
+\hline
+{\em w} & \\
+\hline
+{\em h} & \\
+\hline
+{\em text} & \\
+\hline
+{\em color} & \\
+\hline
+{\em align} & \\
+\hline
+{\em point\+Size} & \\
+\hline
+{\em family} & \\
+\hline
+{\em style} & \\
+\hline
+{\em weight} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_text_a6d443e3c6532c384a46f5ab2552f98e3}\label{class_text_a6d443e3c6532c384a46f5ab2552f98e3}} 
+\index{Text@{Text}!getAlignment@{getAlignment}}
+\index{getAlignment@{getAlignment}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{getAlignment()}{getAlignment()}}
+{\footnotesize\ttfamily Qt\+::\+Alignment\+Flag Text\+::get\+Alignment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Alignment returns text alignment 
+
+\begin{DoxyReturn}{Returns}
+Alignment\+Flag 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_text_af3f37cdcb398831e4e758733b68fe760}\label{class_text_af3f37cdcb398831e4e758733b68fe760}} 
+\index{Text@{Text}!GetArea@{GetArea}}
+\index{GetArea@{GetArea}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{GetArea()}{GetArea()}}
+{\footnotesize\ttfamily double Text\+::\+Get\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get\+Area returns 0 (\mbox{\hyperlink{class_text}{Text}} has no area) 
+
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape_a60821279492d8c2daf0c83e494ea2973}{Shape}}.
+
+\mbox{\Hypertarget{class_text_acb0cbec93eb68a03faffc9e70f5895b7}\label{class_text_acb0cbec93eb68a03faffc9e70f5895b7}} 
+\index{Text@{Text}!getFont@{getFont}}
+\index{getFont@{getFont}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{getFont()}{getFont()}}
+{\footnotesize\ttfamily Q\+Font Text\+::get\+Font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get\+Font returns font. 
+
+\begin{DoxyReturn}{Returns}
+Qfont 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_text_ad8f14955feaeac94cd1da811f5f05253}\label{class_text_ad8f14955feaeac94cd1da811f5f05253}} 
+\index{Text@{Text}!getHeight@{getHeight}}
+\index{getHeight@{getHeight}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
+{\footnotesize\ttfamily int Text\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Height returns text box height 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_text_a3c1eb85e86906273ba0f12df128db87f}\label{class_text_a3c1eb85e86906273ba0f12df128db87f}} 
+\index{Text@{Text}!getMessage@{getMessage}}
+\index{getMessage@{getMessage}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{getMessage()}{getMessage()}}
+{\footnotesize\ttfamily Q\+String Text\+::get\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Message returns text message 
+
+\begin{DoxyReturn}{Returns}
+Qstring 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_text_a20bd0654b0f9a590c5ab21e5eb433b8d}\label{class_text_a20bd0654b0f9a590c5ab21e5eb433b8d}} 
+\index{Text@{Text}!GetPerimeter@{GetPerimeter}}
+\index{GetPerimeter@{GetPerimeter}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{GetPerimeter()}{GetPerimeter()}}
+{\footnotesize\ttfamily double Text\+::\+Get\+Perimeter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get\+Perimeter returns 0 (\mbox{\hyperlink{class_text}{Text}} has no perimeter) 
+
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape_aaf9dd4c6c3b26aba2f0aeb431a0d8d0d}{Shape}}.
+
+\mbox{\Hypertarget{class_text_a003d43b45e7b24084e72100ecdd52886}\label{class_text_a003d43b45e7b24084e72100ecdd52886}} 
+\index{Text@{Text}!getShapeType@{getShapeType}}
+\index{getShapeType@{getShapeType}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{getShapeType()}{getShapeType()}}
+{\footnotesize\ttfamily S\+H\+A\+PE Text\+::get\+Shape\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+get\+Shape\+Type returns shape type 
+
+\begin{DoxyReturn}{Returns}
+S\+H\+A\+PE enum 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape_a38f85d9634a1999cf8005ce9fbdb75e3}{Shape}}.
+
+\mbox{\Hypertarget{class_text_aa426e679627149ff986a2c793b2ac71d}\label{class_text_aa426e679627149ff986a2c793b2ac71d}} 
+\index{Text@{Text}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
+{\footnotesize\ttfamily int Text\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Width returns text box width 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_text_a7d10415d6606939de9227af04c1066fd}\label{class_text_a7d10415d6606939de9227af04c1066fd}} 
+\index{Text@{Text}!setAlignment@{setAlignment}}
+\index{setAlignment@{setAlignment}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{setAlignment()}{setAlignment()}}
+{\footnotesize\ttfamily void Text\+::set\+Alignment (\begin{DoxyParamCaption}\item[{const Qt\+::\+Alignment\+Flag}]{align }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Alignment sets text alignment 
+
+
+\begin{DoxyParams}{Parameters}
+{\em align} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_text_ae15f33b5198a2cbc5381df06abda66c1}\label{class_text_ae15f33b5198a2cbc5381df06abda66c1}} 
+\index{Text@{Text}!setFontFamily@{setFontFamily}}
+\index{setFontFamily@{setFontFamily}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{setFontFamily()}{setFontFamily()}}
+{\footnotesize\ttfamily void Text\+::set\+Font\+Family (\begin{DoxyParamCaption}\item[{const Q\+String}]{family }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Font\+Family sets text font family 
+
+
+\begin{DoxyParams}{Parameters}
+{\em family} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_text_ac1c3862dab83863659ac9a44884c945c}\label{class_text_ac1c3862dab83863659ac9a44884c945c}} 
+\index{Text@{Text}!setPointSize@{setPointSize}}
+\index{setPointSize@{setPointSize}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{setPointSize()}{setPointSize()}}
+{\footnotesize\ttfamily void Text\+::set\+Point\+Size (\begin{DoxyParamCaption}\item[{const int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Point\+Size sets text point size 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_text_a9f6401e4f572adfb8767a196bdd3b40e}\label{class_text_a9f6401e4f572adfb8767a196bdd3b40e}} 
+\index{Text@{Text}!setStyle@{setStyle}}
+\index{setStyle@{setStyle}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{setStyle()}{setStyle()}}
+{\footnotesize\ttfamily void Text\+::set\+Style (\begin{DoxyParamCaption}\item[{const Q\+Font\+::\+Style}]{style }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Style sets text style 
+
+
+\begin{DoxyParams}{Parameters}
+{\em style} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_text_a77b58b18aec83f57f798970af473010a}\label{class_text_a77b58b18aec83f57f798970af473010a}} 
+\index{Text@{Text}!setWeight@{setWeight}}
+\index{setWeight@{setWeight}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{setWeight()}{setWeight()}}
+{\footnotesize\ttfamily void Text\+::set\+Weight (\begin{DoxyParamCaption}\item[{const Q\+Font\+::\+Weight}]{weight }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Weight sets text weight 
+
+
+\begin{DoxyParams}{Parameters}
+{\em weight} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+text.\+h\end{DoxyCompactItemize}

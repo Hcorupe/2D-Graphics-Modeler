@@ -1,0 +1,187 @@
+\hypertarget{class_line}{}\doxysection{Line Class Reference}
+\label{class_line}\index{Line@{Line}}
+
+
+The \mbox{\hyperlink{class_line}{Line}} class inherits from \mbox{\hyperlink{class_shape}{Shape}}.  
+
+
+
+
+{\ttfamily \#include $<$line.\+h$>$}
+
+Inheritance diagram for Line\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_line}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_line_acc11b8a429d8cdd63ba6803dff5602b3}\label{class_line_acc11b8a429d8cdd63ba6803dff5602b3}} 
+\mbox{\hyperlink{class_line_acc11b8a429d8cdd63ba6803dff5602b3}{Line}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_line_ab216aba1016e8cdfd18b9214b6c66ea1}{Line}} (int ID, Q\+Point s\+Point, Q\+Point e\+Point, Qt\+::\+Global\+Color pen\+Color, int pen\+Width, Qt\+::\+Pen\+Style pen\+Style, Qt\+::\+Pen\+Cap\+Style cap\+Style, Qt\+::\+Pen\+Join\+Style join\+Style)
+\begin{DoxyCompactList}\small\item\em Alternate constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_line_af18447238883377a0071d2276a4ac0a5}\label{class_line_af18447238883377a0071d2276a4ac0a5}} 
+\mbox{\hyperlink{class_line_af18447238883377a0071d2276a4ac0a5}{$\sim$\+Line}} () override
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_line_ae4dfe9ac15ee0afe1a1434bbb2a40305}{draw}} (Q\+Paint\+Device $\ast$device) override
+\begin{DoxyCompactList}\small\item\em draws line \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_line_a67c1e50346f952c10c72fbff6fbe80ce}{move}} (Q\+Point point) override
+\begin{DoxyCompactList}\small\item\em moves line, start point is moved to point \end{DoxyCompactList}\item 
+Q\+Point \mbox{\hyperlink{class_line_a0a272d2505b8c84d8c74d60672c2f49a}{get\+End\+Point}} ()
+\begin{DoxyCompactList}\small\item\em get\+End\+Point gets end point \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_line_a6c42047f0204cbd300af573c15a6b3f6}{set\+End\+Point}} (Q\+Point point)
+\begin{DoxyCompactList}\small\item\em set\+End\+Point sets end point \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_line_a283ef49681a60e1fda135eb8a6f8516b}{Get\+Area}} () override
+\begin{DoxyCompactList}\small\item\em Get\+Area returns 0. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_line_aa9f85d240ab3eea5ed5d9e0bcc4aea8f}{Get\+Perimeter}} () override
+\begin{DoxyCompactList}\small\item\em Get\+Perimeter returns 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_line_a3807c6900534506ba1bfe6898bbd8438}\label{class_line_a3807c6900534506ba1bfe6898bbd8438}} 
+S\+H\+A\+PE \mbox{\hyperlink{class_line_a3807c6900534506ba1bfe6898bbd8438}{get\+Shape\+Type}} () override
+\begin{DoxyCompactList}\small\item\em Pure virtual function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_line}{Line}} class inherits from \mbox{\hyperlink{class_shape}{Shape}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_line_ab216aba1016e8cdfd18b9214b6c66ea1}\label{class_line_ab216aba1016e8cdfd18b9214b6c66ea1}} 
+\index{Line@{Line}!Line@{Line}}
+\index{Line@{Line}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{Line()}{Line()}}
+{\footnotesize\ttfamily Line\+::\+Line (\begin{DoxyParamCaption}\item[{int}]{ID,  }\item[{Q\+Point}]{s\+Point,  }\item[{Q\+Point}]{e\+Point,  }\item[{Qt\+::\+Global\+Color}]{pen\+Color,  }\item[{int}]{pen\+Width,  }\item[{Qt\+::\+Pen\+Style}]{pen\+Style,  }\item[{Qt\+::\+Pen\+Cap\+Style}]{cap\+Style,  }\item[{Qt\+::\+Pen\+Join\+Style}]{join\+Style }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Alternate constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & \\
+\hline
+{\em s\+Point} & \\
+\hline
+{\em e\+Point} & \\
+\hline
+{\em pen\+Color} & \\
+\hline
+{\em pen\+Width} & \\
+\hline
+{\em pen\+Style} & \\
+\hline
+{\em cap\+Style} & \\
+\hline
+{\em join\+Style} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_line_ae4dfe9ac15ee0afe1a1434bbb2a40305}\label{class_line_ae4dfe9ac15ee0afe1a1434bbb2a40305}} 
+\index{Line@{Line}!draw@{draw}}
+\index{draw@{draw}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Line\+::draw (\begin{DoxyParamCaption}\item[{Q\+Paint\+Device $\ast$}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+draws line 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_shape_ad2ab549a1b0cc0e23af8be1fd1b61a1b}{Shape}}.
+
+\mbox{\Hypertarget{class_line_a283ef49681a60e1fda135eb8a6f8516b}\label{class_line_a283ef49681a60e1fda135eb8a6f8516b}} 
+\index{Line@{Line}!GetArea@{GetArea}}
+\index{GetArea@{GetArea}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{GetArea()}{GetArea()}}
+{\footnotesize\ttfamily double Line\+::\+Get\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get\+Area returns 0. 
+
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape_a60821279492d8c2daf0c83e494ea2973}{Shape}}.
+
+\mbox{\Hypertarget{class_line_a0a272d2505b8c84d8c74d60672c2f49a}\label{class_line_a0a272d2505b8c84d8c74d60672c2f49a}} 
+\index{Line@{Line}!getEndPoint@{getEndPoint}}
+\index{getEndPoint@{getEndPoint}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{getEndPoint()}{getEndPoint()}}
+{\footnotesize\ttfamily Q\+Point Line\+::get\+End\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+End\+Point gets end point 
+
+\begin{DoxyReturn}{Returns}
+Q\+Point end\+Point 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_line_aa9f85d240ab3eea5ed5d9e0bcc4aea8f}\label{class_line_aa9f85d240ab3eea5ed5d9e0bcc4aea8f}} 
+\index{Line@{Line}!GetPerimeter@{GetPerimeter}}
+\index{GetPerimeter@{GetPerimeter}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{GetPerimeter()}{GetPerimeter()}}
+{\footnotesize\ttfamily double Line\+::\+Get\+Perimeter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get\+Perimeter returns 0. 
+
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape_aaf9dd4c6c3b26aba2f0aeb431a0d8d0d}{Shape}}.
+
+\mbox{\Hypertarget{class_line_a67c1e50346f952c10c72fbff6fbe80ce}\label{class_line_a67c1e50346f952c10c72fbff6fbe80ce}} 
+\index{Line@{Line}!move@{move}}
+\index{move@{move}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Line\+::move (\begin{DoxyParamCaption}\item[{Q\+Point}]{point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+moves line, start point is moved to point 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_shape_a4a0816e50c322100ea472759f7f0c4fa}{Shape}}.
+
+\mbox{\Hypertarget{class_line_a6c42047f0204cbd300af573c15a6b3f6}\label{class_line_a6c42047f0204cbd300af573c15a6b3f6}} 
+\index{Line@{Line}!setEndPoint@{setEndPoint}}
+\index{setEndPoint@{setEndPoint}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{setEndPoint()}{setEndPoint()}}
+{\footnotesize\ttfamily void Line\+::set\+End\+Point (\begin{DoxyParamCaption}\item[{Q\+Point}]{point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+End\+Point sets end point 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+line.\+h\end{DoxyCompactItemize}
