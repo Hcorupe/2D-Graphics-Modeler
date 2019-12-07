@@ -41,6 +41,7 @@ NewShape::NewShape(myStd::vector<int> ids, QWidget *parent) :
     {
         ui->idTakenLabel->setText("Shape ID already taken.");
         ui->buttonBox->setEnabled(false);
+        idTaken = true;
     }
 
 
@@ -284,7 +285,6 @@ void NewShape::enableBrush(bool enable)
 void NewShape::enablePoly(bool enable)
 {
     ui->addPointButton->setEnabled(enable);
-    ui->clearPointsButton->setEnabled(enable);
 }
 
 Qt::GlobalColor NewShape::readColor(int current)
@@ -341,12 +341,21 @@ void NewShape::on_shapeIDSpinBox_valueChanged(int arg1)
     {
         ui->buttonBox->setEnabled(false);
         ui->idTakenLabel->setText("Shape ID already taken.");
+        idTaken = true;
     }
-    else
+    else if ((ui->shapeTypeComboBox->currentIndex() == POLYLINE && points.size() >= 2) ||
+             (ui->shapeTypeComboBox->currentIndex() == POLYGON && points.size() >= 3))
     {
+        idTaken = false;
         id = arg1;
         ui->idTakenLabel->clear();
         ui->buttonBox->setEnabled(true);
+    }
+    else
+    {
+        idTaken = false;
+        id = arg1;
+        ui->idTakenLabel->clear();
     }
 
 
@@ -573,26 +582,14 @@ void NewShape::on_addPointButton_clicked()
 
     ui->pointCountLabel->setText(QString::number(points.size()));
 
-    if(ui->shapeTypeComboBox->currentIndex() == POLYLINE && points.size() >= 2)
+    if(ui->shapeTypeComboBox->currentIndex() == POLYLINE && points.size() >= 2 && !idTaken)
     {
         ui->buttonBox->setEnabled(true);
     }
 
-    else if(ui->shapeTypeComboBox->currentIndex() == POLYGON && points.size() >= 3)
+    else if(ui->shapeTypeComboBox->currentIndex() == POLYGON && points.size() >= 3 && !idTaken)
     {
         ui->buttonBox->setEnabled(true);
     }
-
-}
-
-void NewShape::on_clearPointsButton_clicked()
-{
-
-    for(QPoint* current = points.begin(); current != points.end(); current++)
-    {
-        points.erase(current);
-    }
-
-    ui->pointCountLabel->setText("0");
 
 }

@@ -86,7 +86,6 @@ public:
     QComboBox *alignmentComboBox;
     QLabel *label_6;
     QPushButton *addPointButton;
-    QPushButton *clearPointsButton;
     QLabel *pointsLabel;
     QLabel *idTakenLabel;
     QLabel *pointCountLabel;
@@ -323,15 +322,11 @@ public:
         addPointButton = new QPushButton(NewShape);
         addPointButton->setObjectName(QStringLiteral("addPointButton"));
         addPointButton->setEnabled(false);
-        addPointButton->setGeometry(QRect(494, 107, 93, 28));
-        clearPointsButton = new QPushButton(NewShape);
-        clearPointsButton->setObjectName(QStringLiteral("clearPointsButton"));
-        clearPointsButton->setEnabled(false);
-        clearPointsButton->setGeometry(QRect(494, 138, 93, 28));
+        addPointButton->setGeometry(QRect(494, 110, 93, 28));
         pointsLabel = new QLabel(NewShape);
         pointsLabel->setObjectName(QStringLiteral("pointsLabel"));
         pointsLabel->setEnabled(true);
-        pointsLabel->setGeometry(QRect(500, 175, 51, 20));
+        pointsLabel->setGeometry(QRect(500, 143, 51, 20));
         QFont font;
         font.setBold(false);
         font.setItalic(false);
@@ -348,7 +343,7 @@ public:
         idTakenLabel->setFont(font1);
         pointCountLabel = new QLabel(NewShape);
         pointCountLabel->setObjectName(QStringLiteral("pointCountLabel"));
-        pointCountLabel->setGeometry(QRect(549, 177, 41, 16));
+        pointCountLabel->setGeometry(QRect(549, 145, 41, 16));
 
         retranslateUi(NewShape);
 
@@ -490,7 +485,6 @@ public:
         );
         label_6->setText(QApplication::translate("NewShape", "Alignment:", Q_NULLPTR));
         addPointButton->setText(QApplication::translate("NewShape", "Add Point", Q_NULLPTR));
-        clearPointsButton->setText(QApplication::translate("NewShape", "Clear Points", Q_NULLPTR));
         pointsLabel->setText(QApplication::translate("NewShape", "Points:", Q_NULLPTR));
         idTakenLabel->setText(QString());
         pointCountLabel->setText(QApplication::translate("NewShape", "0", Q_NULLPTR));

@@ -161,8 +161,6 @@ private slots:
 
     void on_addPointButton_clicked();
 
-    void on_clearPointsButton_clicked();
-
 signals:
     void sendShape(Shape*, Text*);
 
@@ -204,6 +202,7 @@ private:
     // List of current shape IDs used to
     // prevent duplicate shapeIDs in new shapes
     myStd::vector<int> idList;
+    bool idTaken;
 
 
 
