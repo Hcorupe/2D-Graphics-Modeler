@@ -537,7 +537,7 @@ QFont::Weight Parser::readTextWeight()
 }
 
 
-myStd::vector<Shape *> Parser::readShape()
+myStd::vector<Shape *> Parser::load()
 {
 
     SHAPE type;
@@ -743,22 +743,26 @@ void Parser::shapeIn(Shape* curr)
 
 
 
+bool Parser::fileOpened() const
+{
+    return (fin? true:false);
+}
 
 
-//string Parser::shapeTypeIn(SHAPE type)
-//{
-//    switch (type)
-//    {
-//    case(LINE):     return "Line";
-//    case(POLYLINE): return "Polyline";
-//    case(POLYGON):  return "Polygon";
-//    case(RECTANGLE):return "Rectangle";
-//    case(SQUARE):   return "Square";
-//    case(ELLIPSE):  return "Ellipse";
-//    case(CIRCLE):   return "Circle";
-//    case(TEXT):     return "Text";
-//    }
-//}
+string Parser::shapeTypeIn(SHAPE type) const
+{
+    switch (type)
+    {
+    case(LINE):     return "Line";
+    case(POLYLINE): return "Polyline";
+    case(POLYGON):  return "Polygon";
+    case(RECTANGLE):return "Rectangle";
+    case(SQUARE):   return "Square";
+    case(ELLIPSE):  return "Ellipse";
+    case(CIRCLE):   return "Circle";
+    case(TEXT):     return "Text";
+    }
+}
 
 
 string Parser::colorIn(Qt::GlobalColor color) const
@@ -983,119 +987,115 @@ string Parser::textWeightIn(QFont::Weight txtWeight) const
 
 
 
-void Parser::outputEmptyLine() const
+void Parser::outputEmptyLine()
 {
-	cout << endl;
+    fout << endl;
 }
-void Parser::outputShapeId() const
+void Parser::outputShapeId()
 {
-	cout << "ShapeId: " << id << endl;
+    fout << "ShapeId: " << id << endl;
 }
-void Parser::outputShapeType() const
+void Parser::outputShapeType()
 {
-    cout << "ShapeType: " << shapeType << endl;
+    fout << "ShapeType: " << shapeType << endl;
 }
-void Parser::outputLineDimensions() const
+void Parser::outputLineDimensions()
 {
-    cout << "ShapeDimensions: " << pointList[0].x() << ", " << pointList[0].y() << ", "
+    fout << "ShapeDimensions: " << pointList[0].x() << ", " << pointList[0].y() << ", "
                                 << pointList[1].x() << ", " << pointList[1].y() << endl;
 }
-void Parser::outputPolyDimensions() const
+void Parser::outputPolyDimensions()
 {
-    cout << "ShapeDimensions: " << pointList[0].x() << ", " << pointList[0].y() << ", "
+    fout << "ShapeDimensions: " << pointList[0].x() << ", " << pointList[0].y() << ", "
                                 << pointList[1].x() << ", " << pointList[1].y() << ", "
                                 << pointList[2].x() << ", " << pointList[2].y() << ", "
                                 << pointList[3].x() << ", " << pointList[3].y() << endl;
 }
-void Parser::outputRectangleDimensions() const
+void Parser::outputRectangleDimensions()
 {
-    cout << "ShapeDimensions: " << pointList[0].x() << ", " << pointList[0].y() << ", "
+    fout << "ShapeDimensions: " << pointList[0].x() << ", " << pointList[0].y() << ", "
 								<< l  << ", " << w << endl;
 }
-void Parser::outputSquareDimensions() const
+void Parser::outputSquareDimensions()
 {
-    cout << "ShapeDimensions: " << pointList[0].x() << ", " << pointList[0].y() << ", "
+    fout << "ShapeDimensions: " << pointList[0].x() << ", " << pointList[0].y() << ", "
 								<< l  << endl;
 }
-void Parser::outputEllipseDimensions() const
+void Parser::outputEllipseDimensions()
 {
-    cout << "ShapeDimensions: " << pointList[0].x() << ", " << pointList[0].y() << ", "
+    fout << "ShapeDimensions: " << pointList[0].x() << ", " << pointList[0].y() << ", "
 								<< a  << ", " << b << endl;
 }
-void Parser::outputCircleDimensions() const
+void Parser::outputCircleDimensions()
 {
-    cout << "ShapeDimensions: " << pointList[0].x() << ", " << pointList[0].y() << ", "
+    fout << "ShapeDimensions: " << pointList[0].x() << ", " << pointList[0].y() << ", "
 								<< r  << endl;
 }
-void Parser::outputTextDimensions() const
+void Parser::outputTextDimensions()
 {
-    cout << "ShapeDimensions: " << pointList[0].x() << ", " << pointList[0].y() << ", "
+    fout << "ShapeDimensions: " << pointList[0].x() << ", " << pointList[0].y() << ", "
 								<< l  << ", " << w << endl;
 }
-void Parser::outputPenColor() const
+void Parser::outputPenColor()
 {
-    cout << "PenColor: " << penColor << endl;
+    fout << "PenColor: " << penColor << endl;
 }
-void Parser::outputPenWidth() const
+void Parser::outputPenWidth()
 {
-	cout << "PenWidth: " << penWidth << endl;
+    fout << "PenWidth: " << penWidth << endl;
 }
-void Parser::outputPenStyle() const
+void Parser::outputPenStyle()
 {
-    cout << "PenStyle: " << penStyle << endl;
+    fout << "PenStyle: " << penStyle << endl;
 }
-void Parser::outputPenCapStyle() const
+void Parser::outputPenCapStyle()
 {
-    cout << "PenCapStyle: " << penCapStyle << endl;
+    fout << "PenCapStyle: " << penCapStyle << endl;
 }
-void Parser::outputPenJoinStyle() const
+void Parser::outputPenJoinStyle()
 {
-    cout << "PenJoinStyle: " << penJoinStyle << endl;
+    fout << "PenJoinStyle: " << penJoinStyle << endl;
 }
-void Parser::outputBrushColor() const
+void Parser::outputBrushColor()
 {
-    cout << "BrushColor: " << brushColor << endl;
+    fout << "BrushColor: " << brushColor << endl;
 }
-void Parser::outputBrushStyle() const
+void Parser::outputBrushStyle()
 {
-    cout << "BrushStyle: " << brushStyle << endl;
+    fout << "BrushStyle: " << brushStyle << endl;
 }
-void Parser::outputTextString() const
+void Parser::outputTextString()
 {
-    cout << "TextString: " << textString << endl;
+    fout << "TextString: " << textString << endl;
 }
-void Parser::outputTextColor() const
+void Parser::outputTextColor()
 {
-    cout << "TextColor: " << textColor << endl;
+    fout << "TextColor: " << textColor << endl;
 }
-void Parser::outputTextAlignment() const
+void Parser::outputTextAlignment()
 {
-    cout << "TextAlignment: " << textAlignment << endl;
+    fout << "TextAlignment: " << textAlignment << endl;
 }
-void Parser::outputTextSize() const
+void Parser::outputTextSize()
 {
-	cout << "TextPointSize: " << textSize << endl;
+    fout << "TextPointSize: " << textSize << endl;
 }
-void Parser::outputTextFamily() const
+void Parser::outputTextFamily()
 {
-    cout << "TextFontFamily: " << textFamily << endl;
+    fout << "TextFontFamily: " << textFamily << endl;
 }
-void Parser::outputTextStyle() const
+void Parser::outputTextStyle()
 {
-    cout << "TextFontStyle: " << textStyle << endl;
+    fout << "TextFontStyle: " << textStyle << endl;
 }
-void Parser::outputTextWeight() const
+void Parser::outputTextWeight()
 {
-    cout << "TextFontWeight: " << textWeight << endl;
-}
-
-bool Parser::fileOpened() const
-{
-    return (fin? true:false);
+    fout << "TextFontWeight: " << textWeight << endl;
 }
 
 
-void Parser::print(SHAPE type) const
+
+void Parser::print(SHAPE type)
 {
     outputEmptyLine();
     outputShapeId();

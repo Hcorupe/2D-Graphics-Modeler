@@ -47,8 +47,7 @@ const int TEXT_WEIGHT = 16;
 
 class Parser
 {
-    ifstream fin;
-    ofstream fout;
+
 
 
 public:
@@ -133,7 +132,7 @@ public:
     QFont::Weight readTextWeight();
 
     //! readShape reads entire shape from file
-    myStd::vector<Shape*> readShape();
+    myStd::vector<Shape*> load();
 
 
     void shapeIn(Shape* curr);
@@ -146,9 +145,11 @@ public:
 
 //********ACCESSORS****************ACCESSORS****************ACCESSORS****************ACCESSORS****************ACCESSORS********************************ACCESSORS********************************ACCESSORS****************
 
+    //! fileOpened returns true if input file is open
+    bool fileOpened() const;
 
     //! shapeTypeIn gets a SHAPE enum and returns the string format of it
-    string shapeTypeIn(SHAPE type);
+    string shapeTypeIn(SHAPE type) const;
 
     //! colorIn gets a Qt color variable and returns the string format of it
     string colorIn(Qt::GlobalColor color) const;
@@ -177,82 +178,79 @@ public:
 
 
     //! outputEmptyLine ouputs an empty line to file
-	void outputEmptyLine() const;
+    void outputEmptyLine() ;
 
     //! outputShapeId outputs shapeID to file
-	void outputShapeId() const;
+    void outputShapeId() ;
 
     //! outputShapeType outputs shape type to file
-	void outputShapeType() const;
+    void outputShapeType() ;
 
     //! outputLineDimensions outputs line dimensions to file
-	void outputLineDimensions() const;
+    void outputLineDimensions() ;
 
     //! outputPolyDimensions outputs polyline/polygon dimentions to file
-	void outputPolyDimensions() const;
+    void outputPolyDimensions() ;
 
     //! outputRectangleDimensions outputs rect dimensions to file
-	void outputRectangleDimensions() const;
+    void outputRectangleDimensions() ;
 
     //! outputSquareDimensions outputs square dimensions to file
-	void outputSquareDimensions() const;
+    void outputSquareDimensions() ;
 
     //! outputEllipseDimensions outputs ellipse dimensions to file
-	void outputEllipseDimensions() const;
+    void outputEllipseDimensions() ;
 
     //! outputCircleDimensions outputs circle dimensions to file
-	void outputCircleDimensions() const;
+    void outputCircleDimensions() ;
 
     //! outputTextDimensions outputs text dimensions to file
-	void outputTextDimensions() const;
+    void outputTextDimensions() ;
 
     //! outputPenColor outputs pen color to file
-	void outputPenColor() const;
+    void outputPenColor() ;
 
     //! outputPenWidth outputs pen width to file
-	void outputPenWidth() const;
+    void outputPenWidth() ;
 
     //! outputPenStyle outputs pen style to file
-	void outputPenStyle() const;
+    void outputPenStyle() ;
 
     //! outputPenCapStyle outputs pen cap style to file
-	void outputPenCapStyle() const;
+    void outputPenCapStyle() ;
 
     //! outputPenJoinStyle outputs pen join style to file
-	void outputPenJoinStyle() const;
+    void outputPenJoinStyle() ;
 
     //! outputBrushColor outputs brush color to file
-	void outputBrushColor() const;
+    void outputBrushColor() ;
 
     //! outputBrushStyle outputs brush style to file
-	void outputBrushStyle() const;
+    void outputBrushStyle() ;
 
     //! outputTextString outputs text message to file
-    void outputTextString() const;
+    void outputTextString() ;
 
     //! outputTextColor outputs text color to file
-    void outputTextColor() const;
+    void outputTextColor() ;
 
     //! outputTextAlignment outputs text alignment to file
-    void outputTextAlignment() const;
+    void outputTextAlignment() ;
 
     //! outputTextSize outputs text size to file
-    void outputTextSize() const;
+    void outputTextSize() ;
 
     //! outputTextFamily outputs text family to file
-    void outputTextFamily() const;
+    void outputTextFamily() ;
 
     //! outputTextStyle outputs text style to file
-    void outputTextStyle() const;
+    void outputTextStyle() ;
 
     //! outputTextWeight outputs text weight to file
-    void outputTextWeight() const;
-
-    //! fileOpened returns true if input file is open
-    bool fileOpened() const;
+    void outputTextWeight() ;
 
     //! print ouputs information to file in the format of the type specified.
-    void print(SHAPE type) const;
+    void print(SHAPE type) ;
 
 
 
@@ -260,6 +258,10 @@ public:
 
 
 private:
+    ifstream fin;
+    ofstream fout;
+
+
     myStd::vector<Shape*> list;
     int id;
     string shapeType;
