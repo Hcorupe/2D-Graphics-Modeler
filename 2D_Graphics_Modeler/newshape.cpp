@@ -343,19 +343,19 @@ void NewShape::on_shapeIDSpinBox_valueChanged(int arg1)
         ui->idTakenLabel->setText("Shape ID already taken.");
         idTaken = true;
     }
-    else if ((ui->shapeTypeComboBox->currentIndex() == POLYLINE && points.size() >= 2) ||
-             (ui->shapeTypeComboBox->currentIndex() == POLYGON && points.size() >= 3))
+    else if ((ui->shapeTypeComboBox->currentIndex() == POLYLINE && points.size() < 2) ||
+             (ui->shapeTypeComboBox->currentIndex() == POLYGON && points.size() < 3))
     {
         idTaken = false;
         id = arg1;
         ui->idTakenLabel->clear();
-        ui->buttonBox->setEnabled(true);
     }
     else
     {
         idTaken = false;
         id = arg1;
         ui->idTakenLabel->clear();
+        ui->buttonBox->setEnabled(true);
     }
 
 
