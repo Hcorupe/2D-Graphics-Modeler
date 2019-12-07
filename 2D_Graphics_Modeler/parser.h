@@ -57,9 +57,10 @@ public:
     //! Destructor
 	~Parser();
 
+//*********MUTATORS********************MUTATORS********************MUTATORS********************MUTATORS********************MUTATORS***********
 
     //! skipLine skips a line in input file
-    void skipLine();
+    void skipLine() ;
 
     //! readShapeID reads shapeID from file
 	int  readShapeId();
@@ -133,6 +134,45 @@ public:
 
     //! readShape reads entire shape from file
     myStd::vector<Shape*> readShape();
+
+
+    void shapeIn(Shape* curr);
+
+
+
+
+
+
+
+//********ACCESSORS****************ACCESSORS****************ACCESSORS****************ACCESSORS****************ACCESSORS********************************ACCESSORS********************************ACCESSORS****************
+
+
+//    //! shapeTypeIn gets a SHAPE enum and returns the string format of it
+//    string shapeTypeIn(SHAPE type);
+
+    //! colorIn gets a Qt color variable and returns the string format of it
+    string colorIn(Qt::GlobalColor color) const;
+
+    //! penStyleIn gets a Qt penStyle variable and returns the string format of it
+    string penStyleIn(Qt::PenStyle pStyle) const;
+
+    //! penCapStyleIn gets a Qt penCapStyle variable and returns the string format of it
+    string penCapStyleIn(Qt::PenCapStyle pCapStyle) const;
+
+    //! penJoinStyleIn gets a Qt penJoinStyle variable and returns the string format of it
+    string penJoinStyleIn(Qt::PenJoinStyle pJoinStyle) const;
+
+    //! brushStyleIn gets a Qt brushStyleIn variable and returns the string format of it
+    string brushStyleIn(Qt::BrushStyle bStyle) const;
+
+    //! textAlignIn gets a Qt AlignmentFlag variable and returns the string format of it
+    string textAlignmentIn(Qt::AlignmentFlag txtAlign) const;
+
+    //! textStyleIn gets a QFont Style variable and returns the string format of it
+    string textStyleIn(QFont::Style txtStyle) const;
+
+    //! textWeightIn gets a QFont Weight variable and returns the string format of it
+    string textWeightIn(QFont::Weight txtWeight) const;
 
 
 
@@ -211,6 +251,12 @@ public:
     //! fileOpened returns true if input file is open
     bool fileOpened() const;
 
+    //! print ouputs information to file in the format of the type specified.
+    void print(SHAPE type) const;
+
+
+
+
 
 
 private:
@@ -222,7 +268,7 @@ private:
     int a, b;
     int r;
     string penColor;
-    int penWidth;
+    int    penWidth;
     string penStyle;
     string penCapStyle;
     string penJoinStyle;
@@ -231,7 +277,7 @@ private:
     string textString;
     string textColor;
     string textAlignment;
-    int textSize;
+    int    textSize;
     string textFamily;
     string textStyle;
     string textWeight;

@@ -27,20 +27,14 @@ Parser::Parser()
     textWeight.clear();
 
     fin.open("shapes.txt");
-    fout.open("output.txt");
 }
 Parser::~Parser()
 {
 	fin.close();
-    fout.close();
-
-//    for(int i = 0; i < list.size(); i++)
-//    {
-//        delete list[i];
-//    }
 }
 
 
+//*********MUTATORS********************MUTATORS********************MUTATORS********************MUTATORS********************MUTATORS***********
 
 
 void Parser::skipLine()
@@ -543,7 +537,6 @@ QFont::Weight Parser::readTextWeight()
 }
 
 
-
 myStd::vector<Shape *> Parser::readShape()
 {
 
@@ -663,12 +656,329 @@ myStd::vector<Shape *> Parser::readShape()
                         // the loop at the correct time.
     }
     return list;
-
 }
 
 
 
 
+void Parser::shapeIn(Shape* curr)
+{
+    SHAPE type = curr->getShapeType();
+
+
+    id = curr->getShapeId();
+    shapeType = curr->GetShapeTypeString();
+    if(type != TEXT)
+    {
+        QPen pen = curr->getPen();
+
+//        penColor = colorIn(pen.);
+        penWidth = pen.width();
+        penStyle = penStyleIn(pen.style());
+        penCapStyle = penCapStyleIn(pen.capStyle());
+        penJoinStyle = penJoinStyleIn(pen.joinStyle());
+        if(type != LINE && type != POLYLINE)
+        {
+            QBrush brush = curr->getBrush();
+
+//            brushColor = colorIn(brush.);
+            brushStyle = brushStyleIn(brush.style());
+        }
+    }
+
+
+
+
+    switch (type)
+    {
+    case(LINE):
+    {Line* pLin = dynamic_cast<Line*>(curr);
+        break;}
+
+    case(POLYLINE):
+    {Polyline* pPolyl = dynamic_cast<Polyline*>(curr);
+        break;}
+
+    case(POLYGON):
+    {Polygon* pPolyg = dynamic_cast<Polygon*>(curr);
+        break;}
+
+    case(RECTANGLE):
+    {Rectangle* pRect = dynamic_cast<Rectangle*>(curr);
+        break;}
+
+    case(SQUARE):
+    {Square* pSqr = dynamic_cast<Square*>(curr);
+        break;}
+
+    case(ELLIPSE):
+    {Ellipse* pElli = dynamic_cast<Ellipse*>(curr);
+        break;}
+    case(CIRCLE):
+    {Circle* pCirc = dynamic_cast<Circle*>(curr);
+        break;}
+
+    case(TEXT):
+    {Text* pTxt = dynamic_cast<Text*>(curr);
+        QFont font = pTxt->getFont();
+
+        textString = (pTxt->getMessage()).toStdString();
+//        textColor = colorIn(pText->getColor);
+        textAlignment = textAlignmentIn(pTxt->getAlignment());
+        textSize = font.pointSize();
+        textFamily = (font.family()).toStdString();
+        textStyle = textStyleIn(font.style());
+        textWeight = textWeightIn(pTxt->getWeight());
+        break;}
+    }
+
+
+
+
+
+}
+
+
+//********ACCESSORS****************ACCESSORS****************ACCESSORS****************ACCESSORS****************ACCESSORS********************************ACCESSORS****************
+
+
+
+
+
+//string Parser::shapeTypeIn(SHAPE type)
+//{
+//    switch (type)
+//    {
+//    case(LINE):     return "Line";
+//    case(POLYLINE): return "Polyline";
+//    case(POLYGON):  return "Polygon";
+//    case(RECTANGLE):return "Rectangle";
+//    case(SQUARE):   return "Square";
+//    case(ELLIPSE):  return "Ellipse";
+//    case(CIRCLE):   return "Circle";
+//    case(TEXT):     return "Text";
+//    }
+//}
+
+
+string Parser::colorIn(Qt::GlobalColor color) const
+{
+    if(color == Qt::GlobalColor::white)
+     {
+       return "white";
+     }
+     else if(color == Qt::GlobalColor::black)
+     {
+         return "black";
+     }
+     else if(color == Qt::GlobalColor::red)
+     {
+         return "red";
+     }
+     else if(color == Qt::GlobalColor::green)
+     {
+         return "green";
+     }
+     else if(color == Qt::GlobalColor::blue)
+     {
+         return "blue";
+     }
+     else if(color == Qt::GlobalColor::cyan)
+     {
+         return "cyan";
+     }
+     else if(color == Qt::GlobalColor::magenta)
+     {
+         return "magenta";
+     }
+     else if(color == Qt::GlobalColor::yellow)
+     {
+         return "yellow";
+     }
+     else if(color == Qt::GlobalColor::gray)
+     {
+         return "gray";
+     }
+     else
+     {
+         assert(false);
+     }
+}
+
+
+string Parser::penStyleIn(Qt::PenStyle pStyle) const
+{
+    if(pStyle == Qt::PenStyle::NoPen)
+    {
+        return "NoPen";
+    }
+    else if(pStyle == Qt::PenStyle::SolidLine)
+    {
+        return "SolidLine";
+    }
+    else if(pStyle == Qt::PenStyle::DashLine)
+    {
+        return "DashLine";
+    }
+    else if(pStyle == Qt::PenStyle::DotLine)
+    {
+        return "DotLine";
+    }
+    else if(pStyle == Qt::PenStyle::DashDotLine)
+    {
+        return "DashDotLine";
+    }
+    else if(pStyle == Qt::PenStyle::DashDotDotLine)
+    {
+        return "DashDotDotLine";
+    }
+    else
+    {
+        assert(false);
+    }
+}
+
+
+string Parser::penCapStyleIn(Qt::PenCapStyle pCapStyle) const
+{
+    if (pCapStyle == Qt::PenCapStyle::FlatCap)
+    {
+        return "FlatCap";
+    }
+    else if (pCapStyle == Qt::PenCapStyle::SquareCap)
+    {
+       return "SquareCap";
+    }
+    else if(pCapStyle == Qt::PenCapStyle::RoundCap)
+    {
+        return "RoundCap";
+    }
+    else
+    {
+        assert(false);
+    }
+}
+
+
+string Parser::penJoinStyleIn(Qt::PenJoinStyle pJoinStyle) const
+{
+    if(pJoinStyle == Qt::PenJoinStyle::MiterJoin)
+     {
+         return "MiterJoin";
+     }
+     else if(pJoinStyle == Qt::PenJoinStyle::BevelJoin)
+     {
+         return "BevelJoin";
+     }
+     else if(pJoinStyle == Qt::PenJoinStyle::RoundJoin)
+     {
+         return "RoundJoin";
+     }
+     else
+     {
+         assert(false);
+     }
+}
+
+
+string Parser::brushStyleIn(Qt::BrushStyle bStyle) const
+{
+    if(bStyle == Qt::BrushStyle::NoBrush)
+    {
+        return "NoBrush";
+    }
+    else if(bStyle == Qt::BrushStyle::SolidPattern)
+    {
+        return "SolidPattern";
+    }
+    else if(bStyle == Qt::BrushStyle::HorPattern)
+    {
+        return "HorPattern";
+    }
+    else if (bStyle == Qt::BrushStyle::VerPattern)
+    {
+        return "VerPattern";
+    }
+    else
+    {
+        assert(false);
+    }
+}
+
+
+string Parser::textAlignmentIn(Qt::AlignmentFlag txtAlign) const
+{
+    if(txtAlign == Qt::AlignmentFlag::AlignLeft)
+    {
+      return "AlignLeft";
+    }
+    else if(txtAlign == Qt::AlignmentFlag::AlignRight)
+    {
+        return "AlignRight";
+    }
+    else if(txtAlign == Qt::AlignmentFlag::AlignTop)
+    {
+        return "AlignTop";
+    }
+    else if(txtAlign == Qt::AlignmentFlag::AlignBottom)
+    {
+        return "AlignBottom";
+    }
+    else if(txtAlign == Qt::AlignmentFlag::AlignCenter)
+    {
+        return "AlignCenter";
+    }
+    else
+    {
+       assert(false);
+    }
+}
+
+
+string Parser::textStyleIn(QFont::Style txtStyle) const
+{
+    if(txtStyle == QFont::Style::StyleNormal)
+    {
+        return "StyleNormal";
+    }
+    else if(txtStyle == QFont::Style::StyleItalic)
+    {
+        return "StyleItalic";
+    }
+    else if(txtStyle == QFont::Style::StyleOblique)
+    {
+        return "StyleOblique";
+    }
+    else
+    {
+        assert(false);
+    }
+}
+
+
+string Parser::textWeightIn(QFont::Weight txtWeight) const
+{
+    if(txtWeight == QFont::Weight::Thin)
+    {
+        return "Thin";
+    }
+    else if(txtWeight == QFont::Weight::Light)
+    {
+        return "Light";
+    }
+    else if(txtWeight == QFont::Weight::Normal)
+    {
+        return "Normal";
+    }
+    else if(txtWeight == QFont::Weight::Bold)
+    {
+        return "Bold";
+    }
+    else
+    {
+        assert(false);
+    }
+}
 
 
 
@@ -785,7 +1095,53 @@ bool Parser::fileOpened() const
 }
 
 
+void Parser::print(SHAPE type) const
+{
+    outputEmptyLine();
+    outputShapeId();
+    outputShapeType();
 
+    switch (type)
+    {
+    case(LINE):     outputLineDimensions();
+                    break;
+    case(POLYLINE): outputPolyDimensions();
+                    break;
+    case(POLYGON):  outputPolyDimensions();
+                    break;
+    case(RECTANGLE):outputRectangleDimensions();
+                    break;
+    case(SQUARE):   outputSquareDimensions();
+                    break;
+    case(ELLIPSE):  outputEllipseDimensions();
+                    break;
+    case(CIRCLE):   outputCircleDimensions();
+                    break;
+    case(TEXT):     outputTextDimensions();
+                    break;
+    }
 
-
-
+    if(type != TEXT)
+    {
+        outputPenColor();
+        outputPenWidth();
+        outputPenStyle();
+        outputPenCapStyle();
+        outputPenJoinStyle();
+        if(type != LINE && type != POLYLINE)
+        {
+            outputBrushColor();
+            outputBrushStyle();
+        }
+    }
+    else
+    {
+        outputTextString();
+        outputTextColor();
+        outputTextAlignment();
+        outputTextSize();
+        outputTextFamily();
+        outputTextStyle();
+        outputTextWeight();
+    }
+}
