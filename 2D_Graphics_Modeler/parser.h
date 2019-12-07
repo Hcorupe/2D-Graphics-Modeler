@@ -147,8 +147,8 @@ public:
 //********ACCESSORS****************ACCESSORS****************ACCESSORS****************ACCESSORS****************ACCESSORS********************************ACCESSORS********************************ACCESSORS****************
 
 
-//    //! shapeTypeIn gets a SHAPE enum and returns the string format of it
-//    string shapeTypeIn(SHAPE type);
+    //! shapeTypeIn gets a SHAPE enum and returns the string format of it
+    string shapeTypeIn(SHAPE type);
 
     //! colorIn gets a Qt color variable and returns the string format of it
     string colorIn(Qt::GlobalColor color) const;

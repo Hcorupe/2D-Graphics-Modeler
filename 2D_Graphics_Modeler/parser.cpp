@@ -667,7 +667,7 @@ void Parser::shapeIn(Shape* curr)
 
 
     id = curr->getShapeId();
-    shapeType = curr->GetShapeTypeString();
+    shapeType = shapeTypeIn(type);
     if(type != TEXT)
     {
         QPen pen = curr->getPen();
