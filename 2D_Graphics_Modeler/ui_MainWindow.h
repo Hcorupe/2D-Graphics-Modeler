@@ -117,6 +117,14 @@ public:
 
 
         QMetaObject::connectSlotsByName(MainWindow);
+
+        for (int i = 0; i < renderArea->shapes.size(); i++)
+        {
+            shapeList->addItem(QString(QString::number((renderArea->shapes[i]->getShapeId())))
+                              + "     " + (QString((renderArea->shapes[i]->GetShapeTypeString())))
+                              + "     " + (QString::number((renderArea->shapes[i]->GetArea())))
+                              + "     " + (QString::number((renderArea->shapes[i]->GetPerimeter()))));
+        }
     } // setupUi
 
     void retranslateUi(QWidget *MainWindow)

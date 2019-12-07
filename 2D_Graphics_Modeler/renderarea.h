@@ -2,6 +2,7 @@
 #define RENDERAREA_H
 
 #include <QWidget>
+#include <QtWidgets/QListWidget>
 #include "shape.h"
 #include "rectangle.h"
 #include "square.h"

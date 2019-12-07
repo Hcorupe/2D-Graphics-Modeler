@@ -12,6 +12,8 @@ RenderArea::RenderArea(QWidget *parent) : QWidget(parent)
      shapes = parser.readShape();
 
 
+
+
     // Test rendering default shapes (Replace with file parser when finished)
 
 //    QPoint sPoint(20,90);
