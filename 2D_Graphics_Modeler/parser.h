@@ -135,8 +135,17 @@ public:
     myStd::vector<Shape*> load();
 
 
+    void save();
     void shapeIn(Shape* curr);
 
+    void lineDimensionIn(Line* pLin);
+    void polylineDimensionIn(Polyline* plylin);
+    void polygonDimensionIn(Polygon* plygon);
+    void rectangleDimensionIn(Rectangle* rect);
+    void squareDimensionIn(Square* sqr);
+    void ellipseDimensionIn(Ellipse* elps);
+    void circleDimensionIn(Circle* circ);
+    void textDimensionIn(Text* txt);
 
 
 

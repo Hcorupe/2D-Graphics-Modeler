@@ -658,7 +658,14 @@ myStd::vector<Shape *> Parser::load()
     return list;
 }
 
-
+void Parser::save()
+{
+    for(int i = 0; i < list.size(); i++)
+    {
+        shapeIn(list[i]);
+        print(list[i]->getShapeType());
+    }
+}
 
 
 void Parser::shapeIn(Shape* curr)
@@ -693,33 +700,41 @@ void Parser::shapeIn(Shape* curr)
     {
     case(LINE):
     {Line* pLin = dynamic_cast<Line*>(curr);
+        lineDimensionIn(pLin);
         break;}
 
     case(POLYLINE):
     {Polyline* pPolyl = dynamic_cast<Polyline*>(curr);
+        polylineDimensionIn(pPolyl);
         break;}
 
     case(POLYGON):
     {Polygon* pPolyg = dynamic_cast<Polygon*>(curr);
+        polygonDimensionIn(pPolyg);
         break;}
 
     case(RECTANGLE):
     {Rectangle* pRect = dynamic_cast<Rectangle*>(curr);
+        rectangleDimensionIn(pRect);
         break;}
 
     case(SQUARE):
     {Square* pSqr = dynamic_cast<Square*>(curr);
+        squareDimensionIn(pSqr);
         break;}
 
     case(ELLIPSE):
-    {Ellipse* pElli = dynamic_cast<Ellipse*>(curr);
+    {Ellipse* pElps = dynamic_cast<Ellipse*>(curr);
+        ellipseDimensionIn(pElps);
         break;}
     case(CIRCLE):
     {Circle* pCirc = dynamic_cast<Circle*>(curr);
+        circleDimensionIn(pCirc);
         break;}
 
     case(TEXT):
     {Text* pTxt = dynamic_cast<Text*>(curr);
+        textDimensionIn(pTxt);
         QFont font = pTxt->getFont();
 
         textString = (pTxt->getMessage()).toStdString();
@@ -732,11 +747,54 @@ void Parser::shapeIn(Shape* curr)
         break;}
     }
 
-
-
-
-
 }
+
+
+
+
+void Parser::lineDimensionIn(Line* pLin)
+{
+    pointList[0] = pLin->getStartPoint();
+    pointList[1] = pLin->getEndPoint();
+}
+
+void Parser::polylineDimensionIn(Polyline* plylin)
+{
+    pointList = plylin->getPoints();
+}
+void Parser::polygonDimensionIn(Polygon* plygon)
+{
+    pointList = plygon->getPoints();
+}
+void Parser::rectangleDimensionIn(Rectangle* rect)
+{
+    pointList[0] = rect->getStartPoint();
+    l = rect->getLength();
+    w = rect->getWidth();
+}
+void Parser::squareDimensionIn(Square* sqr)
+{
+    pointList[0] = sqr->getStartPoint();
+    l = sqr->getLength();
+}
+void Parser::ellipseDimensionIn(Ellipse* elps)
+{
+   pointList[0] = elps->getStartPoint();
+   a = elps->getMajorAxisA();
+   b = elps->getMinorAxisB();
+}
+void Parser::circleDimensionIn(Circle* circ)
+{
+    pointList[0] = circ->getStartPoint();
+    r = circ->getMajorAxisA();  //circle is an ellipse with equal minor and major axis
+}
+void Parser::textDimensionIn(Text* txt)
+{
+    pointList[0] = txt->getStartPoint();
+    l = txt->getHeight();   //length
+    w = txt->getWidth();
+}
+
 
 
 //********ACCESSORS****************ACCESSORS****************ACCESSORS****************ACCESSORS****************ACCESSORS********************************ACCESSORS****************
