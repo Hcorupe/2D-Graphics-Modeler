@@ -657,14 +657,15 @@ myStd::vector<Shape *> Parser::load()
     }
     return list;
 }
-
 void Parser::save()
 {
+    fout.open("output.txt");
     for(int i = 0; i < list.size(); i++)
     {
         shapeIn(list[i]);
         print(list[i]->getShapeType());
     }
+    fout.close();
 }
 
 
@@ -748,16 +749,11 @@ void Parser::shapeIn(Shape* curr)
     }
 
 }
-
-
-
-
 void Parser::lineDimensionIn(Line* pLin)
 {
     pointList[0] = pLin->getStartPoint();
     pointList[1] = pLin->getEndPoint();
 }
-
 void Parser::polylineDimensionIn(Polyline* plylin)
 {
     pointList = plylin->getPoints();
