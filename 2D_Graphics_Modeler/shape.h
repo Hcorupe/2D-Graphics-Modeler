@@ -44,6 +44,11 @@ class Shape
         /*!
          Brush used to fill shape.
          */
+
+        Qt::GlobalColor penColor;
+
+        Qt::GlobalColor brushColor;
+
         QBrush brush;
 
         //! Default constructor
@@ -151,6 +156,7 @@ class Shape
         void setPenColor(const Qt::GlobalColor color)
         {
             pen.setColor(color);
+            penColor = color;
         }
 
         //! Set pen's style
@@ -188,6 +194,7 @@ class Shape
         void setBrushColor(const Qt::GlobalColor color)
         {
            brush.setColor(color);
+           brushColor = color;
         }
 
         //! Set brush's style
@@ -224,6 +231,16 @@ class Shape
         QPen getPen()
         {
             return pen;
+        }
+
+        Qt::GlobalColor getPenColor()
+        {
+            return penColor;
+        }
+
+        Qt::GlobalColor getBrushColor()
+        {
+            return brushColor;
         }
 
         /*!

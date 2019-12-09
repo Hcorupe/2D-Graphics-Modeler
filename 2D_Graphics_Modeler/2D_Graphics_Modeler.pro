@@ -23,7 +23,8 @@ SOURCES += \
     CS1C_Vector_Templated_v3.cpp \
     newshape.cpp \
     parser.cpp \
-    renderarea.cpp
+    renderarea.cpp \
+    savechanges.cpp
 
 HEADERS += \
     MainWindow.h \
@@ -36,6 +37,7 @@ HEADERS += \
     polygon.h \
     polyline.h \
     renderarea.h \
+    savechanges.h \
     text.h \
     vector.h \
     shape.h \
@@ -46,7 +48,8 @@ HEADERS += \
 FORMS += \
     MainWindow.ui \
     login.ui \
-    newshape.ui
+    newshape.ui \
+    savechanges.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

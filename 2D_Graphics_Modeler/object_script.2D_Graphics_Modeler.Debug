@@ -7,9 +7,11 @@ INPUT(
 ./debug\newshape.o
 ./debug\parser.o
 ./debug\renderarea.o
+./debug\savechanges.o
 ./debug\qrc_myResource.o
 ./debug\moc_MainWindow.o
 ./debug\moc_login.o
 ./debug\moc_newshape.o
 ./debug\moc_renderarea.o
+./debug\moc_savechanges.o
 );

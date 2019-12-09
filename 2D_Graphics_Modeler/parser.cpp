@@ -26,11 +26,9 @@ Parser::Parser()
     textStyle.clear();
     textWeight.clear();
 
-    fin.open("shapes.txt");
 }
 Parser::~Parser()
 {
-	fin.close();
 }
 
 
@@ -555,8 +553,7 @@ myStd::vector<Shape *> Parser::load()
     QString txtString;
     QString txtFamily;
 
-
-
+    fin.open("shapes.txt");
 
     skipLine();
     readShapeId();
@@ -655,6 +652,9 @@ myStd::vector<Shape *> Parser::load()
         readShapeId();  // at the end of the file it makes the fin false before the while-loop checks (fin) and we will exit
                         // the loop at the correct time.
     }
+
+    fin.close();
+
     return list;
 }
 void Parser::save()
@@ -680,7 +680,7 @@ void Parser::shapeIn(Shape* curr)
     {
         QPen pen = curr->getPen();
 
-//        penColor = colorIn(pen.);
+        penColor = colorIn(curr->getPenColor());
         penWidth = pen.width();
         penStyle = penStyleIn(pen.style());
         penCapStyle = penCapStyleIn(pen.capStyle());
@@ -689,7 +689,7 @@ void Parser::shapeIn(Shape* curr)
         {
             QBrush brush = curr->getBrush();
 
-//            brushColor = colorIn(brush.);
+            brushColor = colorIn(curr->getBrushColor());
             brushStyle = brushStyleIn(brush.style());
         }
     }
@@ -739,7 +739,7 @@ void Parser::shapeIn(Shape* curr)
         QFont font = pTxt->getFont();
 
         textString = (pTxt->getMessage()).toStdString();
-//        textColor = colorIn(pText->getColor);
+        textColor = colorIn(pTxt->getPenColor());
         textAlignment = textAlignmentIn(pTxt->getAlignment());
         textSize = font.pointSize();
         textFamily = (font.family()).toStdString();
@@ -1198,4 +1198,9 @@ void Parser::print(SHAPE type)
         outputTextStyle();
         outputTextWeight();
     }
+}
+
+void Parser::setShapeList(myStd::vector<Shape*> newList)
+{
+    list = newList;
 }

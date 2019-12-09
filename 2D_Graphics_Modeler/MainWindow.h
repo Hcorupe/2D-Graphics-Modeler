@@ -16,6 +16,8 @@
 #include "vector.h"
 #include <iostream>
 #include "newshape.h"
+#include "savechanges.h"
+#include "parser.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -34,12 +36,15 @@ public:
 private:
     Ui::MainWindow *ui;
     Login* login;
+    SaveChanges* saveDialog;
     NewShape* newShapeWindow;
     Shape* selectedShape;
     Text* selectedShapeLabel;
+    bool changed;
 
 private slots:
     void disableEdit();
+    void save();
 
     void on_idComboBox_currentIndexChanged(int index);
     void on_xSpinBox_valueChanged(int arg1);
@@ -48,5 +53,6 @@ private slots:
     void on_newShapeButton_clicked();
     void receiveShape(Shape* shape, Text* text);
     void on_sortComboBox_currentIndexChanged(int index);
+    void closeEvent(QCloseEvent *event);
 };
 #endif // MAINWINDOW_H

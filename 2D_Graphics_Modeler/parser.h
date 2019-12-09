@@ -261,6 +261,7 @@ public:
     //! print ouputs information to file in the format of the type specified.
     void print(SHAPE type) ;
 
+    void setShapeList(myStd::vector<Shape*> newList);
 
 
 

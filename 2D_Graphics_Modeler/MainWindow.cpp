@@ -9,7 +9,6 @@ MainWindow::MainWindow(QWidget *parent)
 {
 
 
-
     login = new Login;
     login->open();
 
@@ -31,6 +30,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->sortComboBox->addItem(QString(("ID")));
     ui->sortComboBox->addItem(QString(("Area")));
     ui->sortComboBox->addItem(QString(("Perimeter")));
+
+    changed = false;
 }
 
 void MainWindow::disableEdit()
@@ -79,6 +80,12 @@ void MainWindow::on_xSpinBox_valueChanged(int arg1)
 
     ui->renderArea->update();
 
+    if(ui->ySpinBox->isEnabled())
+    {
+        changed = true;
+    }
+
+
 }
 
 void MainWindow::on_ySpinBox_valueChanged(int arg1)
@@ -95,6 +102,11 @@ void MainWindow::on_ySpinBox_valueChanged(int arg1)
     selectedShapeLabel->setStartPoint(newPoint);
 
     ui->renderArea->update();
+
+    if(ui->xSpinBox->isEnabled())
+    {
+        changed = true;
+    }
 }
 
 void MainWindow::on_deleteShapeButton_clicked()
@@ -114,6 +126,9 @@ void MainWindow::on_deleteShapeButton_clicked()
     ui->idComboBox->removeItem(ui->idComboBox->currentIndex());
 
     ui->renderArea->update();
+
+    changed = true;
+
 }
 
 void MainWindow::on_newShapeButton_clicked()
@@ -147,6 +162,8 @@ void MainWindow::receiveShape(Shape* shape, Text* text)
     ui->renderArea->update();
 
     ui->idComboBox->setCurrentIndex(ui->renderArea->shapes.size() - 1);
+
+    changed = true;
 }
 
 void MainWindow::on_sortComboBox_currentIndexChanged(int index)
@@ -185,4 +202,34 @@ void MainWindow::on_sortComboBox_currentIndexChanged(int index)
             delete deleteItem;
         }
     }
+}
+
+void MainWindow::save()
+{
+    if(saveDialog->result() == 0)
+    {
+        // Save function goes here
+
+//        Parser parser;
+//        parser.setShapeList(ui->renderArea->shapes);
+
+//        parser.save();
+
+        std::cerr << "Changes saved"; //Remove when complete
+    }
+
+}
+
+
+void MainWindow::closeEvent(QCloseEvent *event)
+{
+    if (changed)
+    {
+        saveDialog = new SaveChanges();
+        connect(saveDialog, SIGNAL(finished(int)), this, SLOT(save()));
+
+        saveDialog->show();
+    }
+
+    QWidget::closeEvent(event);
 }

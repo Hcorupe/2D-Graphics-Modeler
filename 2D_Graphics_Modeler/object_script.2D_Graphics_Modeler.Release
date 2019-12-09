@@ -7,9 +7,11 @@ INPUT(
 ./release\newshape.o
 ./release\parser.o
 ./release\renderarea.o
+./release\savechanges.o
 ./release\qrc_myResource.o
 ./release\moc_MainWindow.o
 ./release\moc_login.o
 ./release\moc_newshape.o
 ./release\moc_renderarea.o
+./release\moc_savechanges.o
 );
