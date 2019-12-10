@@ -10,7 +10,7 @@ RenderArea::RenderArea(QWidget *parent) : QWidget(parent)
 
      cerr << (parser.fileOpened()? "in":"out");
      shapes = parser.load();
-     parser.save();
+
      parser.load();
 
 
