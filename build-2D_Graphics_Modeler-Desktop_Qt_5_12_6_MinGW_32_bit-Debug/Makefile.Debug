@@ -1291,13 +1291,20 @@ debug/login.o: ../2D_Graphics_Modeler/login.cpp ../2D_Graphics_Modeler/login.h \
 		../../../QT/5.12.6/mingw73_32/include/QtCore/qeventloop.h \
 		../../../QT/5.12.6/mingw73_32/include/QtCore/QPoint \
 		../../../QT/5.12.6/mingw73_32/include/QtGui/QFont \
-		ui_login.h \
+		../2D_Graphics_Modeler/ui_login.h \
 		../../../QT/5.12.6/mingw73_32/include/QtCore/QVariant \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QAction \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qaction.h \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qactiongroup.h \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QApplication \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qapplication.h \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qdesktopwidget.h \
 		../../../QT/5.12.6/mingw73_32/include/QtGui/qguiapplication.h \
 		../../../QT/5.12.6/mingw73_32/include/QtGui/qinputmethod.h \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QButtonGroup \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qbuttongroup.h \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QHeaderView \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qheaderview.h \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QLabel \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qlabel.h \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QLineEdit \
@@ -1630,13 +1637,20 @@ debug/MainWindow.o: ../2D_Graphics_Modeler/MainWindow.cpp ../2D_Graphics_Modeler
 		../../../QT/5.12.6/mingw73_32/include/QtCore/qeventloop.h \
 		../../../QT/5.12.6/mingw73_32/include/QtCore/QPoint \
 		../../../QT/5.12.6/mingw73_32/include/QtGui/QFont \
-		ui_MainWindow.h \
+		../2D_Graphics_Modeler/ui_MainWindow.h \
 		../../../QT/5.12.6/mingw73_32/include/QtCore/QVariant \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QAction \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qaction.h \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qactiongroup.h \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QApplication \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qapplication.h \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qdesktopwidget.h \
 		../../../QT/5.12.6/mingw73_32/include/QtGui/qguiapplication.h \
 		../../../QT/5.12.6/mingw73_32/include/QtGui/qinputmethod.h \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QButtonGroup \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qbuttongroup.h \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QHeaderView \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qheaderview.h \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QLabel \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qlabel.h \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QPushButton \
@@ -1799,8 +1813,11 @@ debug/newshape.o: ../2D_Graphics_Modeler/newshape.cpp ../2D_Graphics_Modeler/new
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qabstractitemview.h \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qabstractscrollarea.h \
 		../../../QT/5.12.6/mingw73_32/include/QtCore/qitemselectionmodel.h \
-		ui_newshape.h \
+		../2D_Graphics_Modeler/ui_newshape.h \
 		../../../QT/5.12.6/mingw73_32/include/QtCore/QVariant \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QAction \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qaction.h \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qactiongroup.h \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QApplication \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qapplication.h \
 		../../../QT/5.12.6/mingw73_32/include/QtCore/qcoreapplication.h \
@@ -1808,9 +1825,13 @@ debug/newshape.o: ../2D_Graphics_Modeler/newshape.cpp ../2D_Graphics_Modeler/new
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qdesktopwidget.h \
 		../../../QT/5.12.6/mingw73_32/include/QtGui/qguiapplication.h \
 		../../../QT/5.12.6/mingw73_32/include/QtGui/qinputmethod.h \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QButtonGroup \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qbuttongroup.h \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QDialogButtonBox \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qdialogbuttonbox.h \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QFrame \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QHeaderView \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qheaderview.h \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QLabel \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qlabel.h \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QLineEdit \
@@ -2218,8 +2239,12 @@ debug/savechanges.o: ../2D_Graphics_Modeler/savechanges.cpp ../2D_Graphics_Model
 		../../../QT/5.12.6/mingw73_32/include/QtCore/qfiledevice.h \
 		../../../QT/5.12.6/mingw73_32/include/QtGui/qvector2d.h \
 		../../../QT/5.12.6/mingw73_32/include/QtGui/qtouchdevice.h \
-		ui_savechanges.h \
+		../2D_Graphics_Modeler/ui_savechanges.h \
 		../../../QT/5.12.6/mingw73_32/include/QtCore/QVariant \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QAction \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qaction.h \
+		../../../QT/5.12.6/mingw73_32/include/QtGui/qicon.h \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qactiongroup.h \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QApplication \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qapplication.h \
 		../../../QT/5.12.6/mingw73_32/include/QtCore/qcoreapplication.h \
@@ -2227,11 +2252,30 @@ debug/savechanges.o: ../2D_Graphics_Modeler/savechanges.cpp ../2D_Graphics_Model
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qdesktopwidget.h \
 		../../../QT/5.12.6/mingw73_32/include/QtGui/qguiapplication.h \
 		../../../QT/5.12.6/mingw73_32/include/QtGui/qinputmethod.h \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QButtonGroup \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qbuttongroup.h \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QDialogButtonBox \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qdialogbuttonbox.h \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QHeaderView \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qheaderview.h \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qabstractitemview.h \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qabstractscrollarea.h \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qframe.h \
+		../../../QT/5.12.6/mingw73_32/include/QtCore/qabstractitemmodel.h \
+		../../../QT/5.12.6/mingw73_32/include/QtCore/qitemselectionmodel.h \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qabstractitemdelegate.h \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qstyleoption.h \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qabstractspinbox.h \
+		../../../QT/5.12.6/mingw73_32/include/QtGui/qvalidator.h \
+		../../../QT/5.12.6/mingw73_32/include/QtCore/qregularexpression.h \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qslider.h \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qabstractslider.h \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qstyle.h \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qtabbar.h \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qtabwidget.h \
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qrubberband.h \
 		../../../QT/5.12.6/mingw73_32/include/QtWidgets/QLabel \
-		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qlabel.h \
-		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qframe.h
+		../../../QT/5.12.6/mingw73_32/include/QtWidgets/qlabel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\savechanges.o ..\2D_Graphics_Modeler\savechanges.cpp
 
 debug/qrc_myResource.o: debug/qrc_myResource.cpp 

@@ -54,7 +54,7 @@ public:
         MainWindow->resize(1037, 612);
         tabWidget = new QTabWidget(MainWindow);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
-        tabWidget->setGeometry(QRect(0, 30, 1041, 621));
+        tabWidget->setGeometry(QRect(20, 40, 1041, 621));
         MainTab = new QWidget();
         MainTab->setObjectName(QString::fromUtf8("MainTab"));
         idComboBox = new QComboBox(MainTab);
@@ -117,7 +117,7 @@ public:
         label->setGeometry(QRect(390, 240, 301, 61));
         label_2 = new QLabel(ContactTab);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(390, 140, 281, 221));
+        label_2->setGeometry(QRect(390, 150, 481, 221));
         tabWidget->addTab(ContactTab, QString());
         label_2->raise();
         label->raise();
@@ -145,11 +145,7 @@ public:
         tabWidget->setTabText(tabWidget->indexOf(ReportsTab), QApplication::translate("MainWindow", "Reports", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(ReviewTab), QApplication::translate("MainWindow", "Reviews", nullptr));
         label->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600; color:#aa0000;\">THE TEAM WITH NO NAME</span></p></body></html>", nullptr));
-        label_2->setText(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\":/new/logo.png\" /></p></body></html>", nullptr));
+        label_2->setText(QApplication::translate("MainWindow", "<html><head/><body><p><img src=\":/new/logo.png\"/></p></body></html>", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(ContactTab), QApplication::translate("MainWindow", "Contact Us", nullptr));
     } // retranslateUi
 
