@@ -26,6 +26,14 @@ MainWindow::MainWindow(QWidget *parent)
         ui->idComboBox->addItem(QString::number((ui->renderArea->shapes[i]->getShapeId())));
     }
 
+    for (int i = 0; i < ui->renderArea->shapes.size(); i++)
+    {
+        ui->shapeList->addItem(QString((QString::number((ui->renderArea->shapes[i]->getShapeId())))
+                          + "     " + (QString((ui->renderArea->shapes[i]->GetShapeTypeString())))
+                          + "     " + (QString::number((ui->renderArea->shapes[i]->GetArea())))
+                          + "     " + (QString::number((ui->renderArea->shapes[i]->GetPerimeter())))));
+    }
+
     //Add sort options to combobox
     ui->sortComboBox->addItem(QString(("ID")));
     ui->sortComboBox->addItem(QString(("Area")));
