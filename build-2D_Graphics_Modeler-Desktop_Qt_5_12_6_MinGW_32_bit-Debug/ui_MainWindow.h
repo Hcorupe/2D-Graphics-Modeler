@@ -114,10 +114,10 @@ public:
         ContactTab->setObjectName(QString::fromUtf8("ContactTab"));
         label = new QLabel(ContactTab);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(390, 240, 301, 61));
+        label->setGeometry(QRect(320, 180, 291, 81));
         label_2 = new QLabel(ContactTab);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(390, 150, 481, 221));
+        label_2->setGeometry(QRect(320, 100, 371, 231));
         tabWidget->addTab(ContactTab, QString());
         label_2->raise();
         label->raise();
