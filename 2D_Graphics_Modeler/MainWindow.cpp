@@ -241,3 +241,44 @@ void MainWindow::closeEvent(QCloseEvent *event)
 
     QWidget::closeEvent(event);
 }
+
+
+void MainWindow::on_commentBtn_clicked()
+{
+
+    count++;
+
+    QString userComment;
+
+    if(count == 4)
+    {
+        //ui->maxCmntWrning->setText("Max comment reached");
+
+        count = 1;
+    }
+
+
+  ui->CommentDisp->setReadOnly(true);
+  ui->commentDispTwo->setReadOnly(true);
+  ui->commentDispThr->setReadOnly(true);
+
+
+  switch (count)
+  {
+  case 1:   userComment = ui->cmntBox->toPlainText();
+            ui->CommentDisp->setText(userComment);
+        break;
+  case 2:   userComment = ui->cmntBox->toPlainText();
+            ui->commentDispTwo->setText(userComment);
+      break;
+  case 3:   userComment = ui->cmntBox->toPlainText();
+            ui->commentDispThr->setText(userComment);
+      break;
+  }
+
+
+
+
+}
+
+ void MainWindow::on_EmailSndBtn_clicked(){}

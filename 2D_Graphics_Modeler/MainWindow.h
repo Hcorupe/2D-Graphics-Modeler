@@ -41,6 +41,7 @@ private:
     Shape* selectedShape;
     Text* selectedShapeLabel;
     bool changed;
+    int count = 0;
 
 private slots:
     void disableEdit();
@@ -54,5 +55,7 @@ private slots:
     void receiveShape(Shape* shape, Text* text);
     void on_sortComboBox_currentIndexChanged(int index);
     void closeEvent(QCloseEvent *event);
+    void on_commentBtn_clicked();
+    void on_EmailSndBtn_clicked();
 };
 #endif // MAINWINDOW_H
