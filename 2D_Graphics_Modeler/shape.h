@@ -85,6 +85,8 @@ class Shape
               Qt::PenCapStyle capStyle, Qt::PenJoinStyle joinStyle, Qt::GlobalColor brushColor,
               Qt::BrushStyle brushStyle)
         {
+            this->penColor = penColor;
+            this->brushColor = brushColor;
             shapeID = ID;
             startPoint = sPoint;
             pen.setColor(penColor);

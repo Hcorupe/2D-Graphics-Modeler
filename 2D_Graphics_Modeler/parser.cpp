@@ -610,56 +610,62 @@ myStd::vector<Shape *> Parser::load()
         switch (type)
         {
         case(LINE):
-        {Line* lin = new Line(id, pointList[0], pointList[1], pColor, penWidth, pStyle, pCapStyle, pJoinStyle);
+            {Line* lin = new Line(id, pointList[0], pointList[1], pColor, penWidth, pStyle, pCapStyle, pJoinStyle);
             list.push_back(lin);
             break;}
 
         case(POLYLINE):
-        {Polyline* plyLin = new Polyline(id, pointList, pColor, penWidth, pStyle, pCapStyle, pJoinStyle) ;
+            {Polyline* plyLin = new Polyline(id, pointList, pColor, penWidth, pStyle, pCapStyle, pJoinStyle) ;
             list.push_back(plyLin);
             break;}
 
         case(POLYGON):
-        {Polygon* plyGon = new Polygon(id, pointList, pColor, penWidth, pStyle, pCapStyle, pJoinStyle, bColor, bStyle);
+            {Polygon* plyGon = new Polygon(id, pointList, pColor, penWidth, pStyle, pCapStyle, pJoinStyle, bColor, bStyle);
             list.push_back(plyGon);
             break;}
 
         case(RECTANGLE):
-        {Rectangle* rect = new Rectangle(id, pointList[0], l, w, pColor, penWidth, pStyle, pCapStyle, pJoinStyle, bColor, bStyle);
+            {Rectangle* rect = new Rectangle(id, pointList[0], l, w, pColor, penWidth, pStyle, pCapStyle, pJoinStyle, bColor, bStyle);
             list.push_back(rect);
             break;}
 
         case(SQUARE):
-        {Square* sqr = new Square(id, pointList[0], l, pColor, penWidth, pStyle, pCapStyle, pJoinStyle, bColor, bStyle);
+            {Square* sqr = new Square(id, pointList[0], l, pColor, penWidth, pStyle, pCapStyle, pJoinStyle, bColor, bStyle);
             list.push_back(sqr);
             break;}
 
         case(ELLIPSE):
-        {Ellipse* elips = new Ellipse(id, pointList[0], pColor, penWidth, pStyle, pCapStyle, pJoinStyle, bColor, bStyle, a, b);
+            {Ellipse* elips = new Ellipse(id, pointList[0], pColor, penWidth, pStyle, pCapStyle, pJoinStyle, bColor, bStyle, a, b);
             list.push_back(elips);
             break;}
         case(CIRCLE):
-        {Circle* crcl = new Circle(id, pointList[0], pColor, penWidth, pStyle, pCapStyle, pJoinStyle, bColor, bStyle, r);
+            {Circle* crcl = new Circle(id, pointList[0], pColor, penWidth, pStyle, pCapStyle, pJoinStyle, bColor, bStyle, r);
             list.push_back(crcl);
             break;}
 
         case(TEXT):
-        {Text* txt = new Text(id, pointList[0], l, w, txtString, txtColor, txtAlign, textSize, txtFamily, txtStyle, txtWeight);
+            {Text* txt = new Text(id, pointList[0], l, w, txtString, txtColor, txtAlign, textSize, txtFamily, txtStyle, txtWeight);
             list.push_back(txt);
             break;}
         }
-        skipLine();     // was called before the while loop once. Needs to be at the end and not the beging of while-loop so
+        skipLine();     // was called before the while loop once. Needs to be at the end and not the begining of while-loop so
         readShapeId();  // at the end of the file it makes the fin false before the while-loop checks (fin) and we will exit
                         // the loop at the correct time.
     }
-
     fin.close();
-
     return list;
 }
+
+
+void Parser::setShapeList(myStd::vector<Shape*> newList)
+{
+    list = newList;
+}
+
+
 void Parser::save()
 {
-    fout.open("output.txt");
+    fout.open("shapes.txt");
     for(int i = 0; i < list.size(); i++)
     {
         shapeIn(list[i]);
@@ -695,46 +701,45 @@ void Parser::shapeIn(Shape* curr)
     }
 
 
-
-
     switch (type)
     {
     case(LINE):
-    {Line* pLin = dynamic_cast<Line*>(curr);
+        {Line* pLin = dynamic_cast<Line*>(curr);
         lineDimensionIn(pLin);
         break;}
 
     case(POLYLINE):
-    {Polyline* pPolyl = dynamic_cast<Polyline*>(curr);
+        {Polyline* pPolyl = dynamic_cast<Polyline*>(curr);
         polylineDimensionIn(pPolyl);
         break;}
 
     case(POLYGON):
-    {Polygon* pPolyg = dynamic_cast<Polygon*>(curr);
+        {Polygon* pPolyg = dynamic_cast<Polygon*>(curr);
         polygonDimensionIn(pPolyg);
         break;}
 
     case(RECTANGLE):
-    {Rectangle* pRect = dynamic_cast<Rectangle*>(curr);
+        {Rectangle* pRect = dynamic_cast<Rectangle*>(curr);
         rectangleDimensionIn(pRect);
         break;}
 
     case(SQUARE):
-    {Square* pSqr = dynamic_cast<Square*>(curr);
+        {Square* pSqr = dynamic_cast<Square*>(curr);
         squareDimensionIn(pSqr);
         break;}
 
     case(ELLIPSE):
-    {Ellipse* pElps = dynamic_cast<Ellipse*>(curr);
+        {Ellipse* pElps = dynamic_cast<Ellipse*>(curr);
         ellipseDimensionIn(pElps);
         break;}
+
     case(CIRCLE):
-    {Circle* pCirc = dynamic_cast<Circle*>(curr);
+        {Circle* pCirc = dynamic_cast<Circle*>(curr);
         circleDimensionIn(pCirc);
         break;}
 
     case(TEXT):
-    {Text* pTxt = dynamic_cast<Text*>(curr);
+        {Text* pTxt = dynamic_cast<Text*>(curr);
         textDimensionIn(pTxt);
         QFont font = pTxt->getFont();
 
@@ -749,41 +754,57 @@ void Parser::shapeIn(Shape* curr)
     }
 
 }
+
+
 void Parser::lineDimensionIn(Line* pLin)
 {
     pointList[0] = pLin->getStartPoint();
     pointList[1] = pLin->getEndPoint();
 }
+
+
 void Parser::polylineDimensionIn(Polyline* plylin)
 {
     pointList = plylin->getPoints();
 }
+
+
 void Parser::polygonDimensionIn(Polygon* plygon)
 {
     pointList = plygon->getPoints();
 }
+
+
 void Parser::rectangleDimensionIn(Rectangle* rect)
 {
     pointList[0] = rect->getStartPoint();
     l = rect->getLength();
     w = rect->getWidth();
 }
+
+
 void Parser::squareDimensionIn(Square* sqr)
 {
     pointList[0] = sqr->getStartPoint();
     l = sqr->getLength();
 }
+
+
 void Parser::ellipseDimensionIn(Ellipse* elps)
 {
    pointList[0] = elps->getStartPoint();
    a = elps->getMajorAxisA();
    b = elps->getMinorAxisB();
 }
+
+
 void Parser::circleDimensionIn(Circle* circ)
 {
     pointList[0] = circ->getStartPoint();
     r = circ->getMajorAxisA();  //circle is an ellipse with equal minor and major axis
 }
+
+
 void Parser::textDimensionIn(Text* txt)
 {
     pointList[0] = txt->getStartPoint();
@@ -1198,9 +1219,4 @@ void Parser::print(SHAPE type)
         outputTextStyle();
         outputTextWeight();
     }
-}
-
-void Parser::setShapeList(myStd::vector<Shape*> newList)
-{
-    list = newList;
 }

@@ -88,7 +88,6 @@ public:
     //! readTextDimensions reads text dimensions from file
     void readTextDimensions();
 
-
     //! readPenColor reads in pen color from file
     Qt::GlobalColor readPenColor();
 
@@ -134,17 +133,37 @@ public:
     //! readShape reads entire shape from file
     myStd::vector<Shape*> load();
 
+    //! setShapeList sets the shape list to pointers that are passed in
+    void setShapeList(myStd::vector<Shape*> newList);
 
+    //! save writes information of the entire shape list to the file in order to save changes
     void save();
+
+    //! shapeIn gets a shape pointer and changes this->memberVariables to match the data of the shape passed
     void shapeIn(Shape* curr);
 
+    //! lineDimensionIn changes this->memberDimensionVariables to imitate the dimension data of the line passed in
     void lineDimensionIn(Line* pLin);
+
+    //! polylineDimensionIn changes this->memberDimensionVariables to imitate the dimension data of the polyline passed in
     void polylineDimensionIn(Polyline* plylin);
+
+    //! polygonDimensionIn changes this->memberDimensionVariables to imitate the dimension data of the polygon passed in
     void polygonDimensionIn(Polygon* plygon);
+
+    //! rectangleDimensionIn changes this->memberDimensionVariables to imitate the dimension data of the rectangle passed in
     void rectangleDimensionIn(Rectangle* rect);
+
+    //! squareDimensionIn changes this->memberDimensionVariables to imitate the dimension data of the square passed in
     void squareDimensionIn(Square* sqr);
+
+    //! ellipseDimensionIn changes this->memberDimensionVariables to imitate the dimension data of the ellipse passed in
     void ellipseDimensionIn(Ellipse* elps);
+
+    //! circleDimensionIn changes this->memberDimensionVariables to imitate the dimension data of the circle passed in
     void circleDimensionIn(Circle* circ);
+
+    //! textDimensionIn changes this->memberDimensionVariables to imitate the dimension data of the text passed in
     void textDimensionIn(Text* txt);
 
 
@@ -187,82 +206,79 @@ public:
 
 
     //! outputEmptyLine ouputs an empty line to file
-    void outputEmptyLine() ;
+    void outputEmptyLine();
 
     //! outputShapeId outputs shapeID to file
-    void outputShapeId() ;
+    void outputShapeId();
 
     //! outputShapeType outputs shape type to file
-    void outputShapeType() ;
+    void outputShapeType();
 
     //! outputLineDimensions outputs line dimensions to file
-    void outputLineDimensions() ;
+    void outputLineDimensions();
 
     //! outputPolyDimensions outputs polyline/polygon dimentions to file
-    void outputPolyDimensions() ;
+    void outputPolyDimensions();
 
     //! outputRectangleDimensions outputs rect dimensions to file
-    void outputRectangleDimensions() ;
+    void outputRectangleDimensions();
 
     //! outputSquareDimensions outputs square dimensions to file
-    void outputSquareDimensions() ;
+    void outputSquareDimensions();
 
     //! outputEllipseDimensions outputs ellipse dimensions to file
-    void outputEllipseDimensions() ;
+    void outputEllipseDimensions();
 
     //! outputCircleDimensions outputs circle dimensions to file
-    void outputCircleDimensions() ;
+    void outputCircleDimensions();
 
     //! outputTextDimensions outputs text dimensions to file
-    void outputTextDimensions() ;
+    void outputTextDimensions();
 
     //! outputPenColor outputs pen color to file
-    void outputPenColor() ;
+    void outputPenColor();
 
     //! outputPenWidth outputs pen width to file
-    void outputPenWidth() ;
+    void outputPenWidth();
 
     //! outputPenStyle outputs pen style to file
-    void outputPenStyle() ;
+    void outputPenStyle();
 
     //! outputPenCapStyle outputs pen cap style to file
-    void outputPenCapStyle() ;
+    void outputPenCapStyle();
 
     //! outputPenJoinStyle outputs pen join style to file
-    void outputPenJoinStyle() ;
+    void outputPenJoinStyle();
 
     //! outputBrushColor outputs brush color to file
-    void outputBrushColor() ;
+    void outputBrushColor();
 
     //! outputBrushStyle outputs brush style to file
-    void outputBrushStyle() ;
+    void outputBrushStyle();
 
     //! outputTextString outputs text message to file
-    void outputTextString() ;
+    void outputTextString();
 
     //! outputTextColor outputs text color to file
-    void outputTextColor() ;
+    void outputTextColor();
 
     //! outputTextAlignment outputs text alignment to file
-    void outputTextAlignment() ;
+    void outputTextAlignment();
 
     //! outputTextSize outputs text size to file
-    void outputTextSize() ;
+    void outputTextSize();
 
     //! outputTextFamily outputs text family to file
-    void outputTextFamily() ;
+    void outputTextFamily();
 
     //! outputTextStyle outputs text style to file
-    void outputTextStyle() ;
+    void outputTextStyle();
 
     //! outputTextWeight outputs text weight to file
-    void outputTextWeight() ;
+    void outputTextWeight();
 
     //! print ouputs information to file in the format of the type specified.
-    void print(SHAPE type) ;
-
-    void setShapeList(myStd::vector<Shape*> newList);
-
+    void print(SHAPE type);
 
 
 
