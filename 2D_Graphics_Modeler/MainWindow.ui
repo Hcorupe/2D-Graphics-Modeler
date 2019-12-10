@@ -23,11 +23,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-<<<<<<< HEAD
     <number>3</number>
-=======
-    <number>0</number>
->>>>>>> 84ef57e13dedfcdf2ae0bef93641f513573049d4
    </property>
    <widget class="QWidget" name="MainTab">
     <attribute name="title">
