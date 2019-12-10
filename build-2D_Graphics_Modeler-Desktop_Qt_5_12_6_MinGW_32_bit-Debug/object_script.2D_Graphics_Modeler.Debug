@@ -1,0 +1,15 @@
+debug/SortingAlgs.o
+debug/login.o
+debug/main.o
+debug/MainWindow.o
+debug/CS1C_Vector_Templated_v3.o
+debug/newshape.o
+debug/parser.o
+debug/renderarea.o
+debug/savechanges.o
+debug/qrc_myResource.o
+debug/moc_MainWindow.o
+debug/moc_login.o
+debug/moc_newshape.o
+debug/moc_renderarea.o
+debug/moc_savechanges.o
