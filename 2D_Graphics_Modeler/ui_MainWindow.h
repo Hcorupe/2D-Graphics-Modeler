@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'MainWindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.8
+** Created by: Qt User Interface Compiler version 5.9.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -20,8 +20,8 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QTabWidget>
-#include <QtWidgets/QWidget>
 #include <QtWidgets/QTextEdit>
+#include <QtWidgets/QWidget>
 #include "renderarea.h"
 
 QT_BEGIN_NAMESPACE
@@ -47,26 +47,19 @@ public:
     QLabel *sortLabel;
     QLabel *listLabel;
     QWidget *ReviewTab;
-    QWidget *ContactTab;
-
     QTextEdit *cmntBox;
     QLabel *cmntLabel;
     QLabel *othrCmntLabel;
     QPushButton *commentBtn;
-    QTextEdit *CommentDisp;
+    QTextEdit *commentDisp;
     QTextEdit *commentDispTwo;
     QTextEdit *commentDispThr;
-    QLabel *maxCmntWrning;
-
+    QWidget *ContactTab;
+    QLabel *label;
+    QLabel *label_2;
     QLabel *EmailLabel;
     QPushButton *EmailSndBtn;
     QTextEdit *EmailBox;
-
-    QLabel *label;
-    QLabel *label_2;
-
-
-
 
     void setupUi(QWidget *MainWindow)
     {
@@ -109,7 +102,7 @@ public:
         deleteShapeButton->setGeometry(QRect(440, 538, 93, 28));
         renderArea = new RenderArea(MainTab);
         renderArea->setObjectName(QStringLiteral("renderArea"));
-        renderArea->setGeometry(QRect(20, 10, 1000, 500));
+        renderArea->setGeometry(QRect(0, -10, 1000, 500));
         renderArea->setMinimumSize(QSize(1000, 500));
         renderArea->setAutoFillBackground(false);
         tabWidget->addTab(MainTab, QString());
@@ -128,45 +121,38 @@ public:
         listLabel->setObjectName(QStringLiteral("listLabel"));
         listLabel->setGeometry(QRect(20, 26, 161, 21));
         tabWidget->addTab(ReportsTab, QString());
-
         ReviewTab = new QWidget();
         ReviewTab->setObjectName(QStringLiteral("ReviewTab"));
-
-
         cmntBox = new QTextEdit(ReviewTab);
         cmntBox->setObjectName(QStringLiteral("cmntBox"));
         cmntBox->setGeometry(QRect(460, 190, 351, 111));
-
         cmntLabel = new QLabel(ReviewTab);
         cmntLabel->setObjectName(QStringLiteral("cmntLabel"));
         cmntLabel->setGeometry(QRect(460, 160, 111, 17));
-
         othrCmntLabel = new QLabel(ReviewTab);
         othrCmntLabel->setObjectName(QStringLiteral("othrCmntLabel"));
         othrCmntLabel->setGeometry(QRect(20, 70, 101, 17));
-
         commentBtn = new QPushButton(ReviewTab);
         commentBtn->setObjectName(QStringLiteral("commentBtn"));
         commentBtn->setGeometry(QRect(730, 310, 80, 25));
-
-
-        CommentDisp = new QTextEdit(ReviewTab);
-        CommentDisp->setObjectName(QStringLiteral("CommentDisp"));
-        CommentDisp->setGeometry(QRect(20, 100, 351, 101));
-
-
+        commentDisp = new QTextEdit(ReviewTab);
+        commentDisp->setObjectName(QStringLiteral("commentDisp"));
+        commentDisp->setGeometry(QRect(20, 100, 351, 101));
         commentDispTwo = new QTextEdit(ReviewTab);
         commentDispTwo->setObjectName(QStringLiteral("commentDispTwo"));
         commentDispTwo->setGeometry(QRect(20, 200, 351, 101));
         commentDispThr = new QTextEdit(ReviewTab);
         commentDispThr->setObjectName(QStringLiteral("commentDispThr"));
         commentDispThr->setGeometry(QRect(20, 300, 351, 101));
-        maxCmntWrning = new QLabel(ReviewTab);
-        maxCmntWrning->setObjectName(QStringLiteral("maxCmntWrning"));
-        maxCmntWrning->setGeometry(QRect(220, 70, 141, 21));
         tabWidget->addTab(ReviewTab, QString());
         ContactTab = new QWidget();
         ContactTab->setObjectName(QStringLiteral("ContactTab"));
+        label = new QLabel(ContactTab);
+        label->setObjectName(QStringLiteral("label"));
+        label->setGeometry(QRect(630, 160, 291, 81));
+        label_2 = new QLabel(ContactTab);
+        label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setGeometry(QRect(620, 70, 371, 231));
         EmailLabel = new QLabel(ContactTab);
         EmailLabel->setObjectName(QStringLiteral("EmailLabel"));
         EmailLabel->setGeometry(QRect(60, 70, 81, 17));
@@ -176,17 +162,12 @@ public:
         EmailBox = new QTextEdit(ContactTab);
         EmailBox->setObjectName(QStringLiteral("EmailBox"));
         EmailBox->setGeometry(QRect(60, 90, 391, 171));
-
-        label_2 = new QLabel(ContactTab);
-        label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(620, 70, 371, 231));
-
-        label = new QLabel(ContactTab);
-        label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(630, 160, 291, 81));
-
-
         tabWidget->addTab(ContactTab, QString());
+        label_2->raise();
+        label->raise();
+        EmailLabel->raise();
+        EmailSndBtn->raise();
+        EmailBox->raise();
 
         retranslateUi(MainWindow);
 
@@ -210,16 +191,13 @@ public:
         listLabel->setText(QApplication::translate("MainWindow", "  ID  Type  Area  Perimeter", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(ReportsTab), QApplication::translate("MainWindow", "Reports", Q_NULLPTR));
         cmntLabel->setText(QApplication::translate("MainWindow", "Leave a comment", Q_NULLPTR));
-        othrCmntLabel->setText(QApplication::translate("MainWindow", "Other comments", Q_NULLPTR));
+        othrCmntLabel->setText(QApplication::translate("MainWindow", "Other coments", Q_NULLPTR));
         commentBtn->setText(QApplication::translate("MainWindow", "Comment", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(ReviewTab), QApplication::translate("MainWindow", "Reviews", Q_NULLPTR));
-        EmailLabel->setText(QApplication::translate("MainWindow", "Constact Us!", Q_NULLPTR));
-        EmailSndBtn->setText(QApplication::translate("MainWindow", "Send", Q_NULLPTR));
+        label->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600; color:#aa0000;\">THE TEAM WITH NO NAME</span></p></body></html>", Q_NULLPTR));
         label_2->setText(QApplication::translate("MainWindow", "<html><head/><body><p><img src=\":/new/logo.png\"/></p></body></html>", Q_NULLPTR));
-        label->setText(QApplication::translate("MainWindow",
-                                               "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600; color:#aa0000;"
-                                               "\">THE TEAM WITH NO NAME</span></p></body></html>", Q_NULLPTR));
-
+        EmailLabel->setText(QApplication::translate("MainWindow", "Contact Us!", Q_NULLPTR));
+        EmailSndBtn->setText(QApplication::translate("MainWindow", "Send", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(ContactTab), QApplication::translate("MainWindow", "Contact Us", Q_NULLPTR));
     } // retranslateUi
 

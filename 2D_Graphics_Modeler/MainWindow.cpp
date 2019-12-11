@@ -258,7 +258,7 @@ void MainWindow::on_commentBtn_clicked()
     }
 
 
-  ui->CommentDisp->setReadOnly(true);
+  ui->commentDisp->setReadOnly(true);
   ui->commentDispTwo->setReadOnly(true);
   ui->commentDispThr->setReadOnly(true);
 
@@ -266,7 +266,7 @@ void MainWindow::on_commentBtn_clicked()
   switch (count)
   {
   case 1:   userComment = ui->cmntBox->toPlainText();
-            ui->CommentDisp->setText(userComment);
+            ui->commentDisp->setText(userComment);
         break;
   case 2:   userComment = ui->cmntBox->toPlainText();
             ui->commentDispTwo->setText(userComment);

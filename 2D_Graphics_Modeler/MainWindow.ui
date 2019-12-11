@@ -16,14 +16,14 @@
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>40</y>
+     <x>0</x>
+     <y>0</y>
      <width>1041</width>
      <height>621</height>
     </rect>
    </property>
    <property name="currentIndex">
-    <number>3</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="MainTab">
     <attribute name="title">
@@ -146,8 +146,8 @@
     <widget class="RenderArea" name="renderArea" native="true">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>10</y>
+       <x>0</x>
+       <y>-10</y>
        <width>1000</width>
        <height>500</height>
       </rect>
@@ -218,6 +218,85 @@
     <attribute name="title">
      <string>Reviews</string>
     </attribute>
+    <widget class="QTextEdit" name="cmntBox">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>190</y>
+       <width>351</width>
+       <height>111</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="cmntLabel">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>160</y>
+       <width>111</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Leave a comment</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="othrCmntLabel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>101</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Other coments</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="commentBtn">
+     <property name="geometry">
+      <rect>
+       <x>730</x>
+       <y>310</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Comment</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="commentDisp">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>100</y>
+       <width>351</width>
+       <height>101</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="commentDispTwo">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>200</y>
+       <width>351</width>
+       <height>101</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="commentDispThr">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>300</y>
+       <width>351</width>
+       <height>101</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="ContactTab">
     <attribute name="title">
@@ -249,8 +328,47 @@
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/new/logo.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
+    <widget class="QLabel" name="EmailLabel">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>70</y>
+       <width>81</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Contact Us!</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="EmailSndBtn">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>270</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Send</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="EmailBox">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>90</y>
+       <width>391</width>
+       <height>171</height>
+      </rect>
+     </property>
+    </widget>
     <zorder>label_2</zorder>
     <zorder>label</zorder>
+    <zorder>EmailLabel</zorder>
+    <zorder>EmailSndBtn</zorder>
+    <zorder>EmailBox</zorder>
    </widget>
   </widget>
  </widget>
