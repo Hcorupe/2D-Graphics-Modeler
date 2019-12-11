@@ -276,9 +276,7 @@ void MainWindow::on_commentBtn_clicked()
       break;
   }
 
-
-
-
+    ui->cmntBox->setText("");
 }
 
- void MainWindow::on_EmailSndBtn_clicked(){}
+ void MainWindow::on_EmailSndBtn_clicked(){ui->EmailBox->setText("");}
