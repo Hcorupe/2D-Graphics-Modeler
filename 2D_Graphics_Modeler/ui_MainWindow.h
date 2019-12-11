@@ -62,6 +62,9 @@ public:
     QPushButton *EmailSndBtn;
     QTextEdit *EmailBox;
 
+    QLabel *label;
+    QLabel *label_2;
+
 
 
 
@@ -174,6 +177,14 @@ public:
         EmailBox->setObjectName(QStringLiteral("EmailBox"));
         EmailBox->setGeometry(QRect(60, 90, 391, 171));
 
+        label_2 = new QLabel(ContactTab);
+        label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setGeometry(QRect(620, 70, 371, 231));
+
+        label = new QLabel(ContactTab);
+        label->setObjectName(QStringLiteral("label"));
+        label->setGeometry(QRect(630, 160, 291, 81));
+
 
         tabWidget->addTab(ContactTab, QString());
 
@@ -204,6 +215,10 @@ public:
         tabWidget->setTabText(tabWidget->indexOf(ReviewTab), QApplication::translate("MainWindow", "Reviews", Q_NULLPTR));
         EmailLabel->setText(QApplication::translate("MainWindow", "Constact Us!", Q_NULLPTR));
         EmailSndBtn->setText(QApplication::translate("MainWindow", "Send", Q_NULLPTR));
+        label_2->setText(QApplication::translate("MainWindow", "<html><head/><body><p><img src=\":/new/logo.png\"/></p></body></html>", Q_NULLPTR));
+        label->setText(QApplication::translate("MainWindow",
+                                               "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600; color:#aa0000;"
+                                               "\">THE TEAM WITH NO NAME</span></p></body></html>", Q_NULLPTR));
 
         tabWidget->setTabText(tabWidget->indexOf(ContactTab), QApplication::translate("MainWindow", "Contact Us", Q_NULLPTR));
     } // retranslateUi
